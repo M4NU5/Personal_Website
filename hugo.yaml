@@ -12,26 +12,36 @@ permalinks:
 
 menu:
   main:
-      - identifier: About
-        name: About
-        url: about
+      # About
+      - identifier: Me
+        name: Me 
+        url: Me
         weight: 1
-      - identifier: Blog
-        name: Blog
-        url: blog
-        weight: 2
-      - identifier: Resume
-        name: Resume
+
+      # Resume
+      - identifier: Work
+        name: Work 
         url: /Resume_William_Smale.pdf
+        weight: 2
+
+      # Musings
+      - identifier: Life
+        name: Life
+        url: Life
         weight: 3
+
+      # Blog
+      - identifier: Thoughts
+        name: Thoughts
+        url: Thoughts
+        weight: 4
+
+      # Search
       - identifier: Search
         name: Search
         url: /search/
-        weight: 4
-      # - identifier: Projects
-      #   name: Project
-      #   url: projects
-      #   weight: 5
+        weight: 5
+
 
 params:
   defaultTheme: dark # defaultTheme: light or dark
@@ -51,11 +61,11 @@ params:
     imageWidth: 150
     imageHeight: 150
     buttons:
-        - name: About
-          url: about
-        - name: Blog
-          url: blog
-        - name: Resume
+        - name: Me
+          url: Me
+        - name: Thoughts
+          url: Thoughts
+        - name: Work
           url: /Resume_William_Smale.pdf
           
   outputs:
