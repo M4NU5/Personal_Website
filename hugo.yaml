@@ -26,7 +26,7 @@ menu:
       # Blog
       - identifier: Thoughts
         name: Thoughts
-        url: Thoughts
+        url: thoughts
         weight: 40
 
       # Search
@@ -62,9 +62,9 @@ params:
     imageHeight: 150
     buttons:
         - name: Me
-          url: Me
+          url: me
         - name: Thoughts
-          url: Thoughts
+          url: thoughts
         # - name: Work
         #   url: /Resume_William_Smale.pdf
           
