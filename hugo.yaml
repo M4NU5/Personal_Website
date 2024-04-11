@@ -12,7 +12,7 @@ menu:
       # About
       - identifier: Me
         name: Me 
-        url: Me
+        url: me
         weight: 10
 
       # Work
@@ -38,7 +38,7 @@ menu:
       - identifier: Archives
         name: Archives
         url: /archives/
-        weight: 60
+        weight: 60                              
 
 
 params:
@@ -65,8 +65,8 @@ params:
           url: Me
         - name: Thoughts
           url: Thoughts
-        - name: Work
-          url: /Resume_William_Smale.pdf
+        # - name: Work
+        #   url: /Resume_William_Smale.pdf
           
   outputs:
     home:
