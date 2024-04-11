@@ -1,33 +1,18 @@
 ---
-title: 'Analytics without Metasploit &#8211; Hack the Box #1'
-date: '2024-03-06T17:27:24+00:00'
 draft: false
-permalink: /2024/03/06/analytics-without-metasploit-hack-the-box-1
+
+title: 'Hack the Box #1 - Analytics without Metasploit'
+date: '2024-03-06T17:27:24+00:00'
 author: William
-excerpt: ''
-type: post
-id: 694
-thumbnail: ../../../../uploads/2024/03/Analytics-e1710797452567.png
-categories:
-    - 'Penetration Testing'
-tag: []
-post_format: []
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-_yoast_wpseo_primary_category:
-    - ''
-_yoast_wpseo_content_score:
-    - '30'
-astra-migrate-meta-layouts:
-    - set
+
+category:
+    - Hacking
+
+tag:
+    - Hacking
+cover:
+    image: thoughts/hacking/hack_the_box_1_analytics.png
+    alt: 'hack_the_box_1_analytics.png'
 ---
 This is my first Hack the Box machine [pwned](https://www.hackthebox.com/achievement/machine/1695260/569) and it’s called Analytics. Here is a mock write-up of the lab because as we all know. It’s great being able to pwn things but if we can’t communicate the remediations to what we have done then there is no benifit past that juicy dopamine hit when you get root 😀
 

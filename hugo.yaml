@@ -4,9 +4,6 @@ title: Home
 theme: PaperMod
 paginate: 15 # articles per page
 
-taxonomies:
-  category: categories
-
 permalinks:
     post: "/:title/"
 
@@ -16,31 +13,32 @@ menu:
       - identifier: Me
         name: Me 
         url: Me
-        weight: 1
+        weight: 10
 
-      # Resume
-      - identifier: Work
-        name: Work 
-        url: /Resume_William_Smale.pdf
-        weight: 2
+      # Work
 
       # Musings
       - identifier: Life
         name: Life
         url: Life
-        weight: 3
+        weight: 30
 
       # Blog
       - identifier: Thoughts
         name: Thoughts
         url: Thoughts
-        weight: 4
+        weight: 40
 
       # Search
       - identifier: Search
         name: Search
         url: /search/
-        weight: 5
+        weight: 50
+      # Archives
+      - identifier: Archives
+        name: Archives
+        url: /archives/
+        weight: 60
 
 
 params:
@@ -50,6 +48,8 @@ params:
   # Post paramaters
   ShowShareButtons: false
   ShowReadingTime: true
+  ShowBreadCrumbs: false
+  ShowPostNavLinks: true
   comments: true
 
   profileMode:

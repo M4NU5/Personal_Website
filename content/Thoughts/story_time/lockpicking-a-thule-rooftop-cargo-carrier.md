@@ -1,25 +1,20 @@
 ---
+draft: false
+
 title: 'Lockpicking a Thule Rooftop Cargo Carrier'
 date: '2023-03-30T07:59:41+00:00'
-status: publish
-permalink: /2023/03/30/lockpicking-a-thule-rooftop-cargo-carrier
 author: William
-excerpt: ''
-type: post
-id: 31
-thumbnail: ../../../../uploads/2023/03/aaron-doucett-Z7pk6E8lZAU-unsplash-1-e1680163761887.jpg
+
 category:
-    - 'Story Time'
+    - Story Time
+
 tag:
     - Lockpicking
     - Security
-post_format: []
-site-sidebar-layout:
-    - default
-site-content-layout:
-    - default
-theme-transparent-header-meta:
-    - default
+
+cover:
+    image: Thoughts/story_time/aaron-doucett-Z7pk6E8lZAU-unsplash-1-e1680163761887-1024x422.jpg
+
 ---
 My uncle forgot his keys…Ok when you have just left home. Not so ok when you at 5 hours from it!
 
