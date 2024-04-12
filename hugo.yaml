@@ -78,8 +78,8 @@ params:
 
 # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-icons/
   socialIcons:
-    - name: buymeacoffee
-      url: example.com
+    # - name: buymeacoffee
+    #   url: example.com
     - name: github
       url: https://github.com/M4NU5
     - name: linkedin
