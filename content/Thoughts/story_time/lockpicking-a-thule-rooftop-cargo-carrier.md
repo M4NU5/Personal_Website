@@ -13,7 +13,8 @@ tag:
     - Security
 
 cover:
-    image: Thoughts/story_time/aaron-doucett-Z7pk6E8lZAU-unsplash-1-e1680163761887-1024x422.jpg
+    image: thoughts/story_time/thule-roof-rack.jpg
+    alt: Epic Lockpicking Image
 
 ---
 My uncle forgot his keys…Ok when you have just left home. Not so ok when you at 5 hours from it!

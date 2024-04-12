@@ -1,37 +1,22 @@
 ---
+draft: false
+
 title: 'Why you should run a half marathon'
 date: '2023-04-25T17:01:57+00:00'
-status: publish
-permalink: /2023/04/25/why-you-should-run-a-half-marathon
 author: William
-excerpt: ''
-type: post
-id: 80
+
 category:
-    - 'Story Time'
+    - Story Time
 tag:
     - Challenges
-post_format: []
-site-sidebar-layout:
-    - default
-site-content-layout:
-    - default
-theme-transparent-header-meta:
-    - default
-_yoast_wpseo_primary_category:
-    - ''
-_yoast_wpseo_metadesc:
-    - 'Because running ~21km sounds tough but in truth, IT''S FUCKING EASY. I have walked that in a day, so running it will be a breeze right?!'
-_yoast_wpseo_content_score:
-    - '90'
 ---
 Because running ~21km sounds tough but in truth, IT’S FUCKING EASY. I have walked that in a day, so running it will be a breeze right?!
 
-<iframe allowfullscreen="allowfullscreen" class="giphy-embed" frameborder="0" height="270" src="https://giphy.com/embed/26tPrj21W9DYMB2dW" width="480"></iframe>
+![RunnigRocky.gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGhrbTJvYm1raHJlOWVwY2d2NHVlZ3Fua3V6YjJ5ODkyZzFxMWk3YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tPrj21W9DYMB2dW/giphy.gif#center)
 
 The difficulty doesn’t come from setting your goal. The difficulty comes with following through on them!
 
-Let me rewind a bit. How did I, an avid NON-RUNNER get roped into this? It all started one early morning, I was brewing my morning coffee at the office machine and my colleague Julia asked me if I wanted to sign up for the London half marathon as she had. Without too much thought, I blurted “Ye sure sounds like a great idea” and before the day was up I was registered… No going back now.
+Let me rewind a bit. How did I, an avid NON-RUNNER get roped into this? It all started one early morning, I was brewing my morning coffee at the office machine and my colleague Julia asked me if I wanted to sign up for the London half marathon as she had. Without too much thought, I blurted “Ye sure sounds like a great idea” and before the day was up I was registered… No going back now.w
 
 I started training and over the next 2 months slowly increased my runs from a manically far 3km to 13km. I talked to some friends and did some research, finding [pages like this](https://www.halhigdon.com/training-programs/half-marathon-training/novice-1-half-marathon/), and found that you don’t need to run the full half marathon prior to race day. But you want to run at least over half of it in training so I aimed for 2/3 of the distance as my max which is only ~14km. EASY GAME
 
@@ -104,6 +89,6 @@ The best way to grow as a person is through adversity. So why not challenge your
 
 ### JUST DO IT
 
-<iframe align="center" allowfullscreen="allowfullscreen" class="giphy-embed" frameborder="0" height="480" src="https://giphy.com/embed/104ueR8J1OPM2s" width="480"><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span></iframe>
+![JustDoIt.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTl1bjF0aWU5d2UxZnoxdzY3MHo4Nm45aGszaW94dWhzOWFuZDF6MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/104ueR8J1OPM2s/giphy.gif#center)
 
-I don’t know why but if you want to get notified of any of my degenerate ramblings I would encourage you to sign up for my newsletter 😀
+And if you have made it this far, I appreciate you. Now go touch some grass 😀
