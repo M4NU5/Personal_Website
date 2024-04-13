@@ -30,10 +30,15 @@ menu:
         weight: 40
 
       # Search
-      - identifier: Search
-        name: Search
-        url: /search/
+      # - identifier: Search
+      #   name: Search
+      #   url: /search/
+      #   weight: 50
+      - identifier: Learned
+        name: Learned
+        url: learned
         weight: 50
+
       # Archives
       - identifier: Archives
         name: Archives
@@ -90,3 +95,7 @@ params:
       url: https://www.instagram.com/williamsmale_/
 
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
