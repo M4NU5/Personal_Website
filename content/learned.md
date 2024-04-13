@@ -29,7 +29,10 @@ cover:
 
 <ul id="program_list">
     <li id="program_item">
-                   
+    <p>This page is generated from a custom script I wrote. The script scrapes my immersive labs achivements page and rebuilds it for my personal website. Will post the script soon!</p>
+    </li>
+    <li id="program_item">
+
  {{< badge url="https://il-production-eu-west-1-assets.s3.eu-west-1.amazonaws.com/uploads/asset/attachment/509a6a4676bf5c1760d326af92f65286/Badge.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2DW7IDEPDDVKIT3T%2F20240413%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T154756Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=351230f0a1ab2656efca24dbbeb8d66ee4be9a040c6853da27b761847409e328" link="https://api.immersivelabs.online/share/achievements/b1a8eb522ebd12336a57ce3db0f8004e" alt="Threat Hunter � Beginner" height="240" >}} 
  {{< badge url="https://il-production-eu-west-1-assets.s3.eu-west-1.amazonaws.com/uploads/asset/attachment/8ffb2d4b4299d1aad7ab12a490e898f6/Badge.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2DW7IDEPDDVKIT3T%2F20240413%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T154802Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f19d170eab081a098d4894576f44312a79204212da0b3b696f464ecfc2383910" link="https://api.immersivelabs.online/share/achievements/dc26ac10927ee3526afb5beca25c5894" alt="Management, Risk, and Compliance" height="240" >}} 
  {{< badge url="https://il-production-eu-west-1-assets.s3.eu-west-1.amazonaws.com/uploads/asset/attachment/7bbb3b060dda2b40edc43a6e599f0ad8/Badge.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2DW7IDEPDDVKIT3T%2F20240413%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T154808Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=23b48fdef16063835f45ded4243a5d5d1547d6e577028e7c76dc293df96dd56e" link="https://api.immersivelabs.online/share/achievements/ae731907f40b20fb8314dd49f4742351" alt="Cloud Engineer � Practical" height="240" >}} 
