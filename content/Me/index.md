@@ -31,10 +31,7 @@ cover:
     # caption: "Perspective" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: false # only hide on current single page
-# editPost:
-#     URL: "https://github.com/<path_to_repo>/content"
-#     Text: "Suggest Changes" # edit text
-#     appendFilePath: true # to append file path to Edit link
+
 ---
 
 ```python
@@ -46,3 +43,7 @@ class Me():
         self.interests  = ["Coding", "Hacking", "Photography", "Philosophy", "Diving"]
         self.location   = "London, United Kingdom"
 ```
+
+
+
+

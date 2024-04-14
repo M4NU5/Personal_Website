@@ -9,6 +9,7 @@ cover:
     image: immersive_labs_logo.webp
     alt: "EpicImmersiveLabs.webp"
 
+ShowReadingTime: false
 
 ---
 <style>
