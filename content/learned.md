@@ -3,7 +3,6 @@ draft: false
 
 title: ''
 date: '2024-04-2813T00:00:24+00:00'
-author: William
 
 cover:
     image: immersive_labs_logo.webp
