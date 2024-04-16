@@ -83,8 +83,6 @@ params:
 
 # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-icons/
   socialIcons:
-    # - name: buymeacoffee
-    #   url: example.com
     - name: github
       url: https://github.com/M4NU5
     - name: linkedin
@@ -93,6 +91,8 @@ params:
       url: https://twitter.com/WilliamSmale_ 
     - name: instagram 
       url: https://www.instagram.com/williamsmale_/
+    - name: buymeacoffee
+      url: https://www.buymeacoffee.com/williamsmale
 
 
 markup:
