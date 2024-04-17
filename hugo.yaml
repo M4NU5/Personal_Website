@@ -18,10 +18,10 @@ menu:
       # Work
 
       # Musings
-      - identifier: Life
-        name: Life
-        url: life
-        weight: 30
+      # - identifier: Life
+      #   name: Life
+      #   url: life
+      #   weight: 30
 
       # Blog
       - identifier: Thoughts
@@ -68,8 +68,8 @@ params:
     buttons:
         - name: Me
           url: me
-        - name: Life
-          url: life
+        # - name: Life
+        #   url: life
         - name: Thoughts
           url: thoughts
         # - name: Work
