@@ -44,7 +44,7 @@ I want to have the image of the badge and when clicked the user will be taken to
 
 Digging into what the achievements page lets look at the components mentioned. `Title` is pretty straight forward. looks like it seems that the image is hosted on some aws instance 
 
-There is some weird variation of how the share_url is constructed. I have been a hethen and created some nested try, except clauses that will try all variations that I have seen.
+There is some weird variation of how immersive labs constructs their share_url so i chose to be a heathen and made some nested try except statements... I know I know burn me at the stake, I could loop through the different url permutations until I get a 200 response. But I am writing this as a quick and dirty script not a production grade web scraper. but methods  I have been a hethen and created some nested try, except clauses that will try all variations that I have seen.
 
 
 
@@ -58,4 +58,5 @@ Fantastic we have all the achievement pages extracted and we are ready to genera
 
 Now we can call this shortcode in our markdown file because hugo go IS AWESOME and we get this output
 [outputs this webpage for my site](https://williamsmale.com/learned)
+
 
