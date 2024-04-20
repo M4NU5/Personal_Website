@@ -18,11 +18,6 @@ cover:
 
 You ever look at your achievements page on X Y or Z website and think "I would love to show this whole page and not just piece meal my linkedin account resulting in just unprofessional noise on my public profile"... No? Maybe it's just me... Anyway Ima build my own achievements page, with blackjack and hookers, using a web scrapping bot that extracts all the essential details and outputs this [webpage for my site](https://williamsmale.com/learned). Heres how I did it.
 
-
-Ingest Webpage -> Scrape out each badge -> Fetch shareable badge page for each achievement [Title, Share_url, image_url] -> Generate markdown file -> copy into hugo project
-
-
-
 ## Making the soup
 Lets get started with importing the achievements webpage into our python script. Now this achievements page is locked behind a login EWWWW. Now I could automate this login process but Ima work smart and do this part of the process manually. This isn't much of a problem as this page itself doesn't change. So I'll only need to fetch the achievements page when I'm wanting to apply an update to my website.
 
