@@ -4,13 +4,13 @@ title: Home
 theme: PaperMod
 paginate: 15 # articles per page
 
-permalinks:
-    post: "/:title/"
+# permalinks:
+#     post: "thoughts/:section/:title"
 
 menu:
   main:
       # About
-      - identifier: Me
+      - identifier: me
         name: Me 
         url: me
         weight: 10
@@ -24,7 +24,7 @@ menu:
       #   weight: 30
 
       # Blog
-      - identifier: Thoughts
+      - identifier: thoughts
         name: Thoughts
         url: thoughts
         weight: 40
@@ -34,13 +34,13 @@ menu:
       #   name: Search
       #   url: /search/
       #   weight: 50
-      - identifier: Learned
+      - identifier: learned
         name: Learned
         url: learned
         weight: 50
 
       # Archives
-      - identifier: Archives
+      - identifier: archives
         name: Archives
         url: /archives/
         weight: 60                              
@@ -56,6 +56,7 @@ params:
   ShowBreadCrumbs: false
   ShowPostNavLinks: true
   comments: true
+  relativeURLs: true
 
   profileMode:
     enabled: true

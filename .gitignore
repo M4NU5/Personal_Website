@@ -10,3 +10,4 @@ raw/
 csv/
 prompts/
 .env/
+**.obsidian

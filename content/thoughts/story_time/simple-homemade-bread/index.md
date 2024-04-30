@@ -9,8 +9,8 @@ category:
     - Recipes
 
 cover:
-    image: thoughts/story_time/simple-homemade-bread.jpg
-    alt: Simple Homemade Bread Pic
+    image: simple-homemade-bread.jpg
+    alt: "Simple_Homemade_Bread_Pic.png"
 ---
 A family recipe that was passed down through the generations. Thank you for this one granny ^^  
 Enjoy, this recipe is super flexible. In my family this recipe is known as the kitchen sink bread , go wild!
