@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: False
 title: "Hack the Box #1 - Lame without Metasploit"
 date: 2023-11-24T17:27:24+00:00
 author: William
