@@ -1,18 +1,15 @@
 ---
 draft: false
-
-title: 'Hack the Box #1 - Analytics without Metasploit'
-date: '2024-03-06T17:27:24+00:00'
+title: "Hack the Box #2 - Analytics without Metasploit"
+date: 2024-03-06T17:27:24+00:00
 author: William
-
 category:
-    - Tech
-
-tag:
-    - Hacking
+  - Tech
+tags:
+  - Hacking
 cover:
-    image: hack_the_box_1_analytics.png
-    alt: 'hack_the_box_1_analytics.png'
+  image: hack_the_box_2_analytics.png
+  alt: hack_the_box_2_analytics.png
 ---
 This is my first Hack the Box machine [pwned](https://www.hackthebox.com/achievement/machine/1695260/569) and it’s called Analytics. Here is a mock write-up of the lab because as we all know. It’s great being able to pwn things but if we can’t communicate the remediations to what we have done then there is no benefit past that juicy dopamine hit when you get root 😀
 
