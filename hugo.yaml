@@ -4,6 +4,8 @@ title: Home
 theme: PaperMod
 paginate: 15 # articles per page
 
+googleAnalytics: G-NM1GF3ZKR0
+
 # permalinks:
 #     post: "thoughts/:section/:title"
 
