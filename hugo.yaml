@@ -4,6 +4,7 @@ title: Home
 theme: PaperMod
 paginate: 15 # articles per page
 
+googleAnalytics: "G-NM1GF3ZKR0"
 
 
 # permalinks:
@@ -52,7 +53,7 @@ params:
   defaultTheme: dark # defaultTheme: light or dark
   disableThemeToggle: true
   
-  googleAnalytics: "G-NM1GF3ZKR0"
+
 
   # Post paramaters
   ShowShareButtons: false
