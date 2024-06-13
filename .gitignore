@@ -11,3 +11,4 @@ csv/
 prompts/
 .env/
 **.obsidian
+content\thoughts\templates
