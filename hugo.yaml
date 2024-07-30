@@ -18,19 +18,19 @@ menu:
         url: me
         weight: 10
 
-      # Work
-
-      # Musings
-      # - identifier: Life
-      #   name: Life
-      #   url: life
-      #   weight: 30
-
       # Blog
       - identifier: thoughts
         name: Thoughts
         url: thoughts
-        weight: 40
+        weight: 20
+
+      # Musings
+      # - identifier: Moments
+      #   name: Moments
+      #   url: https://moments.williamsmale.com/
+      #   weight: 30
+
+
 
       # Search
       # - identifier: Search
@@ -74,10 +74,10 @@ params:
     buttons:
         - name: Me
           url: me
-        # - name: Life
-        #   url: life
         - name: Thoughts
           url: thoughts
+        - name: Moments
+          url: https://moments.williamsmale.com/
         # - name: Work
         #   url: /Resume_William_Smale.pdf
           
