@@ -40,7 +40,7 @@ class Me():
         self.name       = "William Smale"
         self.age        = 29
         self.location   = "London, UK"
-        self.profession = "Security Engineer"
+        self.profession = "Product Security Engineer"
         self.interests  = ["Coding", "Hacking", "Photography", "Philosophy", "Diving"]
 ```
 
