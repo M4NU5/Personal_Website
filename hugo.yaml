@@ -25,10 +25,10 @@ menu:
         weight: 20
 
       # Musings
-      # - identifier: Moments
-      #   name: Moments
-      #   url: https://moments.williamsmale.com/
-      #   weight: 30
+      - identifier: Moments
+        name: Moments
+        url: https://moments.williamsmale.com/
+        weight: 30
 
 
 
@@ -43,10 +43,10 @@ menu:
         weight: 50
 
       # Archives
-      - identifier: archives
-        name: Archives
-        url: /archives/
-        weight: 60                              
+      # - identifier: archives
+      #   name: Archives
+      #   url: /archives/
+      #   weight: 60                              
 
 
 params:
@@ -72,8 +72,8 @@ params:
     imageWidth: 150
     imageHeight: 150
     buttons:
-        - name: Me
-          url: me
+        # - name: Me
+        #   url: me
         - name: Thoughts
           url: thoughts
         - name: Moments
@@ -97,8 +97,8 @@ params:
       url: https://twitter.com/WilliamSmale_ 
     - name: instagram 
       url: https://www.instagram.com/williamsmale_/
-    - name: buymeacoffee
-      url: https://www.buymeacoffee.com/williamsmale
+    # - name: buymeacoffee
+    #   url: https://www.buymeacoffee.com/williamsmale
 
 
 markup:
