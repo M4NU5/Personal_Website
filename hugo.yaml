@@ -53,8 +53,6 @@ params:
   defaultTheme: dark # defaultTheme: light or dark
   disableThemeToggle: true
   
-
-
   # Post paramaters
   ShowShareButtons: false
   ShowReadingTime: true
@@ -67,6 +65,8 @@ params:
     enabled: true
     title: William Smale
     subtitle: "Collaboration | Innovation | Perspective"
+    description: "William Smale is an experienced Product Security Engineer with over half a decade of experience. Skilled in Python, Bash, threat analysis, and secure CI/CD pipeline deployment." 
+
     imageUrl: "doge.png"
     imageTitle: "doge.png"
     imageWidth: 150
