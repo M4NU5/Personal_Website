@@ -29,6 +29,9 @@ So you want to augment your discord server with the power of AI
 https://github.com/jakobdylanc/discord-llm-chatbot 
 
 
+Install docker
+https://docs.docker.com/engine/install/debian/#install-using-the-repository
+
 ## Set up the LLM 
 
 Install Docker 

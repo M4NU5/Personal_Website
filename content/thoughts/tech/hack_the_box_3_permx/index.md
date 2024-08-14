@@ -7,11 +7,14 @@ category:
   - Tech
 tags:
   - Hacking
+  - Security
 cover:
   image: hack_the_box_3_permx.png
   alt: hack_the_box_3_permx.png
 ---
 I've been messing with retired boxes on Hack the box and thought i would finally try my hand on one of the active ones!
+
+## Enumeration
 
 So as per lets start with an nmap scan.
 ```bash
@@ -75,6 +78,8 @@ Lets add this bad boy to our hosts file and lets see what we got… Looks like w
 
 +1 to email **admin@permx.htb** love you Davis Miller
 
+## Exploitation 
+
 In digging through the source to determine what version of Chamilo we are dealing with I could only determine **Chamilo 1** thinking it wouldn't get me to far without a specific version but google is a bountiful place with a simple **Chamilo 1 exploit** search we find a PoC put together by m3m0o [m3m0o/chamilo-lms-unauthenticated-rce](https://github.com/m3m0o/chamilo-lms-unauthenticated-big-upload-rce-poc) Thanks mate love you.
 
 Downloading this and reviewing the exploit it can either check for the vulnerability, drop a webshell or a reverse shell using the exploit. Well I'm feeling vrevshelly today :D
@@ -109,6 +114,8 @@ mtz@permx:~$ cat user.txt
 ```
 
 I’m in and we got the flag… Now to escalate to root!
+
+## Privilege Escalation 
 
 Lets start by enumerating what processes can be run as superuser.
 ```bash

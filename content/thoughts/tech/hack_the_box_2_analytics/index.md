@@ -7,20 +7,22 @@ category:
   - Tech
 tags:
   - Hacking
+  - Security
 cover:
   image: hack_the_box_2_analytics.png
   alt: hack_the_box_2_analytics.png
 ---
 This is my first Hack the Box machine [pwned](https://www.hackthebox.com/achievement/machine/1695260/569) and it’s called Analytics. Here is a mock write-up of the lab because as we all know. It’s great being able to pwn things but if we can’t communicate the remediations to what we have done then there is no benefit past that juicy dopamine hit when you get root 😀
 
-#### Executive summary
+## Executive summary
 
 The attacker achieved an initial foothold by abusing a pre-authentication remote code execution exploit to achieve a reverse shell. User credentials we then found in the environment variables and used to establish a user shell. This can be prevented by upgrading Metabase to the latest version and removing the environment variables with user account details if possible as a secondary objective.
 
 Privilege was then escalated by using 2 kernel exploits from 2023 chained together. These can be remedied by upgrading our kernel version.  
 The general recommendation is to update the software mentioned to later versions.
 
-#### Technical Findings
+## Technical Findings
+### Enumeration
 
 Starting as per with a good old Nmap
 
@@ -41,6 +43,8 @@ It allows for pre-auth remote code execution, this is exactly what we want. For 
 Hitting this endpoint gets us a wonderful .json properties file. And within it we find the value of `setup-token` required for the execution of the exploit
 
 ![HackerImage](https://i.imgur.com/xVUvF7H.png?resize=1048%2C669&ssl=1#center)
+
+### Exploitation
 
 Using this wonderful script combined with the token we can initialize a reverse shell using the following command, oh and also don’t forget the listener on the other side:
 
@@ -65,6 +69,8 @@ And there is the puppy. META\_USER and META\_PASS. Now could these be used to lo
 And it works! With our lovely user flag right there.
 
 ![HackerImage](https://i.imgur.com/woWFcy3.png?resize=711%2C38&ssl=1#center)
+
+### Privilege Escalation
 
 Now to get root. I came back to this bad boy while working in a coffee shop and used the pwnbox provided by Hack the Box as my attack box. Let’s see what we can do.
 

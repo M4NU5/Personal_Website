@@ -1,6 +1,6 @@
 baseURL: https://williamsmale.com/
 languageCode: en-us
-title: Home
+title: William's Blog
 theme: PaperMod
 paginate: 15 # articles per page
 
@@ -51,9 +51,21 @@ menu:
 
 params:
   defaultTheme: dark # defaultTheme: light or dark
-  disableThemeToggle: true
-  
+  disableThemeToggle: false
+  label:
+    text: Home
+  keywords:
+    - William Smale
+    - William
+    - Security
+    - Hacking
+    - Penetration Testing
+  description: William Smale a Product Security Engineer with over half a decade of experience. Skilled in Python, Bash, SAST, DAST, Penetration Testing, threat analysis, and secure CI/CD pipeline deployment.
+
+
   # Post paramaters
+  ShowToc: true
+  TocOpen: true
   ShowShareButtons: false
   ShowReadingTime: true
   ShowBreadCrumbs: false
@@ -64,9 +76,8 @@ params:
   profileMode:
     enabled: true
     title: William Smale
-    subtitle: "Collaboration | Innovation | Perspective"
-    description: "William Smale is an experienced Product Security Engineer with over half a decade of experience. Skilled in Python, Bash, threat analysis, and secure CI/CD pipeline deployment." 
-
+   # subtitle: "Collaboration | Innovation | Perspective"
+    
     imageUrl: "doge.png"
     imageTitle: "doge.png"
     imageWidth: 150
