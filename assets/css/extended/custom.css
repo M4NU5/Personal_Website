@@ -24,7 +24,7 @@ svg:hover {
 }
 
 .social-icons a:nth-child(3) svg:hover {
-    color: rgb(0, 1, 32) !important;
+    color: #000120 !important;
 }
 
 .social-icons a:nth-child(4) svg:hover {
