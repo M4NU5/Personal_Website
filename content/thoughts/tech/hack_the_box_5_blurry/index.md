@@ -17,6 +17,7 @@ I woke up this morning breathed in that sweet morning air. I could feel it, to d
 
 ![ChewingStraw](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtrYXIyajJ5NjFtNzRzc25mdmQzbTFsNG9xamtqbHJpZXZudXhydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lqqB7E9CdSG76/200.gif#center)
 
+---
 ## Enumeration
 What can nmap tell us about this target
 
@@ -67,6 +68,7 @@ So we have `app` , `files` and `chat` as subdomains. Adding these to the hosts f
 
 I went ahead and dug around with both gobuster and manually exploring. When going to `app.blurry.htb` we get taken to an webapp and are prompted to create an account. Which I do, called `Deez` and poke around.
 
+---
 ## Exploitation
 In the investigation we find the `app` subdomain is running an app called **clear.ml** and with some trusty googling we find this vuln [https://github.com/xffsec/CVE-2024-24590-ClearML-RCE-Exploit](https://github.com/xffsec/CVE-2024-24590-ClearML-RCE-Exploit) to execute this script first we need to create credentials on our clear.ml account. 
 ![keys](https://i.imgur.com/457thdA.png#center)
@@ -147,6 +149,7 @@ _________________________________________
 jippity@blurry:~$ 
 ```
 
+---
 ## Privilege Escalation
 
 With persistence achieved it is time to escalate to root. Transferring over linpeas using our newly acquired private key we can get a broadview of what vectors to escalation we have available to us. 

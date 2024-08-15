@@ -21,6 +21,7 @@ The attacker achieved an initial foothold by abusing a pre-authentication remote
 Privilege was then escalated by using 2 kernel exploits from 2023 chained together. These can be remedied by upgrading our kernel version.  
 The general recommendation is to update the software mentioned to later versions.
 
+---
 ## Technical Findings
 ### Enumeration
 
@@ -44,6 +45,7 @@ Hitting this endpoint gets us a wonderful .json properties file. And within it w
 
 ![HackerImage](https://i.imgur.com/xVUvF7H.png?resize=1048%2C669&ssl=1#center)
 
+---
 ### Exploitation
 
 Using this wonderful script combined with the token we can initialize a reverse shell using the following command, oh and also don’t forget the listener on the other side:
@@ -70,6 +72,7 @@ And it works! With our lovely user flag right there.
 
 ![HackerImage](https://i.imgur.com/woWFcy3.png?resize=711%2C38&ssl=1#center)
 
+---
 ### Privilege Escalation
 
 Now to get root. I came back to this bad boy while working in a coffee shop and used the pwnbox provided by Hack the Box as my attack box. Let’s see what we can do.

@@ -14,6 +14,7 @@ cover:
 ---
 This evening I felt like cutting my teeth a little bit more. So lets spin up this box and give it a poke.
 
+---
 ## Enumeration 
 
 Kicking of this baby with an nmap
@@ -43,6 +44,7 @@ This had me stumped for longer then I would care to admit… until I discovered 
 
 Now we are cooking, with a sus login portal. Looking into the known exploits for this software, we find this git repo [CVE-2023-30253](https://github.com/nikn0laty/Exploit-for-Dolibarr-17.0.0-CVE-2023-30253) but this requires authentication… Default creds for this tool are **admin/admin** but that wont work right… right?!
 
+---
 ### Exploitation 
 
 Well the creds work, though the permissions seem to be removed, but no matter.
@@ -74,6 +76,7 @@ larissa@boardlight:~$ cat user.txt
 
 oh baby!
 
+---
 ### Privilege Escalation
 
 Now to start the enumeration of the box. Lets push **linpeas** onto this badboy and run that. In do so Linpeas finds some interesting files with permissions

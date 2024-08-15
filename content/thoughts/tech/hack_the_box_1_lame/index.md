@@ -43,6 +43,7 @@ Performing a deeper inspection of the open SMB ports we are able to determine th
 
 We find this [GitHub](https://github.com/amriunix/CVE-2007-2447) gem to do all the heavy lifting for us. Reviewing the code it is a perfect python reproduction of the metasploit exploit! Love you amriunix <3
 
+---
 ## Exploitation 
 
 Lets prep for running the python script
