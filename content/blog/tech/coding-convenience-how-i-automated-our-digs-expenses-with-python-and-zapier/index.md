@@ -1,19 +1,16 @@
 ---
 draft: false
-
-title: 'Coding Convenience: How I Automated Our Digs Expenses with Python and Zapier'
-date: '2024-01-09T12:09:31+00:00'
+title: "Coding Convenience: How I Automated Our Digs Expenses with Python and Zapier"
+date: 2024-01-09T12:09:31+00:00
 author: William
-
 category:
-    - Tech
-tag:
-    - Automation
-
+  - Tech
+tags:
+  - Automation
+  - Python
 cover:
-    image: auto_expensing_solution_architecture.png
-    alt: "EpicSolutionArchitecture.png"
-
+  image: auto_expensing_solution_architecture.png
+  alt: EpicSolutionArchitecture.png
 ---
 
 I’ve recently moved in with some mates. As with all things moving you need to setup debit orders and subscriptions with your respective utility providers and whatever monthly things you all want to add to the expenses docket.

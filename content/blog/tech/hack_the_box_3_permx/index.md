@@ -8,6 +8,7 @@ category:
 tags:
   - Hacking
   - Security
+  - Linux
 cover:
   image: hack_the_box_3_permx.png
   alt: hack_the_box_3_permx.png

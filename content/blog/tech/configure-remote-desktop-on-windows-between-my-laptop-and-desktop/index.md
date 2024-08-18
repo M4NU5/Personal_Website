@@ -1,19 +1,16 @@
 ---
 draft: false
-
-title: 'Configure remote desktop on Windows'
-date: '2023-12-12T08:51:09+00:00'
+title: Configure remote desktop on Windows
+date: 2023-12-12T08:51:09+00:00
 author: William
-
 category:
-    - Tech
-tag:
-    - Infrastructure
-
+  - Tech
+tags:
+  - Infrastructure
+  - Windows
 cover:
   image: desktop_plus_laptop.png
-  alt: "EpicDesktopPic.png"
-
+  alt: EpicDesktopPic.png
 ---
 So I’m visiting my family back in my home country which is currently experiencing daily power cuts, FUN! And as much as i love my chonky desktop there is not a flying fuck im lugging it all the way home. That is what we have laptops for! Saddly my desktop is x10 more powerful than my cafe warrior of a laptop so any cheeky hacking i might want to do will be severly limited...
 

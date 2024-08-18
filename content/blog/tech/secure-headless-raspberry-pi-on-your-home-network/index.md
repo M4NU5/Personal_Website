@@ -8,6 +8,7 @@ category:
 tags:
   - Infrastructure
   - Security
+  - Linux
 cover:
   image: configuring_ssh_pi.png
   alt: AwesomeRaspberryPi.png

@@ -1,16 +1,14 @@
 ---
 draft: false
-
-title: 'Proving Grounds #1 - Zino'
-date: '2023-11-28T00:55:24+00:00'
+title: "Proving Grounds #1 - Zino"
+date: 2023-11-28T00:55:24+00:00
 author: William
-
 category:
-    - Tech
-
-tag:
-    - Hacking
-
+  - Tech
+tags:
+  - Hacking
+  - Linux
+  - Security
 ---
 This was my first proving grounds lab of my OSCP. Took longer than I would have liked but I was able to pwn it in the end with a joyful fist pump and woop from my side. Any advice or comments on how I could improve this write-up would be appreciated.
 

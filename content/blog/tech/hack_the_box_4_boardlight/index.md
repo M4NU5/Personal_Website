@@ -8,6 +8,7 @@ category:
 tags:
   - Hacking
   - Security
+  - Linux
 cover:
   image: hack_the_box_4_boardlight.png
   alt: hack_the_box_4_boardlight.png

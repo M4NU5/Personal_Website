@@ -7,6 +7,7 @@ category:
   - Tech
 tags:
   - Infrastructure
+  - Linux
 cover:
   image: Docker_on_pi.png
   alt: Docker_on_pi.png
@@ -43,15 +44,18 @@ Docker is a containerization software that allows for you to run a contained pie
 - A Raspberry Pi
 - [Headless Raspbian installed](/blog/tech/secure-headless-raspberry-pi-on-your-home-network)
 
-Assuming our system isn't a fresh install run this just to be sure we don't run into any conflicts
+Assuming our system isn't a fresh install run this just to be sure we don't run into any conflicts.
+
 ```bash
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
-**What does this this command do??** It looks for all instances of docker installed on your system and removes it!
+
+**What does this this command do??** It looks for any occurrence of docker programs installed on your system and removes them!
 
 ## Adding docker repository & install
 
-Now that we are fresh and ready to go let start by adding the docker repository. Here we are going to add the Debian docker repo. Reason for this is we are going back to the root. Raspbian is built on the Debian kernel and has a headless version of docker that it can install unlike the Raspbian specific docker repo
+Now that we are fresh and ready to go let start by adding the docker repository. Here we are going to add the Debian docker repo. Reason for this is we are going back to the root. Raspbian is built on the Debian kernel and has a headless version of docker that it can install unlike the Raspbian specific docker repo.
+
 ```bash
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -71,7 +75,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-And just like that you are goochi to go, its a simple change i know but it makes all the difference
+And just like that you are goochi to go, its a simple change i know but it makes all the difference.
 
 ## Conclusion
 
