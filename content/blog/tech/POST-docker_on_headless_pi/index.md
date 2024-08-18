@@ -41,15 +41,15 @@ Docker is a containerization software that allows for you to run a contained pie
 ## Prerequisites 
 
 - A Raspberry Pi
-- [Headless Raspbian Installed](/blog/tech/secure-headless-raspberry-pi-on-your-home-network) Refer to other post
-
-## Step 1: Adding docker repository
+- [Headless Raspbian installed](/blog/tech/secure-headless-raspberry-pi-on-your-home-network)
 
 Assuming our system isn't a fresh install run this just to be sure we don't run into any conflicts
 ```bash
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
 **What does this this command do??** It looks for all instances of docker installed on your system and removes it!
+
+## Adding docker repository & install
 
 Now that we are fresh and ready to go let start by adding the docker repository. Here we are going to add the Debian docker repo. Reason for this is we are going back to the root. Raspbian is built on the Debian kernel and has a headless version of docker that it can install unlike the Raspbian specific docker repo
 ```bash
@@ -71,7 +71,6 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-
 And just like that you are goochi to go, its a simple change i know but it makes all the difference
 
 ## Conclusion
@@ -81,3 +80,5 @@ We resolved this issue by adding the Docker repo for the core kernel Debian that
 
 Now we can go ahead and deploy containerized apps on our headless raspberry with ease using docker compose. The sky is the limit! Well that and the resources available on the device.
 
+
+![SkyUnicorn.png](https://i.giphy.com/L2UdIWuCRbUL6.webp#center)
