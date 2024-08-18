@@ -1,23 +1,20 @@
 ---
 draft: false
-
-title: 'Set up a Raspberry Pi that only accepts SSH connections'
-date: '2024-03-23T12:04:48+00:00'
+title: Deploy secure headless Raspberry Pi on your home network
+date: 2024-03-23T12:04:48+00:00
 author: William
-
 category:
-    - Tech
-tag:
-    - Infrastructure
-    - Security
-
+  - Tech
+tags:
+  - Infrastructure
+  - Security
 cover:
-    image: configuring_ssh_pi.png
-    alt: 'AwesomeRaspberryPi.png'
+  image: configuring_ssh_pi.png
+  alt: AwesomeRaspberryPi.png
 ---
 ## Introduction
 
-A couple of years ago I bought a [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) and have used it in several ways from a Pi-Hole to a full bitcoin node using a number of prebuilt OS packages. Anyhow today I thought I would tear it all down and start building a system suite from scratch again starting with a generic base. Taking the knowledge i have gained from the past few years. Here’s how I set up my Raspberry Pi 4 with a headless OS for my future projects.
+A couple of years ago I bought a [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) and have used it in several ways from a Pi-Hole to a full bitcoin node using a number of prebuilt OS packages. Anyhow today I thought I would tear it all down and start building a system suite from scratch again starting with a generic base. Taking the knowledge I have gained from the past few years. Here’s how I set up my Raspberry Pi 4 with a headless OS for my future projects.
 
 ### What is a headless OS?
 
@@ -30,7 +27,9 @@ Headless OS refers to a operating system that does not have Graphical User Inter
 
 Now with the obvious prerequisite out the way let’s download the Raspberry pi imager and set up our SD card.
 
-Once you have the image installed, slot in your SD card and select what pi you’re burning for along with the OS of choice. We are going to select **Other OS > Raspbin Headless (64-bit)**
+Once you have the Pi installer open your machine, slot in your SD card and select what pi you’re wanting to burn to along with the OS of choice. We are going to select **Other OS > Raspberry Pi OS Light (64-bit)**
+
+![HeadlessOS.png](https://i.imgur.com/HGGFFL6.png#center)
 
 Configure the installation like this and yes I am blocking out details shame on you!
 
@@ -48,11 +47,13 @@ Now burn that OS you sexy beast!
 With the headless version of Raspbin we need to manually enable SSH functionality. Luckily to do this is pretty easy.
 We need to go into the **bootf** of our newly burned SD card and create a file called SSH. Make sure there are no extentions to the file. and dont worry we dont need to write anything into it.
 
-## Step 3: Configure Powershell
+![SSHFile.png](https://i.imgur.com/TFt4L9C.png#center)
+
+## Step 3: Configure PowerShell
 
 Now with the Raspberry Pi burned and SSH enabled, let’s configure our PowerShell so we can easily connect to the Raspberry Pi when we want to. I would step you through this but I used the following [blog post](https://blog.anurut.com/ssh-with-private-key-in-windows-terminal/) to achieve this and man has outlined the process well. Following step 3 of the guide we add the terminal command by doing the following:
 
-Open Powershell, click the drop-down and open settings:
+Open PowerShell, click the drop-down and open settings:
 
 ![TerminalConfig](https://i.imgur.com/GbiLiGm.png?ssl=1#center)
 

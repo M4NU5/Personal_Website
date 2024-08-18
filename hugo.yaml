@@ -24,7 +24,7 @@ menu:
       # Blog
       - identifier: thoughts
         name: Thoughts
-        url: thoughts
+        url: blog
         weight: 20
 
       # Musings
@@ -88,7 +88,7 @@ params:
         # - name: Me
         #   url: me
         - name: Thoughts
-          url: thoughts
+          url: blog
         - name: Moments
           url: https://moments.williamsmale.com/
         # - name: Work

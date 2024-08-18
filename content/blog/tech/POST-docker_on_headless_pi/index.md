@@ -1,17 +1,19 @@
 ---
-draft: true
-title: Installing Docker on headless Raspberry pi
-date: 2024-08-14
+draft: false
+title: Docker on headless Raspberry pi
+date: 2024-08-18
 author: William
-category: 
-tags: 
+category:
+  - Tech
+tags:
+  - Infrastructure
 cover:
-  image: test
-  alt: test
+  image: Docker_on_pi.png
+  alt: Docker_on_pi.png
 ---
 ## Introduction 
 
-This guide outlines the steps required to install docker on a headless Raspberry Pi. Reason im putting this together is the generally found [official documentation](https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository) doesnt work for the Headless variant of the Raspbin OS. 
+This guide outlines the steps required to install docker on a headless Raspberry Pi. Reason I'm putting this together is the generally found [official documentation](https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository) doesn't work for the Headless variant of the Raspbian OS. 
 
 By following its guidance you can find yourself running into the following errors
 ```bash
@@ -39,17 +41,17 @@ Docker is a containerization software that allows for you to run a contained pie
 ## Prerequisites 
 
 - A Raspberry Pi
-- [Headless Raspin Installed]() Refer to other post
+- [Headless Raspbian Installed](/blog/tech/secure-headless-raspberry-pi-on-your-home-network) Refer to other post
 
 ## Step 1: Adding docker repository
 
-Assuming our system isn't a fresh install run this just to be sure we don't run into any conflicts[
+Assuming our system isn't a fresh install run this just to be sure we don't run into any conflicts
 ```bash
-cool remcalcrtipsids
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
+**What does this this command do??** It looks for all instances of docker installed on your system and removes it!
 
-
-Now that we are fresh and ready to go let start by adding the docker repository. Here we are going to add the Debian docker repo. Reason for this is we are going back to the root. Rasbin is built on the Debian kernel and has a headless version of docker that it can install unlike the Rasbin specific docker repo
+Now that we are fresh and ready to go let start by adding the docker repository. Here we are going to add the Debian docker repo. Reason for this is we are going back to the root. Raspbian is built on the Debian kernel and has a headless version of docker that it can install unlike the Raspbian specific docker repo
 ```bash
 # Add Docker's official GPG key:
 sudo apt-get update
