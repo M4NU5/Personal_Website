@@ -6,9 +6,12 @@ paginate: 15 # articles per page
 
 googleAnalytics: "G-NM1GF3ZKR0"
 
+sitemap:
+  changeFreq: weekly
 
 # permalinks:
 #     post: "thoughts/:section/:title"
+
 
 menu:
   main:
@@ -119,6 +122,7 @@ params:
       url: https://www.instagram.com/williamsmale_/
     # - name: buymeacoffee
     #   url: https://www.buymeacoffee.com/williamsmale
+
 
 
 markup:
