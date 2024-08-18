@@ -15,14 +15,22 @@ cover:
     image: configuring_ssh_pi.png
     alt: 'AwesomeRaspberryPi.png'
 ---
+## Introduction
 
-A couple of years ago I bought a [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) and have used it in several ways. I set up a Pi-Hole for my home. It worked ok but not as well as I would have hoped, probably some miss misconfigurations on my behalf. Anyhow today I thought I would tear it all down and start building from scratch again. Setting it up better than I did in the past given the knowledge I have gained over the past few years. Here’s how I set up my Raspberry Pi 4.
+A couple of years ago I bought a [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) and have used it in several ways from a Pi-Hole to a full bitcoin node using a number of prebuilt OS packages. Anyhow today I thought I would tear it all down and start building a system suite from scratch again starting with a generic base. Taking the knowledge i have gained from the past few years. Here’s how I set up my Raspberry Pi 4 with a headless OS for my future projects.
 
-### Step 1: Burn that Pi
+### What is a headless OS?
 
-First things first, have a pi! Great now that we have gotten past that obvious piece next let’s download the Imager and set up our SD card.
+Headless OS refers to a operating system that does not have Graphical User Interface (GUI) functionality. Used for systems that you only want to interact with on the terminal with no intention of plugging in a monitor. This greatly reduces the size of the operating system while maintain all its core functionality.
 
-Once you have the image installed, slot in your SD card and select what pi you’re burning for along with the OS of choice.
+## Prerequisites
+- A Raspberry Pi
+
+## Step 1: Burn that Pi
+
+Now with the obvious prerequisite out the way let’s download the Raspberry pi imager and set up our SD card.
+
+Once you have the image installed, slot in your SD card and select what pi you’re burning for along with the OS of choice. We are going to select **Other OS > Raspbin Headless (64-bit)**
 
 Configure the installation like this and yes I am blocking out details shame on you!
 
@@ -32,11 +40,17 @@ Configure the installation like this and yes I am blocking out details shame on 
 You want to set the hostname your user and password. As well as configure your Wifi, If you want to access it that way.  
 The next step is to configure SSH. Generate a key if you don’t already have one and throw your public key in here.
 
+Before you burn uncheck auto eject, reason for this is step 2. 
 Now burn that OS you sexy beast!
 
-### Step 2: Configure Powershell
+## Step 2: Enable SSH
 
-While that is burning let’s configure our PowerShell so we can easily connect to the PI when we want to. I would step you through this but I used the following [blog post](https://blog.anurut.com/ssh-with-private-key-in-windows-terminal/) to achieve this and man has outlined the process well. Following step 3 of the guide we add the terminal command by doing the following:
+With the headless version of Raspbin we need to manually enable SSH functionality. Luckily to do this is pretty easy.
+We need to go into the **bootf** of our newly burned SD card and create a file called SSH. Make sure there are no extentions to the file. and dont worry we dont need to write anything into it.
+
+## Step 3: Configure Powershell
+
+Now with the Raspberry Pi burned and SSH enabled, let’s configure our PowerShell so we can easily connect to the Raspberry Pi when we want to. I would step you through this but I used the following [blog post](https://blog.anurut.com/ssh-with-private-key-in-windows-terminal/) to achieve this and man has outlined the process well. Following step 3 of the guide we add the terminal command by doing the following:
 
 Open Powershell, click the drop-down and open settings:
 
@@ -64,7 +78,7 @@ Become root with the casual `sudo -s` and now let’s lock down our config.
 
 Going into the SSH config with `vim /etc/ssh/sshd_config`
 
-You want to set `PasswordAuthentication no`. I also set `AllowedUsers` to just me 😀
+You want to ensure `PasswordAuthentication no`. I also set `AllowedUsers` to just me 😀
 
 Now restart the service `service ssh restart`
 

@@ -89,4 +89,38 @@ volumes:
 This file defines two services: `n8n` and `db`. The `n8n` service runs the n8n container, and the `db` service runs a PostgreSQL database.
 
 
+## Step 2: Start n8n
 
+Run the following command to start this little bad boy
+
+```bash
+docker compose up -d
+```
+
+
+Let's analyze the `docker-compose.yml` file:
+
+- The `n8n` service is based on the `n8nio/n8n` image. It exposes port `5678` and sets the environment variables for basic authentication and database configuration.
+- The `db` service is based on the `postgres:12` image. It creates a volume to persist the database data and sets the environment variables for the database user, password, and database name.
+- The `depends_on` directive ensures that the `db` service starts before the `n8n` service.
+- The `restart` directive ensures that the containers are restarted unless stopped.
+- The `volumes` directive creates a volume for the database data.
+
+## Step 3: Access n8n
+Open your web browser and go to `http://localhost:5678`. You will be prompted to create a new account. This will be your default account.
+
+INSERT COOL AUTOMATION FLOW 
+
+You can create any customized automation now!
+
+http://pi.local:5678/setup 
+
+ERROR
+
+	
+
+## Winning 
+
+And just like that we are in business! Now you have n8n running in a containerized environment using Docker Compose.
+
+You can deploy it in any environment that supports Docker, such as your local machine, a virtual machine, or a cloud provider.

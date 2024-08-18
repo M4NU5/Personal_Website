@@ -62,7 +62,6 @@ params:
     - Penetration Testing
   description: William Smale a Product Security Engineer with over half a decade of experience. Skilled in Python, Bash, SAST, DAST, Penetration Testing, threat analysis, and secure CI/CD pipeline deployment.
 
-
   # Post paramaters
   ShowToc: true
   TocOpen: true
@@ -91,12 +90,22 @@ params:
           url: https://moments.williamsmale.com/
         # - name: Work
         #   url: /Resume_William_Smale.pdf
-          
+
+  # RSS Feed params
+  ShowFullTextinRSS: true
+  author: 
+    name: "William Smale"  
+
   outputs:
     home:
-      - HTML
-      - RSS
+      - html
+      - rss
       - JSON # necessary for search  
+    page:
+      - html
+      - rss
+      - JSON
+    
 
 # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-icons/
   socialIcons:
