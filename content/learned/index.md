@@ -2,14 +2,17 @@
 ---
 draft: false
 
-title: ''
+title: 'Security Studies'
 date: '2024-04-30'
 
+author: 'William'
+
 cover:
-    image: immersive_labs_logo.webp
-    alt: "EpicImmersiveLabs.webp"
+    image: 
+    alt: 
 
 ShowReadingTime: false
+
 ---
 
 <style>
@@ -24,10 +27,14 @@ ShowReadingTime: false
         padding: 10px 0;
         border-bottom: 1px solid #666;
     }
+    h1 {
+        display: none
+    }
 </style>
 
+![EpicImmersiveLabs.webp](immersive_labs_logo.webp#center)
+# Immersive Labs
 This page is generated from a custom script I wrote. The script scrapes my immersive labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](https://williamsmale.com/thoughts/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
-
 
      
  <ul id="program_list"> 
