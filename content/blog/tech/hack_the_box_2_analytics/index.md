@@ -13,6 +13,7 @@ cover:
   image: hack_the_box_2_analytics.png
   alt: hack_the_box_2_analytics.png
 ---
+## Introduction
 This is my first Hack the Box machine [pwned](https://www.hackthebox.com/achievement/machine/1695260/569) and it’s called Analytics. Here is a mock write-up of the lab because as we all know. It’s great being able to pwn things but if we can’t communicate the remediations to what we have done then there is no benefit past that juicy dopamine hit when you get root 😀
 
 ## Executive summary

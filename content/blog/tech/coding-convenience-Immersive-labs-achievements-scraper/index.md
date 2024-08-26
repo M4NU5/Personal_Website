@@ -1,21 +1,18 @@
 ---
 draft: false
-
-title: 'Coding Convenience: Immersive labs achievements scraper'
-date: '2024-04-17T12:09:31+00:00'
+title: "Coding Convenience: Immersive labs achievements scraper"
+date: 2024-04-17T12:09:31+00:00
 author: William
-
 category:
-    - Tech
-tag:
-    - Automation
-
+  - Tech
+tags:
+  - Automation
 cover:
-    image: immersive_labs_achievements_scraper.png
-    alt: "EpicSolutionArchitecture.png"
-
+  image: immersive_labs_achievements_scraper.png
+  alt: EpicSolutionArchitecture.png
+description: Create a personalized achievements page for your website using a Python web-scraping bot to extract and display your accomplishments. This guide walks you through saving your achievements page, parsing it with Beautiful Soup, and generating a custom webpage using Hugo Go shortcodes. Learn how to fetch, process, and display your achievements effectively, and discover how to solve common issues like expired image URLs by downloading and locally hosting images. Perfect for showcasing your milestones in a professional, visually appealing way.
 ---
-
+## Introduction
 You ever look at your achievements page on X Y or Z website and think "I would love to show this whole page and not just piece meal my linkedin account resulting in just unprofessional noise on my public profile"... No? Maybe it's just me... Anyway Ima build my own achievements page, with blackjack and hookers, using a [web scrapping bot](https://github.com/M4NU5/Immersivelabs_Achievements_Scrapper) that extracts all the essential details and outputs this [webpage for my site](/learned). Heres how I did it.
 
 ## Making the soup

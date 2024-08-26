@@ -1,21 +1,18 @@
 ---
 draft: false
-
-title: 'Deploying PostgreSQL Database on Azure Using Terraform with Key Vault Integration'
-date: '2024-03-10T20:41:28+00:00'
+title: Deploying PostgreSQL Database on Azure Using Terraform with Key Vault Integration
+date: 2024-03-10T20:41:28+00:00
 author: William
-
 category:
-    - Tech
-tag:
-    - Automation
-    - Infrastructure
-    - IaC
-
+  - Tech
+tags:
+  - Automation
+  - Infrastructure
+  - IaC
 cover:
   image: terraform-azure.png
-  alt: "EpicTerraformArchitecture.png"
-
+  alt: EpicTerraformArchitecture.png
+description: Deploying a PostgreSQL database on Azure? Use Terraform to automate the setup in a private VNet, including infrastructure like resource groups, virtual networks, and key vaults for storing credentials. The guide walks through creating subnets, DNS zones, and deploying the database securely, without relying on the Azure GUI. The final setup links the database to your application, with credentials managed via the key vault. Check out the full project details and code on GitHub to streamline your deployment process.
 ---
 So you want to deploy a PostgreSQL database in a private vnet and link it to your custom application in Azure. You have developed this awesome app thrown it into a container image and now you need to build the infrastructure to host your beautiful code. You could click around the disgusting Azure GUI like a pleb or you can be cool and deploy your infrastructure using code. With Terraform being your poison of choice to achieve this don’t worry, you have come to the right place.
 

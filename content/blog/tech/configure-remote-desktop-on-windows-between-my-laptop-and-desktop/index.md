@@ -11,6 +11,7 @@ tags:
 cover:
   image: desktop_plus_laptop.png
   alt: EpicDesktopPic.png
+description: Learn how to set up Windows Remote Desktop Protocol (RDP) for seamless access to your powerful desktop from a laptop, even while traveling or dealing with power outages. This guide covers enabling RDP on Windows Pro, resolving common RDP issues like the black screen, and securing remote access with Tailscale VPN. Perfect for those needing a remote connection to their desktop without relying on third-party software, ensuring a smooth, reliable experience wherever you are. Simplify remote access and stay productive on the go.
 ---
 So I’m visiting my family back in my home country which is currently experiencing daily power cuts, FUN! And as much as i love my chonky desktop there is not a flying fuck im lugging it all the way home. That is what we have laptops for! Saddly my desktop is x10 more powerful than my cafe warrior of a laptop so any cheeky hacking i might want to do will be severly limited...
 

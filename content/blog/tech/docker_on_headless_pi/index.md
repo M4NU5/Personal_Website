@@ -8,9 +8,11 @@ category:
 tags:
   - Infrastructure
   - Linux
+  - Raspberry_Pi
 cover:
   image: Docker_on_pi.png
   alt: Docker_on_pi.png
+description: Learn how to install Docker on a headless Raspberry Pi with this step-by-step guide. Avoid common errors in official Docker documentation by following our tailored instructions for Raspbian OS. Discover the benefits of using a headless OS and understand Docker's role in containerization. This guide covers prerequisites, adding the correct Docker repository, and successfully installing Docker without a GUI. Perfect for Raspberry Pi users looking to deploy containerized apps on a minimal, efficient setup. Start your headless Docker journey now!
 ---
 ## Introduction 
 
@@ -69,17 +71,18 @@ echo \
 	"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
 	$(lsb_release -cs) stable" | \ 
 	sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
+# Check if any updates to repo data needed
 sudo apt-get update
 
+# INSTALL THE DOCKER
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-And just like that you are goochi to go, its a simple change i know but it makes all the difference.
+And just like that you are goochi to go, its a simple change I know but it makes all the difference.
 
 ## Conclusion
 
-To wrap things up the issue with the [docker docs](https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository) is that its focused on the Raspbian repo which seems to only acomidate the GUI version of docker for the operating system install weirdly. 
+To wrap things up the issue with the [docker docs](https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository) is that its focused on the Raspbian repo which seems to only accommodate the GUI version of docker for the operating system install weirdly. 
 We resolved this issue by adding the Docker repo for the core kernel Debian that Raspbian is built on. 
 
 Now we can go ahead and deploy containerized apps on our headless raspberry with ease using docker compose. The sky is the limit! Well that and the resources available on the device.

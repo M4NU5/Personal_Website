@@ -9,9 +9,11 @@ tags:
   - Infrastructure
   - Security
   - Linux
+  - Raspberry_Pi
 cover:
   image: configuring_ssh_pi.png
   alt: AwesomeRaspberryPi.png
+description: Setting up a Raspberry Pi 4 with a headless OS is a streamlined process that allows you to manage the device via terminal without a GUI. Start by burning a lightweight Raspberry Pi OS to your SD card, configuring SSH, and enabling it manually. Next, configure your PowerShell for easy SSH access. Once connected, lock down the Pi by restricting SSH access to your specific user. This setup ensures a secure, minimal environment, perfect for future projects. Explore more detailed steps and guidance in the full guide.
 ---
 ## Introduction
 

@@ -12,6 +12,7 @@ tags:
 cover:
   image: hack_the_box_1_lame.png
   alt: hack_the_box_1_lame.png
+description: The blog post discusses the process of exploiting a Hack the Box machine named "Lame". Starting with a port scan, the guide explores potential vulnerabilities in a target system. It details attempts to exploit FTP on port 21 using known vulnerabilities in vsftpd 2.3.4, though these attempts fail. Moving to SMB on ports 129 and 445, the guide successfully exploits a vulnerability (CVE-2007-2447) using a Python script. After preparing a netcat listener, the exploit yields a root shell, allowing access to system flags. The process concludes with a successful hack and a recommendation to take a break.
 ---
 
 
