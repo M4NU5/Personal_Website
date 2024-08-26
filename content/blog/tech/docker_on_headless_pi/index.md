@@ -1,7 +1,7 @@
 ---
 draft: false
 title: Docker on headless Raspberry pi
-date: 2024-08-18
+date: 2024-08-16
 author: William
 category:
   - Tech

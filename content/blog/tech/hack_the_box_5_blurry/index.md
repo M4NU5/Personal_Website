@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Hack the Box #5 - Blurry w/o Metasploit"
-date: 2024-08-14
+date: 2024-08-20
 author: William
 category:
   - Tech
