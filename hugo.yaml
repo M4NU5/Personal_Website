@@ -75,6 +75,8 @@ params:
   comments: true
   relativeURLs: true
 
+  hideDescriptions: true
+
   profileMode:
     enabled: true
     title: William Smale
