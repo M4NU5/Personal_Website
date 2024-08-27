@@ -18,7 +18,7 @@ This evening I felt like cutting my teeth a little bit more. So lets spin up thi
 ---
 ## Enumeration 
 
-Kicking of this baby with an nmap
+Kicking off this baby with an nmap
 ![https://i.imgur.com/EOD1dhH.png](https://i.imgur.com/EOD1dhH.png#center)
 
 In doing so we find port 22 and 80 are the only ones open. _I did a full port scan after to the avail of no extra dice_
