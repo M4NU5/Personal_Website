@@ -122,6 +122,8 @@ params:
       url: https://twitter.com/WilliamSmale_ 
     - name: instagram 
       url: https://www.instagram.com/williamsmale_/
+    - name: calender 
+      url: https://cal.com/williamscheduling 
     # - name: buymeacoffee
     #   url: https://www.buymeacoffee.com/williamsmale
 

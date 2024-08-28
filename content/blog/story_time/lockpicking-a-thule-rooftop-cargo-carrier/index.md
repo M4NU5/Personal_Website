@@ -18,7 +18,7 @@ cover:
 
 
 ---
-My uncle forgot his keys…Ok when you have just left home. Not so ok when you at 5 hours from it!
+So my uncle forgot his keys to his roof rack… Ok when you have just left home. Not so ok when you at 5 hours from it!
 
 He was traveling with his family to the Kruger National Park. His trip takes him passed Johannesburg where I live so they all stayed the night, catching up with family, leaving the last 4 hours of the trip for the next day. When they arrived he realised that he had forgotten the key to the roof mounted carrier probably 5 hours away at their home. Thing is all their overnight gear was stored in the roof top carrier. Toothbrushes, Underwear, Cables you know all overnight essentials!!!  
 I have never picked this type of lock before… Well no time like the present. I grab my picking set and get to work. The first attempt was partly successful but not completely unlocked successful… RESEARCH TIME!
