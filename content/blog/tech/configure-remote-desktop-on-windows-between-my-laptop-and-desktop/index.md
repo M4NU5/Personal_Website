@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Configure remote desktop on Windows
+title: Set Up Windows Remote Desktop (RDP) and Secure Access with VPN
 date: 2023-12-12T08:51:09+00:00
 author: William
 category:
