@@ -34,7 +34,7 @@ ShowReadingTime: false
 
 ![EpicImmersiveLabs.webp](immersive_labs_logo.webp#center)
 # Immersive Labs
-This page is generated from a custom script I wrote. The script scrapes my immersive labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](https://williamsmale.com/thoughts/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
+This page is generated from a custom script I wrote. The script scrapes my immersive labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](/blog/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
 
      
  <ul id="program_list"> 
