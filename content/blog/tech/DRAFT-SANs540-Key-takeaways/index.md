@@ -64,6 +64,11 @@ I hope this isnt news to you but reality is very different. which is why its adv
 
 
 
+# 5: You dont have to automate everything 
+
+paying for golden images vs making  your own
+
+
 
 
 # Conclusion 
