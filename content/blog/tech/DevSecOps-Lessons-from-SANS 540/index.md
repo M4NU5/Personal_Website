@@ -30,7 +30,9 @@ Gone are the days of cramming every command into a massive pipeline file that en
 2. **Enhanced Modularity:** By consolidating complex commands into a single-line script call, you create a plug-and-play structure. This makes it easier to swap out or update parts of your pipeline without having to worry about monstrous git merges. No more falling down the conflict resolution rabbit hole... as much.
 3. **Better Collaboration:** With a modular approach, multiple team members can work on different aspects of the pipeline simultaneously, without the headache of code merging conflicts.
 
-By keeping your pipelines simple and modular, you not only streamline your workflow but also make it more maintainable for everyone involved. It also enabled easier collaberation on the same project, minimizing conflicts.
+By keeping your pipelines simple and modular, you not only streamline your workflow but also make it more maintainable for everyone involved. It also enabled easier collaboration on the same project, minimizing conflicts.
+
+![Simple](https://i.giphy.com/NLuX3GCUdfltpCdFGW.webp#center)
 
 ## 2: Check your tool versions
 
@@ -52,6 +54,7 @@ Another example is managing feature toggles or environment-specific configuratio
 
 By leveraging a secrets store like HashiCorp Vault, you transform it from a mere safe for sensitive data into a powerful tool for managing variables and orchestrating complex pipeline operations.
 
+![secrets](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTkxbWVvcXdxbjh4NjF3Nmt0NTlkNHNwMGQzbnZndmV3NjQzbDI4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIP7vCPcUz3RNMgU/giphy.webp#center)
 
 ## 4: Scan at All Stages. Redundancy is Good!
 
@@ -62,6 +65,8 @@ The answer lies in adopting a Swiss cheese model of security—in other words, _
 If this isn't news to you, then you understand that reality is far more complex. This is why a defense-in-depth approach is crucial. Borrowing a page from military strategy, don't rely on a single control to protect your systems. Attackers are constantly finding ways to bypass security measures, whether by jumping through hoops or finding a way around obstacles. It's their job to think creatively and exploit any gaps in your defenses.
 
 By scanning at multiple stages—whether in the pipeline, in the image repository, or even in the production environment—you create layers of security that make it harder for critical vulnerabilities from slipping through that attackers can exploit. Redundancy ensures that if one layer fails, another is there to catch what was missed. Security isn't about finding a single, perfect solution; it's about building a resilient, layered defense that can adapt to evolving threats.
+
+![defense](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRhem1rdW10bXpwcWJrNjhhZXVldmhhZ3VodGw2MTlyYzA3Y2J0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/56wdZ4gYcwRvU7rJiY/giphy.webp#center)
 
 ## 5: Automate, But Don't Forget to Monitor
 
