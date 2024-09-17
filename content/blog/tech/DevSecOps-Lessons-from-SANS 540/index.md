@@ -1,7 +1,7 @@
 ---
-draft: true
+draft: false
 title: "5 DevSecOps Lessons from the SANS 540 Course: Building Secure and Efficient Pipelines"
-date: 2024-09-12
+date: 2024-09-17
 author: William
 category:
   - Tech
@@ -18,7 +18,9 @@ I recently completed the SANS 540 course in person, and what an intense and rewa
 
 As I'm knuckling down in preparation for my exam, I wanted to first highlight five key takeaways from the course that can be applied everywhere. Helping to augment your daily operations in pipelines, automation, and all things DevSecOps. 
 
-A nice little bonus at the end of the week I was able to acquire the challenge coin for the course. You can find a picture in my conclusion. So without further a due...
+A nice little bonus at the end of the week I was able to acquire the challenge coin for the course.
+
+![](https://i.imgur.com/nuD3pPo.png#center)
 
 ## 1: Keep your pipelines simple and modular
 
@@ -83,5 +85,7 @@ By combining automation with vigilant monitoring, you create a more reliable and
 At the end of the day, my understanding of DevSecOps has grown tremendously through the SANS 540 course. It was an eye-opener, providing new strategies and a deeper appreciation for building secure, efficient pipelines. From keeping pipelines simple and modular to leveraging secrets stores and implementing redundancy at every stage, these key takeaways have already started to reshape how I approach pipeline security.
 
 The highlight of the week was earning the coveted challenge coin for the course — a symbol of the hard work and dedication I put into mastering these concepts. Winning this coin was not just an achievement; it gave me a significant boost of confidence as I prepare for the exam. It serves as a reminder that with the right mindset and approach, even the most complex DevSecOps challenges can be tackled head-on.
+
+![Challange_Coin](https://i.imgur.com/nuD3pPo.png#center)
 
 DevSecOps is a continuously evolving field with no one-size-fits-all solution. It's about finding the right balance between automation, security, and monitoring while staying adaptable to emerging threats. By integrating these practices into your daily operations, you can strengthen your security posture and streamline your workflow, making DevSecOps an integral and seamless part of your development process.
