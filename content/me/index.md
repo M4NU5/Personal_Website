@@ -41,7 +41,13 @@ class Me():
         self.age        = 29
         self.location   = "London, UK"
         self.profession = "Product Security Engineer"
-        self.interests  = ["Coding", "Hacking", "Photography", "Philosophy", "Diving"]
+        self.interests  = ["Coding", "Hacking", "Photography", "Philosophy", "Diving"]+
+
+    def output_code(self, coffee):
+        while coffee >= 0:
+            "Write Code"
+            "Sip Coffee"
+            coffee -= 1
 ```
 
 
