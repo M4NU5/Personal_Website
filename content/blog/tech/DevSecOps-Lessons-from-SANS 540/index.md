@@ -7,6 +7,7 @@ category:
   - Tech
 tags:
   - Automation
+  - Security
 description: Discover five key DevSecOps lessons from the SANS 540 course that can enhance your pipeline security and efficiency. Learn how to simplify pipelines, leverage secrets stores, implement redundancy, and more for a robust DevSecOps strategy.
 cover:
   image: cyberpipeline.webp
@@ -18,9 +19,7 @@ I recently completed the SANS 540 course in person, and what an intense and rewa
 
 As I'm knuckling down in preparation for my exam, I wanted to first highlight five key takeaways from the course that can be applied everywhere. Helping to augment your daily operations in pipelines, automation, and all things DevSecOps. 
 
-A nice little bonus at the end of the week I was able to acquire the challenge coin for the course.
-
-![](https://i.imgur.com/nuD3pPo.png#center)
+A nice little bonus at the end of the week I was able to acquire the challenge coin for the course. Check it out in my conclusion and without further a due... 
 
 ## 1: Keep your pipelines simple and modular
 
