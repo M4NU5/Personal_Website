@@ -44,10 +44,10 @@ class Me():
         self.interests  = ["Coding", "Hacking", "Photography", "Philosophy", "Diving"]+
 
     def output_code(self, coffee):
-        if coffee >= 0:
-            return "Code"
-        else:
+        if not coffee:
             raise "NO COFFEE!!!"
+            
+        return "Code"
 ```
 
 
