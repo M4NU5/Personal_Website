@@ -46,7 +46,6 @@ class Me():
     def output_code(self, coffee):
         if not coffee:
             raise "NO COFFEE!!!"
-            
         return "Code"
 ```
 
