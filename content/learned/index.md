@@ -26,12 +26,13 @@ ShowReadingTime: false
     }
 </style>
 
-This page is generated from a custom script I wrote. The script scrapes my immersive labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](https://williamsmale.com/thoughts/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
+This page is generated from a custom script I wrote. The script scrapes my Immersive Labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](https://williamsmale.com/thoughts/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
 
 
      
  <ul id="program_list"> 
        <li id="program_item"> 
+ {{< badge url="./badge_images/Web_App_Pen_Tester_a_Beginner.webp" link="https://niq.immersivelabs.online/share/achievement/7d8f39e25cce73cf469e606e8a7b1e4b" alt="Web App Pen Tester – Beginner" height="240" >}} 
  {{< badge url="./badge_images/Threat_Hunter_a_Beginner.webp" link="https://niq.immersivelabs.online/share/achievement/b1a8eb522ebd12336a57ce3db0f8004e" alt="Threat Hunter – Beginner" height="240" >}} 
  {{< badge url="./badge_images/Management_Risk_and_Compliance.webp" link="https://niq.immersivelabs.online/share/achievement/dc26ac10927ee3526afb5beca25c5894" alt="Management, Risk, and Compliance" height="240" >}} 
  {{< badge url="./badge_images/Cloud_Engineer_a_Practical.webp" link="https://niq.immersivelabs.online/share/achievement/ae731907f40b20fb8314dd49f4742351" alt="Cloud Engineer – Practical" height="240" >}} 
@@ -66,6 +67,7 @@ This page is generated from a custom script I wrote. The script scrapes my immer
 
  ### Offensive Cyber 
 
+ {{< badge url="./badge_images/Intro_to_Web_App_Hacking.webp" link="https://niq.immersivelabs.online/share/achievement/efdc8a422c008863ab970112acc8a348" alt="Intro to Web App Hacking" height="155" >}} 
  {{< badge url="./badge_images/OSINT.webp" link="https://niq.immersivelabs.online/share/achievement/09a6753086deb93fa6c36ab72068023f" alt="OSINT" height="155" >}} 
  {{< badge url="./badge_images/Hack_Your_First_Web_Application.webp" link="https://niq.immersivelabs.online/share/achievement/1f42ac60345fbda95978401a528d641f" alt="Hack Your First Web Application" height="155" >}} 
  {{< badge url="./badge_images/Scanning.webp" link="https://niq.immersivelabs.online/share/achievement/643ec291f3273e789048b2147d106584" alt="Scanning" height="155" >}} 
