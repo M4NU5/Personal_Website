@@ -41,11 +41,12 @@ class Me():
         self.age        = 29
         self.location   = "London, UK"
         self.profession = "Product Security Engineer"
-        self.interests  = ["Coding", "Hacking", "Photography", "Philosophy", "Diving"]+
+        self.interests  = ["Coding", "Hacking", "Photography", "Philosophy", "Diving"]
 
     def output_code(self, coffee):
         if not coffee:
             raise "NO COFFEE!!!"
+            sys.exit(1)
         return "Code"
 ```
 
