@@ -24,12 +24,43 @@ svg:hover {
 }
 
 .social-icons a:nth-child(3) svg:hover {
-    color: #000120 !important;
+    color: #13171A !important;
 }
 
 .social-icons a:nth-child(4) svg:hover {
     color: #C84370 !important;
 }
+
+.social-icons a:nth-child(5) svg:hover {
+    color: red; /* Starting with the first rainbow color */
+    animation: rainbow 2s infinite; /* 1 second duration, infinite loop */
+}
+
+/* Define the keyframes for color change */
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+    16% {
+        color: orange;
+    }
+    32% {
+        color: yellow;
+    }
+    48% {
+        color: green;
+    }
+    64% {
+        color: blue;
+    }
+    80% {
+        color: indigo;
+    }
+    100% {
+        color: violet;
+    }
+}
+
 
 /* Theme hover */
 #moon:hover {

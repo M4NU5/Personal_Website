@@ -45,8 +45,7 @@ class Me():
 
     def output_code(self, coffee):
         if not coffee:
-            raise "NO COFFEE!!!"
-            sys.exit(1)
+            raise Exception("NO COFFEE!!!")
         return "Code"
 ```
 
