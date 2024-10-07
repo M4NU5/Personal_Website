@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Hack the Box #6 - Greenhorn w/o Metasploit"
-date: 2024-09-24
+date: 2024-10-07
 author: William
 category:
   - Tech
