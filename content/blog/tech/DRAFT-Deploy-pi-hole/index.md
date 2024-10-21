@@ -63,19 +63,19 @@ services:
 Now we need to configure our router to use the Pi Hole as our DNS. To do this we need to connect our router. 
 With `ipconfig` or `ifconfig` we can find the IP address of our default gateway. Generally your IP address will be `192.168.0.1`. Typing this into the browser we will hit our gateways login portal. 
 
-Logging in, navigate to the DNS configuration and input the IP address on the Raspberry Pi. 
+Logging in, navigate to the DNS configuration and input the IP address of the Raspberry Pi. Now we are gochie, our Pi hole will start sinking ads into a beautiful black abys.
 
-Note some routers, believe it or not, don't support configuring a DNS sad I know. Hopefully you don't have this problem. If you do you will need to configure your 
-
-
+Note some routers, believe it or not, don't support configuring a DNS! Sad I know. Hopefully you don't have this problem. If you do you will need to configure your DNS on your machine. It doesn't work as well as the Gateway level Pi-Hole but you got to work with what you have. 
 
 
 ## Step 3: Add more ad block lists (optional)
 
 
+
+
 ## Conclusion 
 
-
+Wham bam thank you mam 
 
 
 
