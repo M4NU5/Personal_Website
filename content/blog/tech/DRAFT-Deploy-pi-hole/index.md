@@ -1,15 +1,15 @@
 ---
 draft: true
 title: Set up a Pi hole on your headless Raspberry Pi
-date: 2024-08-18
+date: 2024-10-22
 author: William
 category:
   - Tech
 tags: 
 description: 
 cover:
-  image: test
-  alt: test
+  image: Docker_pi_hole.png
+  alt: Docker_pi_hole.png
 ---
 
 ## Introduction
@@ -28,8 +28,10 @@ A Pihole is an ad blocker like the one you have in your bowser but it operates o
 
 ## Step 1: Prepare docker compose
 
-We are going to start with deploying the PiHole on our Pi then do the respecive
-
+We are going to start with deploying the Pi-Hole on our Pi. I start by creating a dedicated folder to keep my docker compose file. This is just to keep running applications on my raspberry pi separate and manageable. 
+```mkdir pi_hole && cd pi_hole```
+Now we make the compose file and input the following.
+```vim compose.yaml```
 
 ```bash
 # More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
@@ -41,20 +43,26 @@ services:
     ports:
       - "53:53/tcp"
       - "53:53/udp"
-      # - "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+        #- "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
       - "666:80/tcp"
     environment:
       TZ: 'America/Chicago'
-      WEBPASSWORD: 'set a secure password here or it will be random'
+      WEBPASSWORD: '<PASSWORD>'
     # Volumes store your data between container upgrades
     volumes:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     #cap_add:
-    #  - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+      #  - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
     restart: unless-stopped
 	```
+
+To explain the components of this file: 
+- **`image`**: Specifies the official Pi-Hole docker image.
+- **`ports`**: Set port to 666 because I want to send all ads to hell :D
+- **`environment`**: Configures pi environment variables, setting including the claim token that streamlines the initial setup.
+- **`volumes`**: Maps files to machine for persistence between container restarts.
 
 
 
@@ -73,9 +81,13 @@ Note some routers, believe it or not, don't support configuring a DNS! Sad I kno
 
 
 
+
+
 ## Conclusion 
 
-Wham bam thank you mam 
 
+Congratulations! We have now successfully deployed and configured our very own Pi-Hole that will block most of those pesky ads that the internet is inundated with. You can check if your Pi-Hole is working by going to whatever site you might fancy to see if ads are being blocked.
+Personlly I used cnn.com and fox
+Saddly this wont block Youtube ads, I know its inexcusable
 
 
