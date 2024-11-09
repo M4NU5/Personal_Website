@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Hack the Box #4 - BoardLight w/o Metasploit"
+title: "Hack the Box #4 - BoardLight without Metasploit"
 date: 2024-08-08
 author: William
 category:

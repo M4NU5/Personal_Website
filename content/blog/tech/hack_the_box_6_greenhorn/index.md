@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Hack the Box #6 - Greenhorn w/o Metasploit"
+title: "Hack the Box #6 - Greenhorn without Metasploit"
 date: 2024-10-07
 author: William
 category:

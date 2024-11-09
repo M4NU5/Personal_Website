@@ -60,6 +60,8 @@ params:
   keywords:
     - William Smale
     - William
+    - Raspberry Pi
+    - Linux
     - Security
     - Hacking
     - Penetration Testing
@@ -67,7 +69,7 @@ params:
 
   # Post paramaters
   ShowToc: true
-  TocOpen: true
+  TocOpen: false
   ShowShareButtons: false
   ShowReadingTime: true
   ShowBreadCrumbs: false

@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Hack the Box #3 - PermX w/o Metasploit"
+title: "Hack the Box #3 - PermX without Metasploit"
 date: 2024-07-30
 author: William
 category:

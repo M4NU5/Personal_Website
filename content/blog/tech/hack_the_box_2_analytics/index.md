@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Hack the Box #2 - Analytics w/o Metasploit"
+title: "Hack the Box #2 - Analytics without Metasploit"
 date: 2024-03-06T17:27:24+00:00
 author: William
 category:
