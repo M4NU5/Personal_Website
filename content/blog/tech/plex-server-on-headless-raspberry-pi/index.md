@@ -26,8 +26,9 @@ Plex is a powerful media server platform that allows you to organize and stream 
 - [Headless Raspbian installed](/blog/tech/secure-headless-raspberry-pi-on-your-home-network)
 - [Docker Installed](/blog/tech/docker-on-headless-raspberry-pi)
 
->[!NOTE]
->A Raspberry Pi is not perfectly suited for this service due to the processing capacity of the CPU. If the video quality is above 1080p the Pi will struggle to transcode and serve the media in time resulting in unwanted buffering. It does however work relatively well for 1080p and below. 
+> [!WARNING]
+> Raspberry Pi is not perfectly suited for this service due to the processing capacity of the Pis CPU. If the video quality is above 1080p the Pi will struggle to transcode and serve the media in time resulting in unwanted buffering. It does however work relatively well for 1080p and below.
+
 ## Step 1:  Prepare Media Drive
 
 Before deploying Plex, prepare your media drive, which will be used to store all your movies and series. We are going to start assuming we are wanting a fresh start, which is what I did.

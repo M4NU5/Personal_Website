@@ -2,7 +2,8 @@ baseURL: https://williamsmale.com/
 languageCode: en-us
 title: William's Blog
 theme: PaperMod
-paginate: 15 # articles per page
+pagination:
+  pagerSize: 15 # articles per page
 
 googleAnalytics: "G-NM1GF3ZKR0"
 
@@ -12,7 +13,6 @@ sitemap:
 # permalinks:
 #     post: "thoughts/:section/:title"
 
-
 menu:
   main:
       # About
@@ -20,21 +20,16 @@ menu:
         name: Me 
         url: me
         weight: 10
-
       # Blog
       - identifier: thoughts
         name: Thoughts
         url: blog
         weight: 20
-
       # Musings
       - identifier: Moments
         name: Moments
         url: https://moments.williamsmale.com/
         weight: 30
-
-
-
       # Search
       # - identifier: Search
       #   name: Search
@@ -44,7 +39,6 @@ menu:
         name: Learned
         url: learned
         weight: 50
-
       # Archives
       # - identifier: archives
       #   name: Archives
@@ -68,7 +62,7 @@ params:
   description: William Smale a Product Security Engineer with over half a decade of experience. Skilled in Python, Bash, SAST, DAST, Penetration Testing, threat analysis, and secure CI/CD pipeline deployment.
 
   # Post paramaters
-  ShowToc: true
+  ShowToc: false
   TocOpen: false
   ShowShareButtons: false
   ShowReadingTime: true
@@ -129,9 +123,17 @@ params:
     # - name: buymeacoffee
     #   url: https://www.buymeacoffee.com/williamsmale
 
+module:
+  mounts:
+  - excludeFiles: blog/templates/*
+    source: content
+    target: content
 
 
 markup:
   goldmark:
+    parser:
+      attribute:
+        block: true
     renderer:
       unsafe: true

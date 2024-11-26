@@ -82,3 +82,32 @@ svg:hover {
     /* box-shadow: 0 0 0 1px grey; */
     transform: scale(1.1) translateZ(0) translate3d(0, 0, 0) rotate(0.01deg);
 }
+
+
+/* Notes for markdown */
+
+/* .danger,
+.note,
+.warning {
+  background: #efefef;
+  border-left-style: solid;
+  border-left-width: 0.4rem;
+  border-radius: 0.2rem;
+  margin-left: 0;
+  > p {
+    padding: 100px;
+    margin-left: 10;
+  }
+}
+
+.warning {
+  border-left-color: #ffbb00;
+}
+
+.note {
+  border-left-color: #0000ee;
+}
+
+.danger {
+  border-left-color: #ee0000;
+} */
