@@ -1,7 +1,7 @@
 ---
 draft: true
 title: 
-date: "{{date:YYYY-MM-DD}}"
+date: 
 author: William
 category: 
 tags: 

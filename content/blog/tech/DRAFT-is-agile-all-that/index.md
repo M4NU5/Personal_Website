@@ -1,118 +1,105 @@
 ---
-draft: true
+draft: false
 title: 
-date: 2024-11-06
+date: 1994-11-09
 author: William
-category: 
+category:
+  - Tech
 tags: 
 description: 
 cover:
   image: test
   alt: test
 ---
+# The age of Agile
 
+We live in an age of agile in the tech world. Some argue it was incepted by the [agile manifesto](https://agilemanifesto.org/) back in 2001 almost 24 years ago. In these formative years agile techniques used by startups to ship products quickly, fail fast and fail forward. That is how you built good software. Revolutionary in the age of waterfall where companies would take years developing some fully fledged program before going to market.
+By reducing the time between the inception of the idea to the idea being in peoples hands, the feedback loop could start quicker. Only focusing on core critical functionality and seeing whether the market even fucking wants what you're selling. Less capital is required for this approach, so it makes sense for startups to take this route. Its still to this day used as a guiding light for any aspiring startup founder to be AGILE! Fail fast and fail often with the goal to fail into a winning product with market fit.
 
-# The dawn of the Agile age
+Who wouldn't want that! It got us google, uber, amazon, and a whole host of other unicorn companies. WHO DOESNT WANT TO BE A UNICORN :D
 
-We live in an age of agile and scrum in the tech world. Some argue it was incepted by the agile manifesto KT <- insert link-- where agile techniques used by startups were codified into how software should be built. 
+As any good agile certified professional will tell you. Agile isn't just a concept, its a CULTURE! You're entire organization needs to embody this agile methodology. This methodology is outlined in 4 key tenants articulated in the agile manifesto.
 
-In the age of waterfall methods where companies would key years to go to market with some fully fledged program and backed by all the monies in the world.  
-This was turned on its head by reducing the time between the inception of the idea to the idea being in peoples hands. Only focusing on core critical functionality and seeing whether the market even fucking wants what youre offering. 
-Less capital is required for this apprach, so it makes sense for startups to take this route. Its still to this day used as a guiding light for any aspiring startup founder to be AGILE! 
+1. **Individuals and interactions** over processes and tools  
+2. **Working software** over comprehensive documentation  
+3. **Customer collaboration** over contract negotiation  
+4. **Responding to change** over following a plan
 
-I mean who wouldnt want to be agile, it got us google, uber, amazon, and a whole host of other unicorn companies.
-
-
-But as any good scrum or agile trained professional will tell you. Agile is just a concept ITS A CULTURE! Youre entire organisation needs to embody this agile methodology, reacting quickly to consumer feedback. 
+Embodying these 4 tenants will make you agile. So how did your large corporates fair...
 
 # The shift to agile
 
-When the large tech companies of today started to blow up everyone and their dog wanted what they had. Wanted their way of working. It was a workplace revolution! Out with dedecated desks and cubicale. In with the new trendy hot desking alowing for people to agilly move around the workplace free to unleash thier creative spirit... right?!
+When your googles of today started to blow up everyone and their dog wanted to be them. Monkey see, monkey do results in everyone copying the market leaders, its only human. Hot desking, beanbags, pool tables fun goofy colours. It was a workplace revolution! Allowing people the freedom to unleash their creative spirit... right?!
 
-This agile manifesto thing was being talked about alot so we need to also adopt that into our mid to large organisation so we can remain compeditatve in the emerging techological environment we now find ourselves in. 
+Driven by shareholders asking "How is company X Agile in this modem age?". Your corporates shift towards agile but a corporate needs more then a website with 4 tenants and 12 rules... Do you see the opportunity? It spawned an entire sector... no? AGILE EXPERTS ofcourse, consultants who will transform your company from the ancient lumbering monolith of waterfall to the nimble agile... Like a puma Rawww... for a small fee ofcourse. These subject matter experts will train your employees on the tenants of agile, after all agile is a CULTURE. And dont worry shareholders us consultants have made this agile SAFe for your investment.
 
-OUT WITH WATERFALL. thats for losers and old people. The trendy new thing is agile, the hip google looking motherfucker on the block.
+Lets throw in those rose tinted glasses, huff some hope and get into that shareholder mindset of SAFe Agile.
+## The GLOURIOUS story point
+Starting with the smallest segment of time a story point which helps teams manage their workload. Story points are what teams want them to be. Could be a hour, a day or how many fucks to give a ticket. Generally the more points the larger the task. 
 
-#### The sprint
-Great. we are now going to break down bodies of work into finite deliverable chunks. that can be delivered in a sprint which is about 2 weeks of work. GREAT. Lets also have a daily standup where we communicate to the team any issues we might be having. This is great, we as software engineers are trying to think creativly and can sometimes get stuck. Bouncing ideas off people can help us solve the issue quicker also known as rubber ducking 
+There are a number of ways to determine how many fucks to give a task. Some teams vote on it collaboratively, relying on the wisdom of the collective through some points poker. Or just let the single omnipotent engineer responsible to guess. With each sprint iteration teams will get a feel for their capacity and tune in on what their 'true capacity' is. 
 
-Everyone gives their updates in the morning then goes on doing what they say they were going to do. COMMUNICATION IS GOOD
+Let me take another hit for the next part HUFFFFFFFF THE HOPE!!!
+#### The SULASIOUS sprint
+Next up we have finite chunks of work deliverable in about 2-4 weeks known as a sprint. During this time period the team looks to address and complete the tickets mentioned above in the time allotted.
 
-### The planned incromment
-but a single sprint wont embody more larger inititives... After all we are a mid to large company. So lets cluster a couple of sprints together and call it a planned increment. this gets the more executive level involved so they can effectivly direct the work efforts the teams under them. Lets make this incromment 3 months long and x number of sprints fall into this. GREAT. 
+Daily standups are held where team members discuss any issues they might be having along with their progress. This is great, we as software engineers are trying to think creatively and can sometimes get stuck. Bouncing ideas off people can help solve the issue quicker also known as rubber ducking.
 
-Dedicate to delivering on whatever larger inititive or epic by the end of the planned increment that spans about 4 months. 
+Everyone gives their updates in the morning then goes on doing what they say they were going to do. COMMUNICATION IS GOOD... HUFFFFF!
 
-## The Glorious story point
-Obviously we need to communicate to the wider organisetion about the complexity of our work. So at the inseption of our planned Incromment lets use the ever omnipitent of an engineers mind to guess how complex the task they are performing is and how long it will take for them to complete. 
-This with each PI itteraction should be tuned more and more to the 'true capacity' of your team. 
+### The EVERPRESENT planned increment
+Roping a number of sprints together we get a planned increment the highest level. These are ~3 months long, to complete an Epic containing a number of tickets. A holistic feature or function.  
 
+We aren't a nimble startup with a very flat organizational structure. We are a corporate behemoth! The planned increment thus becomes a great tool to rope in directors and C-suite level. They can thus keep tabs on how the epics are progressing. Which can be fed back to the board and shareholders with a personally attached gas canister... HUFFFF!
 
-
+Can you see the problem already? 
 
 ## What reality looks like
+Now that I have annihilated every braincell and the only reader of this article. You might be say "My God William, this agile framework thing sounds great, LETS GO". Put down the canister Timmy, what does all this result in? 
 
-You might be thinking well ofcourse william this agile framework is great and there is a reason why its used by everyone. But i will ask you, what does this result in? 
+Time for autistic minute counting like a consultant! We have 8 work hours a day. 40 work hours every week, ~120 work hours every sprint and ~480 work hours every planned increment.
 
-Before i jump down this autistic consultant minute counting i would like to highlight that according to the deep work bros of the internet 2-3 hours of dedicated uninteruped deep work is what you want to aim for. As a programmer myself I like to get into the groove and knock out 4 hours like a degenerate. So with that all prefficed i give you a typical day in the world of corperate scrum.
+Every day theres a 15 min standup... But lets call it 45 min accounting for running over and prep.  Include the mandatory hour long ticket 'grooming' session in the beginning of the week 1:30 hour. Then you have that one poor fucker on your team called the scrum master whos job it is to go to the weekly sync meeting with the maniacs running this clown show at the planned increment level 2 hours.
 
-A standup every day of 15 min but lets be honest it regularly runs over to 30 min +
-This include a hour long ticket 'grooming' session in the beginning of the week. then you have that one poor fucker on your team called the scrum master whos job it is to go to the weekly sync meeting with the maniacs running this  clownshow at the Pi level.
+(40 * 60) - (45 * 4) - 90 - 120 = 2190 minutes => 36,5 hours
 
-I already hear you saying but william that isnt so bad. Its just 30 min a day plus some extra hours here and there. to you i say NO its more then just 30 min. Every meeting has a preperation time whether its a couple mins lets say 5-10 min. We are at 40 min. Ok Cool so you wake up start work with a 9am standup right? 
-well no as a multi national team spanning the globe or just working on a team where your team lead isnt a phycopath its probably at 9:30 or 10...Great that leaves a 1 hour seggment best case before and you ran a little over to 10:30 that leaves you 1:30 till lunch... And fuck you need to grab a coffee well that coffee. The Sole reason fo your existance in the morning has just fucked any chance of getting anythig of substance done. 
-Great lunch time 12-1. You get back to your desk having eatend a metric fuck ton of rice from that Thai place down the road and you hit that 'mid day' slump. Now this can be avoided. Im just giving a generic day. So lets say we have a healthy 1:30 - 5 to knock that baby out the park. after you have reqauired your 4th coffee for the day. you have 3.5 hours at your disposal... Oh wait i forgot that we are working in a large corperate you know what that means... MEETINGS!!!! Rememeber that 1 hour Scrum sync weekly where you wait in line listening to everyone huffing thier own farts about achiveing the very thing they said they would. before you get a turn it have a big wiff of your own home brewed bullshit that you listrally put together not 3 days before because everyone has the memory of a goldfish with alsimers. Only then to remind alice who for 3 weeks still hasnt made that admin accounts for you and your team. You might say but william that is why you have those meetings. and to you i say no fuck you, If it takes you 3 weeks to make an admin account in your org you are not agile.
-And you will get to the end of the meeting and have the scrum king himself say "remember everyone over communication is good" NO IT NOT ITS CALLED OVER COMMUNCATION FOR A REASON, TO MUCH. 
+I already hear you saying but William that isn't so bad. A 4,5 hour cost every week to be agile is nothing. To you i say NO the cost is higher. As an international team standup isn't at 9am its at 10am to accommodate everyone across the globe. Great that leaves a 1 hour segment best case before to catch up with your local collogues, send emails or have another meeting. Finishing your standup at 10:30 with a coffee and a chat later its 11. With lunch at 12 you cant sink your teeth to deep into a coding problem so you do some B level tasks instead. 
+That essential standup has just fucked any chance of getting anything of substance done in the morning. 
 
-or how about discussing a new idea with the team. Or running some training workshop. Or god forbid your CTO pulls you into a vendor review session for the 10th time because our budget constrained team definitly needs to consider adding another steaming pile of bullshit sold to him over a dinner that was probably more expensive then your months salary.
-Or what ever 30 min tidbit bullshit meeting know you have because CORPERATE!!
+Great lunch time 12-1. You get back to your desk having eaten a metric fuck ton of rice from that Thai place down the road and you hit that 'mid day' slump. Now this can be avoided, eat healthy and all that. Now to knock out the afternoon, 1:30 - 5 easy game. But first coffee then 3.5 hours of glorious free time at your disposal to sink your teeth into code... Oh wait I forgot we are working in a large corporate you know what that means... MEETINGS!!!!
 
-This results you getting to the end of your day as a programmer thinking WTF have i actually done today. 
+That 2 hour Scrum sync weekly where you wait in line listening to everyone huffing their farts about achieving the very thing they said they would the week prior. You get your turn to take a big wiff of your own home brewed bullshit. Everyone has the memory of a goldfish with alsimers and never remember what you said last week. So you must remind Alice that she still hasn't created those admin accounts you and your team requested 3 weeks ago. You might say "but William that is why you have those meetings". To you I say "NO fuck you", if it takes you 3 weeks to make an admin account in your org you are not agile. At the end of the meeting the the scrum king himself will say "remember everyone over communication is good" NO IT NOT ITS CALLED OVER COMMUNCATION FOR A REASON, TO MUCH. 
 
-And maybe by the end of the sprint you were able to squeeze out that deliverable inbetween taking a huff of the fart sack that could have taken 2 days of focused work. 
+This is but one of many types of meetings that are held. That is not mentioning training workshops, idea meetings, out of standup syncs, sprint planning, retrospectives, or god forbid your CTO pulls you into a vendor review session for the 10th time because our budget constrained team definitely needs to consider adding another steaming pile of bullshit sold to him over a dinner that was probably more expensive then your months salary. or what ever random 30 min adhoc bullshit meeting you get pulled into know you have because CORPERATE!!
 
+Im going to take a breather here an interject with some research. According to the deep work bros of the internet, 2-3 hours of dedicated uninterrupted deep work should be your target every day. As a programmer myself I like to get into the groove and knock out 4 hours+ like a degenerate, bopping to some drum and bass.
 
+Now in the 3.5 hour window every day that you have to work. If you have 1 meeting in the middle any chance of a deep work session being locked in reach near zero. You end up running after B tier problems, unable to sink your teeth into the big problem. This results you getting to the end of your day as a programmer thinking WTF have I actually done today. Better yet the next morning when your about to give your standup update. for the cycle to only continue. With the off hope that maybe by the end of the sprint you were able to squeeze out that deliverable in-between huffing the corporate marketing cope and the local fart sack that fuels the delusion.
+ 
+![Comic](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8f20f8d1-3409-44f3-a3c8-06e9a32dc277_4800x4800.png#center)
 
-
-
-Abviously we need a way to quantify wether teams are over commiting or undercommitting thier capacity. So we can assign 'Story points' to everything. How are theres story 
-
-But! We need to codify this, we need to build out the processes people within the organiseaiton follow
-
-
-Great. now lets put this lovely plan into action into a company that has
-
-
-<-- Insert a image of the whole scrum process here --
-
-
-It becomes a oraborious where the ratio of talking about doing things and reporting it to actully doing it is 5 : 1
-
+It gets to the point where its all an ouroboros of meetings where the ratio of talking about doing things and reporting on it vs actually doing it is 5 : 1
 
 ## Think logically
+I will bet you, the title of scrum master that if you went to any other industry be that Lawyers, doctors, HR, sales, marketing, finance. And asked them if the entire team gets together every day in the morning to discuss the things they are going to do for that day. They will say get fucked, you're crazy, stop taking drugs, no one has time for that shit. There is a trust that people will do their jobs and we meet when we need to meet. If someone isnt doing their job you can see because they aren't delivering.
 
+So why then in tech do we do it? Why don't we trust our engineers to go ahead tackle a problem and comeback when the task is done and report on it. Maybe even require an update every other week. Perhaps because Techies are so socially awkward we would rather commit seppuku over listening to Karen from HRs talk about what she did last weekend for a whole hour. 
 
-I will bet you honour of scrum master that if you went to any other industory be that Lawyers, doctors, HR, Sales, marketing, finance. And asked them if the entire team gets together every day in the morning to discuss the things they are going to do for that day. they will say get fucked your crazy no one has time for that shit. We just trust that people will do thier jobs and we meet when we need to meet. 
-So why then in tech do we do it. Why dont we trust our engineers to go ahead tackle a problem and comeback when the task is done and report on it. 
-
-Is it because Techies are so socially awkward we would rather commit sepaku over listening to Sasha from HRs stroy about what she did last weekend for an whole hour. 
-
-Generally in tech we have the idea of being locked in, when we are trying to solve a problem. You even see it in series where the characters will say 'Dont disturb terry mans locked in and working, We can tell him about whatever it is later'. 
-But when you work in an office people dont give a fuck and will happly pull you out of your autistic mind palace that you finaly found the keys too just to tell you about the new mod they are adding to thier car this weekend. 
-
+Generally in tech we have the idea of being locked in, when we are trying to solve a problem. You even see it in series like silicon valley where the characters will say 'Don't disturb terry mans locked in and working, we can tell him about whatever it is later'. 
+But when you work in an office people don't give a fuck and will happily pull you out of your mind palace only to tell you about the new mod they are adding to their motorbike this weekend. 
 
 Its a programmers job to develop code. Let them develop the fucking code. Get out of their way. 
-Coding time should be considered holy grail time. but because no one knows what it takes to write code, lets micro manage them into ineffectiveness. which results in you hiring more people to help with volocity. and somehow you find yourself a a point where you have a 20 person team reporting to one person and your standups are no longer just those 15 min but 40 min DAILY!
-
-remember that knock on effect i metioned earlier. 
-
-
-
+Coding time should be considered holy grail time but no one knows what it takes to write code! The answer? Lets micro manage them into ineffectiveness. Which results in you hiring more people to help increase velocity. Next thing you find yourself in a team of 20 people. And do you know how 20 people DAILY standups go... They just don't. Makes you wish, dear is say, to be understaffed.
 ## Conclusion
-In conclusion as we are getting to the end of my rant
-We are getting to the end of this article and you might be asking. So what do we do about this. Its a great question. How do we tell the c suite to just point in a direction and let the manic programmers plow forward like demented wolves after a kill. Less micro management of every task that is being done. No i dont think you should have daily standups to tell people that you are still working on that problem because youre a dumb fuck that cant get two rocks to bash together. 
+In conclusion to my rant, firstly thanks for reading this far. You are the only person who probably has, and to you I wish all the good things.
 
-Team syncs are important yes but should be used sparingly. As Defend the time your developer team has. Block out hours for them, if need be. Give them a place of rispite to flee from the idiacy of day to day dredge and grind... and maybe just maybe you might get a team that will be both incredably effective and abosolutly love you for letting them do what they love
+So what do we do about this. Great question. I'm just a security engineer. How do we tell the c-suite to just point in a direction and let the manic programmers plow forward like demented wolves after a kill. Less micro management of every task that is being done. No I don't need daily standups to tell your team you're still stuck on that problem because you're a dumb fuck that cant get two rocks to bash together. 
+
+Team syncs are important yes but should be used sparingly. As developers we must defend our time. As that time is what we are really paid for. Block out those hours weeks in advance, if need be. Project managers give them a place of respite, to flee from the idiocy of the day to day dredging and grind... and maybe, just maybe, you will get a team that will be both incredibly effective and absolutely love you for letting them do what what they are best at.
+
+Now I'm going to go touch some grass, i need to wipe this shit off my hands :D 
+
+
 
 
 
