@@ -35,9 +35,9 @@ menu:
       #   name: Search
       #   url: /search/
       #   weight: 50
-      - identifier: learned
-        name: Learned
-        url: learned
+      - identifier: certifications
+        name: Certifications
+        url: certifications
         weight: 50
       # Archives
       # - identifier: archives

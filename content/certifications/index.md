@@ -2,15 +2,15 @@
 ---
 draft: false
 
-title: 'Security Studies'
-date: '2024-09-20'
+title: 'Certifications & Studies'
+date: '2025-01-16'
 
-cover:
-    image: immersive_labs_logo.webp
-    alt: "EpicImmersiveLabs.webp"
+
 
 ShowReadingTime: false
+
 ---
+
 
 <style>
     #program_list {
@@ -24,21 +24,33 @@ ShowReadingTime: false
         padding: 10px 0;
         border-bottom: 1px solid #666;
     }
+    #credential {
+        padding: inherit;
+        margin:auto;
+        display: block;
+    }
 </style>
 
-This page is generated from a custom script I wrote. The script scrapes my Immersive Labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](https://williamsmale.com/thoughts/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
+---
+
+ {{< credential url="./giac-cloud-security-automation-certification-gcsa.png" link="https://www.credly.com/badges/2d1da0a3-67c2-4784-883d-d046796cda6c/public_url" alt="GCSAcertification" height="300" >}} 
+
+---
+![Alt](immersive_labs_logo.webp#center)
+
+This part of the page is generated from a custom script I wrote. The script scrapes my Immersive Labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](https://williamsmale.com/thoughts/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
 
 
      
  <ul id="program_list"> 
        <li id="program_item"> 
+  {{< badge url="./badge_images/Cloud_Engineer_a_Practical.webp" link="https://niq.immersivelabs.online/share/achievement/ae731907f40b20fb8314dd49f4742351" alt="Cloud Engineer – Practical" height="240" >}} 
  {{< badge url="./badge_images/Web_App_Pen_Tester_a_Beginner.webp" link="https://niq.immersivelabs.online/share/achievement/7d8f39e25cce73cf469e606e8a7b1e4b" alt="Web App Pen Tester – Beginner" height="240" >}} 
- {{< badge url="./badge_images/Threat_Hunter_a_Beginner.webp" link="https://niq.immersivelabs.online/share/achievement/b1a8eb522ebd12336a57ce3db0f8004e" alt="Threat Hunter – Beginner" height="240" >}} 
- {{< badge url="./badge_images/Management_Risk_and_Compliance.webp" link="https://niq.immersivelabs.online/share/achievement/dc26ac10927ee3526afb5beca25c5894" alt="Management, Risk, and Compliance" height="240" >}} 
- {{< badge url="./badge_images/Cloud_Engineer_a_Practical.webp" link="https://niq.immersivelabs.online/share/achievement/ae731907f40b20fb8314dd49f4742351" alt="Cloud Engineer – Practical" height="240" >}} 
- {{< badge url="./badge_images/Cyber_Fundamentals.webp" link="https://niq.immersivelabs.online/share/achievement/9c1c7ae6d464ac9cfe40e20376fd898f" alt="Cyber Fundamentals" height="240" >}} 
  {{< badge url="./badge_images/Cloud_Engineer_a_Theory.webp" link="https://niq.immersivelabs.online/share/achievement/78aa82f893cf0c6b926a53b38bdcce63" alt="Cloud Engineer – Theory" height="240" >}} 
-  </li> 
+{{< badge url="./badge_images/Management_Risk_and_Compliance.webp" link="https://niq.immersivelabs.online/share/achievement/dc26ac10927ee3526afb5beca25c5894" alt="Management, Risk, and Compliance" height="240" >}} 
+  {{< badge url="./badge_images/Threat_Hunter_a_Beginner.webp" link="https://niq.immersivelabs.online/share/achievement/b1a8eb522ebd12336a57ce3db0f8004e" alt="Threat Hunter – Beginner" height="240" >}} 
+ {{< badge url="./badge_images/Cyber_Fundamentals.webp" link="https://niq.immersivelabs.online/share/achievement/9c1c7ae6d464ac9cfe40e20376fd898f" alt="Cyber Fundamentals" height="240" >}} 
+ </li> 
 
 <li id="program_item"> 
 {{< details "Cloud Security">}}
