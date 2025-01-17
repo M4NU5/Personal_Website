@@ -11,6 +11,14 @@ cover:
   image: test
   alt: test
 ---
+
+The agile manifesto was born. What is it you might say? To sum it up the manifesto basically states that each individual tech team should setup their own rules to help them maximise their efficiency  be self governing and autonomous 
+
+What ends up happening when you enterprise this idea. We cant have each team working differently we need to STANDARDIZE! and apply a single process to all teams. See how this fly in the face of the agile manifesto???
+
+Lookup sandbagging in agile
+
+
 # The Age of Agile
 
 We live in an age of agile in the tech world. Some argue it was incepted by the [Agile Manifesto](https://agilemanifesto.org/) in 2001 almost 24 years ago. In these formative years, startups used agile techniques to ship products quickly, fail fast, and fail forward. That is how you build good software. Revolutionary in the age of waterfall where companies would take years to develop some fully fledged program before going to market.  
