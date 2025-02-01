@@ -26,8 +26,9 @@ Do you ever browse on your phone? Did you know you could block all ads on your n
 A Pi Hole is an ad blocker that operates on the DNS level. Its like the one you have in your bowser but operates on a lower level, the ads don't even make it to your computer. And because you configure it at your router it allows you to make your home network an ad free zone. Anyone of is connected to your home network after setting this up will automagically have any ads blocked on their phone or whatever else.
 
 ## Prerequisites
-- Docker / Containerized environment to deploy to.
-- Access to Web gateway with **configurable DNS**.
+- [Headless Raspbian installed](/blog/tech/secure-headless-raspberry-pi-on-your-home-network)
+- [Docker Installed](/blog/tech/docker-on-headless-raspberry-pi)
+- Access to Web gateway with **configurable DNS**
 
 ## Step 1: Prepare docker compose
 
