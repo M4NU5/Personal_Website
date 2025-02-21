@@ -9,8 +9,8 @@ tags:
   - Ballad
 description: 
 cover:
-  image: A_dramatic_landscape.webp
-  alt: A_dramatic_landscape.webp
+  image: A_dramatic_landscape.jpg
+  alt: A_dramatic_landscape.jpg
 ---
 **The Epic Migration: From the Land of Confluence to the Gates of SharePoint**
 
