@@ -26,10 +26,10 @@ menu:
         url: certifications
         weight: 20
       # Blog
-      - identifier: thoughts
-        name: Thoughts
-        url: blog
-        weight: 20
+      # - identifier: thoughts
+      #   name: Thoughts
+      #   url: blog
+      #   weight: 20
       # Musings
       - identifier: Moments
         name: Moments
