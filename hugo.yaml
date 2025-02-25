@@ -75,7 +75,7 @@ params:
 
   homeInfoParams:
     Title: "William Smale"
-    Content: Welcome to my blog
+    # Content: Welcome to my blog
 
   profileMode:
     enabled: false
