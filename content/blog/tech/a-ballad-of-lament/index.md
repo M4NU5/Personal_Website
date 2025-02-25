@@ -12,15 +12,18 @@ cover:
   image: A_dramatic_landscape.jpg
   alt: A_dramatic_landscape.jpg
 ---
-**The Epic Migration: From the Land of Confluence to the Gates of SharePoint**
 
-Engineers have a curious relationship with their tools. Take Confluence, for example—a platform many love to hate. It’s clunky, inconsistent, and often a source of frustration. Engineers curse its name when they’re forced to hunt through disorganized pages or wrestle with broken permissions.
-
-But even in their disdain, there is a kind of grim acceptance. Confluence, for all its flaws, is a familiar beast—predictable in its chaos, manageable with enough effort and has some features that we come to enjoy like markdown support and imbedded graphs. What engineers often forget, however, is the immutable law of systems: there is always something worse out there.
+Engineers have a curious relationship with their tools. Take Confluence, a platform many love to hate. It’s clunky, inconsistent, and often a source of frustration. As engineers curse its name when they’re forced to hunt through disorganized pages or wrestle with broken permissions.
+ 
+But even in our disdain, there is a kind of grim acceptance. Confluence, for all its flaws, is a familiar beast—predictable in its chaos, manageable with enough effort and has some features that we come to enjoy like markdown support and imbedded graphs. What engineers often forget, however, is the immutable law of systems: there is always something worse out there.
 
 For as much as engineers loathe Confluence, there are tools that stalk the executive hallways looking for its next unsuspecting victim.
 
-And so, gather close, my kin, for I shall recount a tale that still burns in the hearts of those who bore witness. A tale of resistance, of valor, and of ultimate betrayal to the towering hoard of Microsoft’s realm.
+And so, gather close, my kin, for I shall recount a tale that still burns in the hearts of those who bore witness. A tale of resistance, of valour, and of ultimate betrayal to the towering hoard of Microsoft’s realm.
+
+---
+
+**The First Meeting: Emissary of what's to come**
 
 It began on a cold winter’s morning. The frost of the day mirrored the icy dread in my heart as I joined the fateful Teams call. The migration team had summoned us, heralds of doom cloaked in polite corporate cheer. And lo, with voices as soft as lamb’s wool, they spoke the words that shall haunt us forevermore:
 
@@ -30,7 +33,7 @@ A ripple of elation surged through the ranks of the engineers, laughter like a p
 
 _"We are migrating to… SharePoint."_
 
-The words hit like a thunderbolt, an icy blade plunged straight into the heart. For in that moment, we knew, dear friends, that there is always another layer of hell, waiting patiently in the shadows, to ensnare the weary traveler.
+The words hit like a thunderbolt, an icy blade plunged straight into the heart. For in that moment, we knew, dear friends, that there is always another layer of hell, waiting patiently in the shadows, to ensnare the weary traveller.
 
 Silence fell. And then came the murmurs, growing into a restless din. "SharePoint?" one voice cried. "Are they mad?" "Have we offended the gods of IT governance?" asked another.
 
@@ -39,8 +42,6 @@ Thus began the first meeting, the _diplomatic exchange_. A battle not of swords,
 ---
 
 **The Second Meeting: The Engineers' Stand**
-
-The first meeting ended with no resolution, only murmurs of coming strife. But as the days passed, the engineers prepared. Our people were not ones to charge blindly into battle; no, we were tacticians, builders, architects of order. And so we spent those precious days gathering evidence, crafting arguments as sharp as Spartan spears.
 
 The second meeting arrived, a digital arena hosted once more in the icy expanse of Teams. This time, the engineers were not caught off guard. We entered the fray armed with slides, metrics, and the fiery conviction that only comes from years of defending systems we held dear.
 
