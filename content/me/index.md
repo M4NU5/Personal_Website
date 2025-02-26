@@ -36,12 +36,21 @@ cover:
 class Me():
     def __init__(self):
         self.name       = "William Smale"
-        self.age        = 29
         self.location   = "London, UK"
-        self.profession = "Product Security Engineer"
-        self.interests  = ["Coding", "Hacking", "Photography", "Philosophy", "Diving"]
+        self.experience = 7
+        self.profession = "Senior Product Security Engineer"
+        self.languages  = ["Python", "Go", "Bash"]
+        self.interests  = ["Coding", "Hacking", "Diving", "Photography", "Philosophy"]
+
+    def favorite_quote(self):
+        return random.choice([
+            "The quieter you become, the more you can hear.",
+            "There are more stars in the universe then seconds in a human life."
+        ])
 
     def output_code(self, coffee):
+        if coffee == "Cortado":
+            return "Code crafted with perfection ☕️"
         if not coffee:
             raise Exception("NO COFFEE!!!")
         return "Code"
