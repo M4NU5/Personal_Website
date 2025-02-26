@@ -2,7 +2,7 @@
 title: "About me"
 date: 2023-09-15T11:30:03+00:00
 # tags: ["About"]
-# author: "Me"
+author: "William"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false

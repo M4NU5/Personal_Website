@@ -1,11 +1,11 @@
- 
 ---
 draft: false
 
 title: 'Certifications & Studies'
 date: '2025-01-16'
 
-
+author: "William"
+hidemeta: true
 
 ShowReadingTime: false
 
