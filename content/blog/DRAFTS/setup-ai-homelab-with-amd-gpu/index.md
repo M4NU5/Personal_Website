@@ -3,8 +3,12 @@ draft: true
 title: 
 date: 
 author: William
-category: 
-tags: 
+category:
+  - Tech
+tags:
+  - Windows
+  - Infrastructure
+  - AI
 description: 
 cover:
   image: test
@@ -18,45 +22,44 @@ cover:
 
 Need to add static network IP NOT [localhost](http://localhost)
 
-because ollama hosted on host machine → [localhost](http://localhost) refers to container
+because Ollama hosted on host machine → [localhost](http://localhost) refers to container
 
-That age of AI is upon us. Everyone and their mother are decreeing large language models will take your jobs and end humanity as we know it.
 
-OpenAI, Google, X and many more all provide AI chatbot capabilities that are really useful but it will cost you. And not only in moneys. You pay with all data you submit are then owned by said company and you need to pay for the privilege to use their top models consistently
+The age of AI is upon us. Everyone and their mother are decreeing large language models will take your jobs, end humanity as we know it and berth a techno utopia.
 
-Step in the open source community who have worked to provide impressive models of their own that can be run by yourself. Its what all the cool kids are doing. Install ollama and pull models that can be run locally. How cool is that, we can run LLMs locally assuming we have a strong enough machine or wel GPU if we are looking at some of the heavyer models.
+OpenAI, Google, X and many more are in the race to provide the best AI chatbot with capabilities that unmatched. The best of the best will cost you and not only in your wallet. You pay with all data you submit as well, similar to social media, everything you submit is owned by said company ontop of paying for the privilege to consume their top models through UI but more importantly through APIs. 
 
-Obviously as a tech curitus individual like myself why would you not want to runn a local LLM that can give you unlimited chat
+Step in the open source community who have worked to provide impressive models of their own that can be run by yourself. Its what all the cool kids are doing. Install Ollama, pull models that can be run locally and bobs your uncle. How cool is that we can run local LLMs, how big a model just depends on how strong a system you are sporting.
 
-All the nividia cool kids got turn key access to this world, where nividias work with cuda which results in AMD always coming off second best to nvidia for anything other then gaming.
+Obviously as a tech nerd myself why would I not want to run a local LLM that can give you unlimited chat capabilities. Sure not to the sophistication of GPT but that isnt always needed, plus less guardrails.
 
-But hot dame do AMD gpus pack a punch. and with Ollama comming out and posting a blog on March 14, 2024 saying they now support AMD GPUs
+![Getinloser.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTNxdWJtaXBuY2VndnNkeGpjZmM5cjdkaG81dHNqemdrYnQwcDUyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pyTkBNVthpwp0WVFw0/giphy.gif#center)
 
-[https://ollama.com/blog/amd-preview](https://ollama.com/blog/amd-preview)
+As this is cutting edge the ecosystem is still evolving. Nvidia has a real leg up due to its CUDA ecosystem for non-gaming related GPU tasks. So when AI exploded all the Nividia cool kids got turn key access to this world and all us AMD pesants who just wanted raw power for gaming have been left in the dust.
 
-I was super excited as an AMD chad myself to give a local model a shot but it was only met with disappintment like my zulu marks in primary school. I put it to the side until now 
+That was until Ollama dropped this blog post announcing support for AMD GPUs on March 14, 2024 [https://ollama.com/blog/amd-preview](https://ollama.com/blog/amd-preview)
 
-Thought i would give it another stab having given the AI crazy to calm a bit, drivers to mature and having completed my Sans course. 
-Knowing it wouldnt be as easy as installing and getting it to run out of the gate like how NVIDIA pesants i took up the challange. 
+I was super excited as an AMD chad myself to give a local model a shot but sadly I was only met with disappointment. Ollama was only able to detect my CPU and all research pointed me toward the need to install Linux to be like the cool kids. Now i'm familiar with the Linux ecosystem and am looking to migrate to it but the one thing that i holding me back is its gaming ecosystem. That was a lot as I was studying for my GCSA having finished my SANS 540 course, [checkout post highlighting my takeaways](./blog/tech/devsecops-lessons-from-sans-540/).
 
-After a bit of research i narrowed it down to the following steps, but come on AMD couldnt you have made this easier. NOPE that would be to easy.
+Now its time to give this another stab and with AMDs drivers more mature the time is now. I have gotten it working and saddly the one click life for Nvidia users does not exist for us AMD users. But come young paddyone let me show you the way.
 
-We got to mess with a couple things.
+## Install the CORRECT Ollama
 
-To start off we need to install Ollama for AMD. There is a legend called likelovewant who has implemented an AMD compatable ollama, spesifically with this github repo. 
+Eeyup you heard me right, there is a legend called likelovewant who has implemented an AMD compatible Ollama, specifically with this [github repo](https://github.com/likelovewant/ollama-for-amd/releases).
 
-[https://github.com/likelovewant/ollama-for-amd/releases](https://github.com/likelovewant/ollama-for-amd/releases)
+Now it isn't the latest and greatest but to be honest we just need Ollama to serve the model, I don't really care for the latest bells and whistles… yet! 
 
-Now it isnt the latest and greatest but tbh we just need ollama to serve the model, i dont really care for the latest bells and whistles … yet! 
+1. Download Ollama package.
+2. Install the Ollama package.
+3. Open terminal and type `ollama serve`
 
-Download it and install the ollama package.
+When Ollama starts and you see `GPU Detected` you are good to go, but more likely you see a log mentioning `GPU not detected` or `using CPU`.
 
-Once that is complete open terminal and type `ollama serve`
-
-When ollama starts you will see a log about GPU not detected or using CPU. Like follows
+Like follows
 xxx
-This means that ollama cant usilise our gpu. Now i hear you asking 
-"but william isnt this ollama amd compatable"
+
+This means that Ollama doesn't have the correct drivers to utilise our GPU. Now I hear you asking 
+"but William isn't this Ollama AMD compatible"
 It is but we need to update the ollama install files with the correct ROCm Library files to enable compatability.
 
 For that you will need to go here
