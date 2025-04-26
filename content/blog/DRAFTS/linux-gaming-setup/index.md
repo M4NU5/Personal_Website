@@ -7,8 +7,8 @@ category:
 tags: 
 description: 
 cover:
-  image: test
-  alt: test
+  image: Steam-Linux.webp
+  alt: Steam-Linux.webp
 ---
 
 
