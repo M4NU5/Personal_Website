@@ -1,26 +1,20 @@
 ---
 draft: false
-
-title: 'Lockpicking a Thule Rooftop Cargo Carrier'
-date: '2023-03-30T07:59:41+00:00'
+title: Lockpicking a Rooftop Cargo Carrier
+date: 2023-03-30T07:59:41+00:00
 author: William
-
 category:
-    - Story Time
-
-tag:
-    - Lockpicking
-    - Security
-
+  - Story Time
+tags:
+  - Lockpicking
+  - Security
 cover:
-    image: thule-roof-rack.jpg
-    alt: "Epic_Lockpicking_Image.png"
-
-
+  image: thule-roof-rack.jpg
+  alt: Epic_Lockpicking_Image.png
 ---
 So my uncle forgot his keys to his roof rack… Ok when you have just left home. Not so ok when you at 5 hours from it!
 
-He was traveling with his family to the Kruger National Park. His trip takes him passed Johannesburg where I live so they all stayed the night, catching up with family, leaving the last 4 hours of the trip for the next day. When they arrived he realised that he had forgotten the key to the roof mounted carrier probably 5 hours away at their home. Thing is all their overnight gear was stored in the roof top carrier. Toothbrushes, Underwear, Cables you know all overnight essentials!!!  
+He was travelling with his family to the Kruger National Park. His trip takes him passed Johannesburg where I live so they all stayed the night, catching up with family, leaving the last 4 hours of the trip for the next day. When they arrived he realised that he had forgotten the key to the roof mounted carrier probably 5 hours away at their home. Thing is all their overnight gear was stored in the roof top carrier. Toothbrushes, Underwear, Cables you know all overnight essentials!!!  
 I have never picked this type of lock before… Well no time like the present. I grab my picking set and get to work. The first attempt was partly successful but not completely unlocked successful… RESEARCH TIME!
 
 From online pictures I assume the lock has a wafer mechanism. Looking closer there is a code on the lock barrel: N048. MORE RESEARCH TIME!
