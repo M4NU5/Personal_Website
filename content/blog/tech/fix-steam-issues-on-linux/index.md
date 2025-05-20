@@ -1,6 +1,6 @@
 ---
 draft: false
-title: How to Fix Steam Issues on Linux
+title: How to Fix Common Steam Issues on Linux
 date: 2025-04-26
 author: William
 category: Tech
