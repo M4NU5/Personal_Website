@@ -63,7 +63,7 @@ params:
   description: William Smale a Product Security Engineer with over half a decade of experience. Skilled in Python, Bash, SAST, DAST, Penetration Testing, threat analysis, and secure CI/CD pipeline deployment.
 
   # Post paramaters
-  ShowToc: false
+  ShowToc: true
   TocOpen: false
   ShowShareButtons: false
   ShowReadingTime: true
