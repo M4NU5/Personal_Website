@@ -65,7 +65,7 @@ params:
   # Post paramaters
   ShowToc: true
   TocOpen: false
-  ShowShareButtons: false
+  ShowShareButtons: true
   ShowReadingTime: true
   ShowBreadCrumbs: false
   ShowPostNavLinks: true
