@@ -126,6 +126,10 @@ params:
     # - name: buymeacoffee
     #   url: https://www.buymeacoffee.com/williamsmale
 
+theme: 
+  - my_customs
+  - PaperMod
+
 module:
   mounts:
   - excludeFiles: blog/templates/*
