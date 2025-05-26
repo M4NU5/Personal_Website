@@ -39,19 +39,19 @@ class Me():
         self.location   = "London, UK"
         self.experience = 7
         self.profession = "Senior Product Security Engineer"
-        self.languages  = ["Python", "Go", "Bash"]
+        self.languages  = ["Go", "Python", "Bash"]
         self.interests  = ["Coding", "Hacking", "Diving", "Photography", "Philosophy"]
 
     def favorite_quote(self):
         return random.choice([
-            "The quieter you become, the more you can hear.",
-            "There are more stars in the universe then seconds in a human life."
+            "There are more stars in the universe then seconds in a human life.",
+            "The quieter you become, the more you can hear."
         ])
 
     def output_code(self, coffee):
         if coffee == "Cortado":
             return "Code crafted with perfection ☕️"
-        if not coffee:
+        elif not coffee:
             raise Exception("NO COFFEE!!!")
         return "Code"
 ```

@@ -13,6 +13,7 @@
 /* Icon Hover */
 svg:hover {
     transition: 0.15s;
+    transform: scale(1.8);
 }
 
 .social-icons a:nth-child(1) svg:hover{
