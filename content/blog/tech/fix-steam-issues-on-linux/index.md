@@ -96,7 +96,7 @@ You may get the following error `ntfs-3g-mount: failed to access mountpoint /med
 
 Congratulations! With your NTFS drive successfully mounted, Steam can now interact with your game files. Let’s fire up Steam and dive into its configuration to make sure everything is running smoothly on the Linux side.
 
-## Steam Configuration
+## Steam Configuration (Correctly)
 
 Start by typing into terminal `Steam`, this will start Steam with our terminal allowing us to see all the logs behind the scenes of what the Steam client is doing, making it much easier to troubleshoot when we run into any errors.
 
@@ -124,7 +124,7 @@ sudo ln -s ~/.Steam/root/Steamapps/compatdata  /media/data/Steam LIBRARY IN NTFS
 
 Once you've linked up the compatibility data properly, your game should finally launch. Success! But even if it doesn’t, you’re not alone. This is where the wider Linux gaming community really shines.
 
-## Linux Gaming Community
+## Linux Gaming Community (Protondb)
 
 There is a thriving Linux gaming community that work together to figure out the best configuration for any game of your choosing. Check them out here at [protondb](https://www.protondb.com/) You can search for any game you like and see the recommendations of many other users.
 
