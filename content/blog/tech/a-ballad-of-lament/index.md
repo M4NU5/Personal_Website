@@ -23,7 +23,7 @@ And so, gather close, my kin, for I shall recount a tale that still burns in the
 
 ---
 
-**The First Meeting: Emissary of what's to come**
+### The First Meeting: Emissary of what's to come
 
 It began on a cold winter’s morning. The frost of the day mirrored the icy dread in my heart as I joined the fateful Teams call. The migration team had summoned us, heralds of doom cloaked in polite corporate cheer. And lo, with voices as soft as lamb’s wool, they spoke the words that shall haunt us forevermore:
 
@@ -41,7 +41,7 @@ Thus began the first meeting, the _diplomatic exchange_. A battle not of swords,
 
 ---
 
-**The Second Meeting: The Engineers' Stand**
+### The Second Meeting: The Engineers' Stand
 
 The second meeting arrived, a digital arena hosted once more in the icy expanse of Teams. This time, the engineers were not caught off guard. We entered the fray armed with slides, metrics, and the fiery conviction that only comes from years of defending systems we held dear.
 
@@ -63,7 +63,7 @@ Victory, dear friends, was within our grasp. For by the end of that meeting, the
 
 ---
 
-**The Final Meeting: The Fall**
+### The Final Meeting: The Fall
 
 The days following our hard-won victory were fleetingly quiet. Yet we, the engineers, knew better than to trust the stillness. For no victory comes without consequence, and the migration team had retreated not in defeat but in preparation.
 
