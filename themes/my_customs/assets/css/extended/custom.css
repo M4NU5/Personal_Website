@@ -1,28 +1,35 @@
 /* Header bar Hovers */
 .logo a:hover {
-    transition: 0.15s;
+    transition: 0.2s;
     color: gray;
 }
 
 #menu a:hover {
-    transition: 0.15s;
+    transition: 0.2s;
     color: grey;
 }
 
 
 /* Icon Hover */
 svg:hover {
-    transition: 0.15s;
+    transition: 0.2s;
     transform: scale(1.8);
 }
 
-.social-icons a:nth-child(1) svg:hover{
-    color: grey !important;
+/* Bluesky */
+.social-icons a:nth-child(2) svg:hover {
+    color: #38B0DE !important;
 }
 
-.social-icons a:nth-child(2) svg:hover {
-    color: #0072b1 !important;
+/* Github */
+.social-icons a:nth-child(1) svg:hover{
+    color: 	#fafbfc  !important;
 }
+
+/* Linkedin */
+/* .social-icons a:nth-child(2) svg:hover {
+    color: #0072b1 !important;
+} */
 
 .social-icons a:nth-child(3) svg:hover {
     color: #13171A !important;

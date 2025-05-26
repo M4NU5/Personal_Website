@@ -8,7 +8,6 @@ category:
 tags:
   - Automation
   - Infrastructure
-  - IaC
 cover:
   image: terraform-azure.png
   alt: EpicTerraformArchitecture.png

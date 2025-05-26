@@ -35,17 +35,15 @@ menu:
         name: Moments
         url: https://moments.williamsmale.com/
         weight: 30
+    
+      - identifier: Tags
+        name: Tags
+        url: /tags/
+        weight: 60
+      
+      # Categories
       # Search
-      # - identifier: Search
-      #   name: Search
-      #   url: /search/
-      #   weight: 50
-
-      # Archives
-      # - identifier: archives
-      #   name: Archives
-      #   url: /archives/
-      #   weight: 60                              
+      # Archives                             
 
 
 params:
@@ -115,8 +113,10 @@ params:
   socialIcons:
     - name: github
       url: https://github.com/M4NU5
-    - name: linkedin
-      url: https://www.linkedin.com/in/william-smale/
+    # - name: linkedin
+    #   url: https://www.linkedin.com/in/william-smale/
+    - name: bluesky
+      url: https://bsky.app/profile/williamsmale.com
     - name: x
       url: https://twitter.com/WilliamSmale_ 
     - name: instagram 
