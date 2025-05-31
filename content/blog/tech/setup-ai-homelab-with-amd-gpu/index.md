@@ -25,9 +25,15 @@ Need to add static network IP NOT [localhost](http://localhost)
 because Ollama hosted on host machine → [localhost](http://localhost) refers to container
 
 
-The age of AI is upon us. Everyone and their mother are decreeing large language models will take your jobs, end humanity as we know it and berth a techno utopia.
+## Introduction
 
-OpenAI, Google, X and many more are in the race to provide the best AI chatbot with capabilities that unmatched. The best of the best will cost you and not only in your wallet. You pay with all data you submit as well, similar to social media, everything you submit is owned by said company ontop of paying for the privilege to consume their top models through UI but more importantly through APIs. 
+OpenAI, Google, X and many more all provide AI chatbot capabilities that are really useful to a point and that point is how much they know. There is a prevailing consensus that the more data you give a model the better it is. You can even customise and get the chat bot to know you better by uploading your personal data. By doing so however you are seeding all your data to be owned by which ever company you are uploading to. Oh and you want to use our top models consistently without rate limits cough up some money as well boy! 
+
+![https://media1.tenor.com/m/dW-Pb6qvsq8AAAAd/thanos-infinity-war.gif](https://media1.tenor.com/m/dW-Pb6qvsq8AAAAd/thanos-infinity-war.gif#center)
+
+This is not to say its a bad thing, its just good to know what we are working with and consider the trade-offs.
+
+Step in the open source side of the equation, there are companies and communities out there are arent being tightfisted about the whole AI revolution. Ones that come to mind immediately are llama from meta, Mistral from XXX and Deepseek from XXX. These models are holding their own against the close source models of the tech giants and its pretty straight forward to run them yourself. Install ollama and pull models that can be run locally. How cool is that, we can run LLMs locally assuming we have a strong enough machine or wel GPU if we are looking at some of the heavyer models.
 
 Step in the open source community who have worked to provide impressive models of their own that can be run by yourself. Its what all the cool kids are doing. Install Ollama, pull models that can be run locally and bobs your uncle. How cool is that we can run local LLMs, how big a model just depends on how strong a system you are sporting.
 
@@ -43,6 +49,9 @@ I was super excited as an AMD chad myself to give a local model a shot but sadly
 
 Now its time to give this another stab and with AMDs drivers more mature the time is now. I have gotten it working and saddly the one click life for Nvidia users does not exist for us AMD users. But come young paddyone let me show you the way.
 
+## Install AMD Drivers
+The AMD drivers that we will be needing a part of AMDs ROCm Platform. Since we are talking windows it is specifically [AMDs HIP SDK](https://www.amd.com/en/developer/resources/rocm-hub/hip-sdk.html) that we will be installing.
+
 ## Install the CORRECT Ollama
 
 Eeyup you heard me right, there is a legend called likelovewant who has implemented an AMD compatible Ollama, specifically with this [github repo](https://github.com/likelovewant/ollama-for-amd/releases).
@@ -55,28 +64,22 @@ Now it isn't the latest and greatest but to be honest we just need Ollama to ser
 
 When Ollama starts and you see `GPU Detected` you are good to go, but more likely you see a log mentioning `GPU not detected` or `using CPU`.
 
-Like follows
-xxx
-
 This means that Ollama doesn't have the correct drivers to utilise our GPU. Now I hear you asking 
 "but William isn't this Ollama AMD compatible"
-It is but we need to update the ollama install files with the correct ROCm Library files to enable compatability.
-
-For that you will need to go here
+It is but we need to update the Ollama install files with the correct ROCm Library files to enable compatibility. For that you will need to go here:
 [https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU/releases/tag/v0.6.1.2](https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU/releases/tag/v0.6.1.2)
 
 Now for the hard part. To determine what GPU model you are working with. If only the names were that of what it says on the box but saddly not. For this we run `ollama serve` in our terminal.
-If ollama detects the GPU but it isnt supported we get a message "GPU is unsupported with a gfx" that code is the code for our GPU. I have a RTX 7900 XT which when i run the above mentioned command i get the following 
+If Ollama detects the GPU but it isnt supported we get a message "**GPU is unsupported with a gfx**" that code is the code for our GPU. I have a RTX 7900 XT which when I run the above mentioned command I can see my GPU is classed as **gfx1100**. 
 
-XXX
+We can go ahead and download the corresponding zip file. Navigate to where our drivers are for Ollama and replace them with the contents of the zip file.
+These files are generally located at `C:\Program Files\AMD\ROCm\5.7\bin` or something similar.
+Have a closer look at these [installation guidelines](https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU) and remember before replacing anything make a backup copy so you can always rollback and restart.
 
-We can go ahead and download the corsiponding zip file. Navigate to where our dirvers are for ollama and replace them with the contents of the zip file.
-These files are generally located at XXX
+This is the point where you might be thinking fuck me this is complicated! You would be correct because I thought the same. Messing with drivers is the price to pay to use an AMD card!
 
-Once done run ollama serve again and you should see ‘Supported GPU detected’
+Once done run `ollama serve` again and you should see ‘Supported GPU detected’
 
-XXX Party time
+![PartyTime](https://i.giphy.com/zINs6k7lwfawSbLOIc.webp)
 
-We are now goochi and whatever AI model we run will now use our AMD GPU rather then the mesaly CPU
-
-In the next post ill show how we can deploy our own UI like chatGPT 
+We are now goochi and whatever AI model we run will now use our AMD GPU rather then the measly processing unit called a CPU
