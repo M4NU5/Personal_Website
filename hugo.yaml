@@ -73,6 +73,10 @@ params:
 
   homeInfoParams:
     Title: "William Smale"
+    imageUrl: "doge.png"
+    imageTitle: "doge.png"
+    imageWidth: 100
+    imageHeight: 100
     # Content: Welcome to my blog
 
   profileMode:

@@ -1,9 +1,14 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry-custom home-info-custom">
+    <div class="profile_pic">
+        <div class="profile_pic_inner">
+            <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}" height="{{ .imageHeight | default 10 }}" width="{{ .imageWidth | default 150 }}" />
+        </div>
+    </div>
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>
     </header>
-    <div class="entry-content">
+    <div class="entry-content"> 
         {{ .Content | markdownify }}
     </div>
     <footer class="entry-footer">

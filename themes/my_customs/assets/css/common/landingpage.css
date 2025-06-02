@@ -36,3 +36,23 @@
 .first-entry-custom .entry-footer {
     font-size: 14px;
 }
+
+.profile_pic img {
+    border-radius: 50%;
+    background-color: transparent;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.profile_pic_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.2s;
+    transform-style: preserve-3d;
+}
+
+.profile_pic:hover .profile_pic_inner {
+    /* transform: rotateX(180deg); */
+    transform: rotateZ(180deg);
+}
