@@ -6,16 +6,16 @@ author: William
 category:
   - Story Time
 tags:
-  - Ballad
-description: 
+  - Rant
+description: An epic, satirical tale of engineers resisting a Confluence-to-SharePoint migration. Insightful, hilarious, and painfully relatable for every tech team.
 cover:
   image: A_dramatic_landscape.jpg
   alt: A_dramatic_landscape.jpg
 ---
 
-Engineers have a curious relationship with their tools. Take Confluence, a platform many love to hate. It’s clunky, inconsistent, and often a source of frustration. As engineers curse its name when they’re forced to hunt through disorganized pages or wrestle with broken permissions.
+Engineers have a curious relationship with their tools. Take Confluence, a platform many love to hate. It’s clunky, inconsistent, and often a source of frustration. As engineers curse its name when they’re forced to hunt through disorganised pages or wrestle with broken permissions.
  
-But even in our disdain, there is a kind of grim acceptance. Confluence, for all its flaws, is a familiar beast—predictable in its chaos, manageable with enough effort and has some features that we come to enjoy like markdown support and imbedded graphs. What engineers often forget, however, is the immutable law of systems: there is always something worse out there.
+But even in our disdain, there is a kind of grim acceptance. Confluence, for all its flaws, is a familiar beast—predictable in its chaos, manageable with enough effort and has some features that we come to enjoy like markdown support and embedded graphs. What engineers often forget, however, is the immutable law of systems: there is always something worse out there.
 
 For as much as engineers loathe Confluence, there are tools that stalk the executive hallways looking for its next unsuspecting victim.
 
@@ -49,7 +49,7 @@ The migration team, emboldened by their corporate mandate, began their assault. 
 
 But the engineers were ready.
 
-_"Integration?"_ our leader scoffed, stepping into the breach. “You mean the kind that buries knowledge under layers of unintuitive UI? Or do you refer to the 'integration' where every search returns files last edited in 2014?”
+_"Integration?"_ our leader scoffed, stepping into the breach. “You mean the kind that buries knowledge under layers of intuitive UI? Or do you refer to the 'integration' where every search returns files last edited in 2014?”
 
 The opposition faltered, their smiles thinning. Another engineer took up the charge:
 
@@ -57,7 +57,7 @@ _"Accessible? SharePoint's interface is a labyrinth designed to confuse even the
 
 Every argument they posed, we countered. Every glossy promise, we dissected with cold precision. The migration team, for all their PowerPoint prowess, was no match for the fury of 300 impassioned engineers united in a common cause.
 
-And as the meeting dragged on, a strange thing began to happen. The neutral parties—those who had yet to take sides—began nodding along with us. Their silence turned to tentative questions. “Wait, how _will_ file permissions work? What about version control? How will diagrams be imbedded?”
+And as the meeting dragged on, a strange thing began to happen. The neutral parties—those who had yet to take sides—began nodding along with us. Their silence turned to tentative questions. “Wait, how _will_ file permissions work? What about version control? How will diagrams be embedded?”
 
 Victory, dear friends, was within our grasp. For by the end of that meeting, the migration team agreed to revisit their plans, promising to consult further with the engineers before taking any final steps. It was a hard-fought battle, but the engineers stood victorious.
 
