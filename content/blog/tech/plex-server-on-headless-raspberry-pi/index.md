@@ -27,13 +27,13 @@ Plex is a powerful media server platform that allows you to organize and stream 
 - [Docker Installed](/blog/tech/docker-on-headless-raspberry-pi)
 
 > [!WARNING]
-> Raspberry Pi is not perfectly suited for this service due to the processing capacity of the Pis CPU. If the video quality is above 1080p the Pi will struggle to transcode and serve the media in time resulting in unwanted buffering. It does however work relatively well for 1080p and below.
+> A Raspberry pi is not perfectly suited for this service due to the processing capacity of its CPU. If the video quality is 1080p or above the Pi will struggle to transcode and serve the media in time. This will result in consistent unwanted buffering. It does however work well for 720p and below.
 
 ## Step 1:  Prepare Media Drive
 
 Before deploying Plex, prepare your media drive, which will be used to store all your movies and series. We are going to start assuming we are wanting a fresh start, which is what I did.
 
-### **Partition Your Drive**
+### **Partition & Format**
 In preparation to partition the drive we first need to unmount the drive.
 ```bash
 # List all disks connected to pi
@@ -69,7 +69,8 @@ Explanation of what we are inputting is as follows
 - **0**: Backing up partition settings, 0 = disable
 - **0**: Disable error checking at boot time
 
-### **Format Your Drive**
+**Format Your Drive**
+
 Next, we need to format the partition we have just created.  If your drive is located at /dev/sda, the new partition will be located at /dev/sda1 (if the drive is /dev/sdb, you will use /dev/sdb1, and so on). Run this code:
 ```bash
 # Used to create an ext4 file system
@@ -93,7 +94,7 @@ sudo chown -R pi /mnt/PlexMedia
 sudo chmod -R 775 /mnt/PlexMedia
 ```
 
-### **Share Your Drive**
+### **Secure & Share**
 Now its time to share the drive on our network, so you can add your files and access them from another device in the house. This will simplify how we manage the files on the media server. To achieve this we will use a tool called [Samba](https://www.samba.org/), which is an open-source implementation of Windows' [SMB/CIFS](https://www.pcmag.com/encyclopedia/term/cifs) file-sharing protocol.
 
 ```bash
@@ -113,7 +114,8 @@ sudo vim /etc/samba/smb.conf
 
 In the Samba config file scroll down to the bottom of the file and input the above configuration for the smb share. In your version of the config file, **plexmedia** would be the name of your share (name it whatever you want) and **/mnt/plexmedia** would be the mounted location of your drive.
 
-### **Secure Your Drive**
+**Secure**
+
 Finally to secure the network share you will need to create a password for Samba. **Samba requires this for the share to become active.** 
 ```bash
 #sudo smbpasswd -a <USER>
@@ -126,14 +128,14 @@ sudo adduser jeff
 sudo smbpasswd -a jeff
 ```
 
-Now with the setup process complete, lets restart just to have a clean slate and let everything load from scratch `sudo shutdown -r now` or if you like to live life on the edge just restart the smb service `sudo systemctl restart smbd`
+Now with the setup process complete, lets restart just to have a clean slate and let everything load from scratch `sudo shutdown -r now` or if you like to live life on the edge just restart the smb service `sudo systemctl restart smbd`.
 
-### **Access Your Media**
+**Access Your Media**
+
 To access your Raspberry Pi’s shared media folder from a Windows PC, open File Explorer and enter your Pi’s local URL (`\\pi.local\plexmedia`) or IP address (`\\192.168.1.11\plexmedia`) into the address bar. Replace **plexmedia** with your specific share name. Press Enter, then log in with your Samba username and password. If you’re unsure of your Pi’s IP address, find it via your router settings or by running `ifconfig` on the Pi. For easy access, right-click on **This PC**, select **Add a network location**, and follow the prompts.
 
-
 ## Step 2: Create Docker Compose file
-Docker simplifies the deployment of applications like Plex. By deploying Plex on Docker, you streamline the setup process, making it easier to manage, update, and maintain the Plex server. Aswell minimizes the chance of conflict with any other software you may want to deploy onto your Raspberry Pi. We will be using the plex image put together by [linuxserver.io](https://docs.linuxserver.io/images/docker-plex)
+Docker simplifies the deployment of applications like Plex. By deploying Plex on Docker, you streamline the setup process, making it easier to manage, update, and maintain the Plex server. We will be using the plex image put together by [linuxserver.io](https://docs.linuxserver.io/images/docker-plex)
 ```yaml
 services:
   plex:
@@ -168,7 +170,6 @@ docker-compose up -d
 ```
 
 This command instructs Docker to download the Plex image and start the container in detached mode. Your Plex server will now be running on the Raspberry Pi, accessible through your local network.
-
 
 
 ## Step 3: Connect Your Plex Client

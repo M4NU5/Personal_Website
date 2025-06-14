@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Ollama with AMD GPU
+title: Setup Ollama with AMD GPU
 date: 2025-06-01
 author: William
 category:
