@@ -59,6 +59,8 @@ If you want details of how I have mounted my drive check out [my other writeup](
 
 You may run into issues with permissions. For this we do the following...
 
+Anyhow without further adue, here is my 2 cents on the good, the bad and the ugly of linux gaming
+
 ### The good
 
 The package manager experience with Linux is second to none. Sure you need to use a terminal but thats all very basic. Its so superior you even find windows going that route with wget and chocolate
@@ -138,21 +140,18 @@ People love knowing what exactly you’re working with. Include:
 
 ---
 
-#### 7. **Wrap Up with a “Who Should Switch?” Section**
+### Conclusion 
 
-Summarize your stance with a recommendation guide:
+So thats all good william i hear you say. So who is this life for? I would say everyone, but some people will make the transision easier then others and some might go down the middle road like me which can seem quite daunting if you have never done it before. 
 
-### Who Should Make the Linux switch?
-✅ You're a developer   
-✅ You love tinkering   
-✅ You want performance and control   
-✅ You’re gaming on supported titles   
-✅ You’re sick of Windows updates and bloat  
-❌ You depend on Adobe tools   
-❌ You play anti-cheat-heavy multiplayer games   
-❌ You hate terminal or troubleshooting weird issues`
+If your a developer, a tinkerer or techie go for it, im suprised you have read this far. 
+If your sick of windows bloat and being locked in make the change. 
 
+If youre a being AAA gamer playing multiplayer games you will most probably run into some problems. This can be solved by the middle way of dual boot. and if youre like me with an NVMe your boot times are rediculiously quick so it isnt a drawback if you need to quickly switch OS
 
+But one thing i will say could be a showstopper for people is if you go down the linux path you need to be comfortable with the terminal, or willing to learn it and be happy to troubleshoot weird issues you run into. 
+
+These days with AI it can help you troubleshoot issues alot easier but it still is a thing to keep in mind.
 
 ### Conclusion
 In my experiance so far has been great but not without its flaws and drawbacks. At the end of the day it is a trade off as in all things. I myself am a techie and enjoy tinkering and learning more and more about computers. Often this road leads me to linux where you can operate in a more flexible and free manner 
