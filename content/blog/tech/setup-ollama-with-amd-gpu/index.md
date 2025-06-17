@@ -16,7 +16,7 @@ cover:
 ---
 ## Introduction
 
-OpenAI, Google, X and many more all provide AI chatbot capabilities that are really useful to a point and that point is how much they know. There is a prevailing consensus that the more data you give a model the better it is. You can even customise and get the chat bot to know you better by uploading your personal data. By doing so however you are seeding all your data to be owned by which ever company you are uploading to. Oh and you want to use our top models consistently without rate limits cough up some money as well boy! 
+OpenAI, Google, X and many more axll provide AI chatbot capabilities that are really useful to a point and that point is how much they know. There is a prevailing consensus that the more data you give a model the better it is. You can even customise and get the chat bot to know you better by uploading your personal data. By doing so however you are seeding all your data to be owned by which ever company you are uploading to. Oh and you want to use our top models consistently without rate limits cough up some money as well boy! 
 
 This is not to say its a bad thing, its just good to know what we are working with and consider the trade-offs.
 

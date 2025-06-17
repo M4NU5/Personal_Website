@@ -49,9 +49,6 @@ https://www.mdfaisal.com/blog/using-n8n-with-docker-compose
 Create a new file called `docker-compose.yml` and add the following content. Don't worry about what it does, we will explain it later.
 
 ```yaml
-version: '3'
-version: '3.8'
-
 services:
   n8n:
     image: n8nio/n8n
