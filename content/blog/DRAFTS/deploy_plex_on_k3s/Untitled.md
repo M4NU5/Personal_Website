@@ -47,6 +47,7 @@ For me I'm using the SMB protocol to manage the persistent storage. I want to se
 ## Cluster Deployment
 ##### Master node deployment process
 
+
 ##### Adding worker nodes
 ##### Implementing high availability features 
 - Not doing this this round. Need quorum of 3
