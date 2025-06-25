@@ -18,6 +18,17 @@ What ends up happening when you enterprise this idea. We cant have each team wor
 
 Lookup sandbagging in agile
 
+SAFe Agile (Scaled agile framework) - Adopted by NIQ
+Just a framework (NOT RIDGED?) Guidelines
+Developed in 2010
+Agile release train (ART)
+Pro View
+- Align priorities 
+- Same planning cycle - Bind them into lock step
+- Combining teams together to work together
+- Foster collaberation with teams working on the same schedule
+
+
 # The Age of Agile
 
 We live in an age of agile in the tech world. Some argue it was incepted by the [Agile Manifesto](https://agilemanifesto.org/) in 2001 almost 24 years ago. In these formative years, startups used agile techniques to ship products quickly, fail fast, and fail forward. That is how you build good software. Revolutionary in the age of waterfall where companies would take years to develop some fully fledged program before going to market.  
