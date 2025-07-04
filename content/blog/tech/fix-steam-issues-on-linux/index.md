@@ -3,10 +3,10 @@ draft: false
 title: How to Fix Common Steam Issues on Linux
 date: 2025-04-26
 author: William
-category: Tech
+category:
+  - Tech
 tags:
   - Linux
-  - Infrastructure
   - Gaming
 description: Struggling with Steam on Linux? Learn how to properly mount your NTFS drive, fix Proton issues, and start gaming smoothly with this step-by-step guide.
 cover:

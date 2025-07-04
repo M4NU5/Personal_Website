@@ -7,6 +7,7 @@ category:
   - Tech
 tags:
   - Automation
+  - Python
 cover:
   image: immersive_labs_achievements_scraper.png
   alt: EpicSolutionArchitecture.png
