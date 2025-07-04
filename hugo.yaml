@@ -6,9 +6,6 @@ theme: PaperMod
 pagination:
   pagerSize: 50 # articles per page
 
-cover:
-  hiddenInList: true
-
 googleAnalytics: "G-NM1GF3ZKR0"
 
 sitemap:
@@ -63,8 +60,7 @@ params:
     - Hacking
     - Penetration Testing
   description: William Smale a Product Security Engineer with over half a decade of experience. Skilled in Python, Bash, SAST, DAST, Penetration Testing, threat analysis, and secure CI/CD pipeline deployment.
-  cover:
-    image: true
+
   # Post paramaters
   ShowToc: true
   TocOpen: true
@@ -75,7 +71,8 @@ params:
   comments: true
   relativeURLs: true
   hideDescriptions: true
-
+  cover:
+    hiddenInList: true
   homeInfoParams:
     Title: "William Smale"
     imageUrl: "doge.png"
