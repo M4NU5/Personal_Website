@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Linux gaming in 2025
 date: 2025-06-28
 author: William
@@ -8,10 +8,10 @@ category:
 tags:
   - Linux
   - Gaming
-description: 
+description: Thinking about switching to Linux for gaming? Here's a deep dive into dual-booting, gaming on Nobara Linux, NTFS shenanigans, Steam support, and the good, bad, and ugly of Linux gaming in 2025 from someone who actually made the switch. 
 cover:
-  image: Steam-Linux.webp
-  alt: Steam-Linux.webp
+  image: LinuxSteam.png
+  alt: LinuxSteam.png
 ---
 So you're thinking about switching to Linux. We've all had those moments.
 
