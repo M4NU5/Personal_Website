@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Linux gaming in 2025
+title: Linux gaming in 2025?
 date: 2025-06-28
 author: William
 category:
