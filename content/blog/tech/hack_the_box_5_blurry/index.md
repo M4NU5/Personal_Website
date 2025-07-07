@@ -6,9 +6,9 @@ author: William
 category:
   - Tech
 tags:
-  - Hacking
-  - Security
   - Linux
+  - Security
+  - Hacking
 cover:
   image: hack_the_box_5_blurry.png
   alt: hack_the_box_5_blurry.png
