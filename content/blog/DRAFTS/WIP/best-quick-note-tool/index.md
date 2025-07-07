@@ -16,8 +16,21 @@ cover:
 
 Knowlage capture is a tough thing. In this age where we have a firehgose of data and infomration being thrown at us all the time how we capture and process this information becomes increasingly important. 470
 
+Enter notion, the saviour of project management and colaberation where you can manage your life in a single app. 
+Notion was the new kid on the block when the likes of evernote were the real heavy hitters. 
+And for the most part coming from a evernote landscape notion does a pretty good job.
+You build you structure and fill out content as you need. Morfing the structure as and when you need while using relational databases to link everything up.
 
+Yeah i can see all you project managers cumming in your pants right now.
 
+Exposed its API (FACT CHECK!!) allowing for custom methods to integrate with it.
+This lead to a whole host of cool little projects that would enable you in inject data into your notion world. Whether it is a app that you add to your browser or savetonotion bot on twitter/x people started using it all.
+
+This is particularity prevelent in the bug bounty space where you see people comenting on posts savetonotion like a self report. Getting whatever it is to be added to their inbox for later consumption.
+
+This lead to people building
+
+But what if you are out and about and one to snap or capture something quickly.
 
 Why keep is better then notion for quick note **capture**
 
