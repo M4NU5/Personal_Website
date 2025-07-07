@@ -6,9 +6,9 @@ author: William
 category:
   - Tech
 tags:
+  - Linux
   - Infrastructure
   - Security
-  - Linux
   - Raspberry_Pi
 cover:
   image: configuring_ssh_pi.png

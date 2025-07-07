@@ -6,9 +6,9 @@ author: William
 category:
   - Tech
 tags:
-  - Hacking
   - Linux
   - Security
+  - Hacking
 ---
 This was my first proving grounds lab of my OSCP. Took longer than I would have liked but I was able to pwn it in the end with a joyful fist pump and woop from my side. Any advice or comments on how I could improve this write-up would be appreciated.
 
