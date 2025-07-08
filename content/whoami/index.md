@@ -1,7 +1,6 @@
 ---
-title: "About me"
+title: "whoami"
 date: 2023-09-15T11:30:03+00:00
-# tags: ["About"]
 author: "William"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -33,7 +32,7 @@ cover:
 ---
 
 ```python
-class Me():
+class whoami():
     def __init__(self):
         self.name       = "William Smale"
         self.location   = "London, UK"

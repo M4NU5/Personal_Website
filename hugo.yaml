@@ -17,9 +17,9 @@ sitemap:
 menu:
   main:
       # About
-      - identifier: me
-        name: Me 
-        url: me
+      - identifier: whoami
+        name: whoami
+        url: whoami
         weight: 10
 
       - identifier: certifications
