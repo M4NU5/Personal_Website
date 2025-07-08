@@ -74,7 +74,7 @@ params:
   cover:
     hiddenInList: true
   homeInfoParams:
-    Title: "William Smale"
+    Title: "William"
     imageUrl: "doge.png"
     imageTitle: "doge.png"
     imageWidth: 100
@@ -83,7 +83,7 @@ params:
 
   profileMode:
     enabled: false
-    title: William Smale
+    title: William
     # subtitle: "Collaboration | Innovation | Perspective"
     imageUrl: "doge.png"
     imageTitle: "doge.png"
