@@ -11,13 +11,13 @@ comments: false
 # description: "Desc Text."
 # canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
-disableShare: false
+disableShare: true 
 disableHLJS: false
 # hideSummary: false
 searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
-ShowPostNavLinks: true
+ShowPostNavLinks: true 
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
@@ -32,7 +32,7 @@ cover:
 ---
 
 ```python
-class whoami():
+class me():
     def __init__(self):
         self.name       = "William Smale"
         self.location   = "London, UK"
