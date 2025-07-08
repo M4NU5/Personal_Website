@@ -32,7 +32,7 @@ cover:
 ---
 
 ```python
-class whoami():
+class me():
     def __init__(self):
         self.name       = "William Smale"
         self.location   = "London, UK"
