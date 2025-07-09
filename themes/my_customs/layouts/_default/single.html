@@ -49,6 +49,10 @@
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
+    {{- if (.Param "comments") }}
+    {{- partial "comments-bsky.html" . }}
+    {{- end }}
+
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
@@ -58,7 +62,7 @@
   </footer>
 
   {{- if (.Param "comments") }}
-  {{- partial "comments.html" . }}
+  {{- partial "comments-bsky.html" . }}
   {{- end }}
 </article>
 
