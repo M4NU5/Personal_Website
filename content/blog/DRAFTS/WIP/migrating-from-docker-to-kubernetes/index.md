@@ -1,16 +1,17 @@
 ---
 draft: true
-title: 
+title: Migrating from docker to Kubernetes
 date: 
 author: William
-category: 
+category:
+  - Tech
 tags: 
 description: 
 cover:
   image: test
   alt: test
 ---
-The time has come! docker just isnt doing it for me anymore. 
+The time has come! docker just isn't doing it for me anymore. 
 Its limitations and lack of industory application has driven me to the dark side
 Thats right its kubernetes time baby.
 
@@ -55,16 +56,36 @@ This migration was a bigger inititave then just deploying kubernetes. I needed t
 
 
 Setting up K3s on linux
+Installing K3s is super straight forward. Just go here TK and follow the installation guide.
+
+
 
 Migrating Plex capability
+Migrating Plex was more of a headache however because of how plex works as a platform.
+In the docker verse it is easy and straight forward. Expose ports and good to go. In the kubernetes world where you want your cluster to handle your networking for you you run into a problem 
 
-Why plex is a bad idea in Kubernetes
+Deploying Plex call out but you cant configure or set it up becuase you need to access the port 32500 directly to get access to the admin panels.
+On top of this if if your TV tries to connect to the plex media server which requires port 32500 again your plex client wont be able to find it with a direct conneciton. Your client will fallback to an indirect connection which i think uses Plexes own servers as a sudo proxy / vpn thing that will result in terrible quality video streams... If it even streams at all!
 
+All in all plex is a bad idea if you want kubernetes to handle the networking. It can still be made to work by setting net `nodePort` option on your helm chart. 
+
+This seemingly weird limitation makes sense if you remember that plex is old. Like pre containers old as a platform and hence was built with the idea of running on a VM or directly on tin.
+
+Yes im using helm charts and fuck i forget to mention that. Think of helm charts as the docker compose of kubernetes. But just better in everyway.
+
+I personally didnt want to go down this route as it would take away the flexability that you gain by going down this kubernetes route and plus i dont want to go to a shitty IP when im consuming my media i want to go to a URL where i can access my own netflix. Like a willflix.com you would say... That link goes to a venmo and i do not condone it!
+
+
+For this reason and a couple others i would recommend if you are looking to use Kubernetes go with Jellyfin. Highly recommened. It isnt as 'feature rich' as plex, other people would call it bloat! Jellyfin gives you exactly whats on the tin nothing less and even a little more then plex in some areas. If you just need a media server capability Jellyfin is for you. It was built in the age of containers so you dont have to fuck around with Plexes weird limitations. Allowing you to lift and shift you infra, push it to a different node on your cluster with no headaches... Well atleast minimal ones :D
 Jellyfin recommendation
-
-Arr stack blog post referance
+But deploying and configuring Jellyfin is outside the scope of this blog post. But stay tuned if you have read this far dear reader... Or here is the post right now TK  Arr stack blog post referance
 
 Conclusion
+All in all I have zero resovasions migrating from docker to Kubernetes, just like using training wheels when learning to ride a bike docker is the perfect entry point to the container world that we now live in. Hell it is good enough for most use cases and many people will never graduate past it but if you want to grow as an engineer the training wheels need to come off at some point. How else are you going to be able to do cool BMX trick or go on awesome mountainbike trails, Ive gotten a little lost in my bike annalogy. 
+
+anyway, i would highly recommend for anyone who is interested running their own home lab to give K3s a go Its not as crazy complicated as K8s but it doesnt need to be for a home lab usecase.
+
+Now having no lifed this migration for longer then i would like to admit im going to go touch grass before I have a mental break talking about the differances between nginx, Trefieak and reverse proxies. Which i think we can all agree no one knows how reverse proxies work!!!!
 
 
 
