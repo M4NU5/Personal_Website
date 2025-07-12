@@ -1,14 +1,53 @@
+/* Base styles for all comment-related links */
+.comments-class a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.comments-class a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.comments-class {
+    font-size: 15px;
+}
+
 .comment {
     padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
 }
 .author {
     font-weight: bold;
 }
+
+.comment-post-meta-actions .actions-link {
+    font-size: 5px;
+}
+
+#comment-post-meta-reply {
+    font-size: 12px;
+    display: block;
+    margin-top: 0.05rem; /* space below stats */
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+#comment-post-meta-reply:hover {
+  text-decoration: underline;
+}
+
 .avatar {
-    width: 24px;
-    height: 24px;
+    flex: none;
+    padding-top: 0.5rem; 
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     vertical-align: middle;
+    display: inline-block;
     margin-right: 8px;
 }
 .nested-replies {
@@ -24,7 +63,4 @@
 }
 .rounded-full {
     border-radius: calc(infinity * 1px);
-}
-.my-12 {
-    margin-block: calc(var(--spacing) * 12);
 }
