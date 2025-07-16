@@ -49,7 +49,7 @@
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
-    {{- if (.Param "comments") }}
+    {{- if (.Params.bsky) }}
     {{- partial "comments-bsky.html" . }}
     {{- end }}
 
