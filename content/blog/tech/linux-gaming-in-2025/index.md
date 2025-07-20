@@ -9,7 +9,7 @@ tags:
   - Linux
   - Gaming
 description: Thinking about switching to Linux for gaming? Here's a deep dive into dual-booting, gaming on Nobara Linux, NTFS shenanigans, Steam support, and the good, bad, and ugly of Linux gaming in 2025 from someone who actually made the switch. 
-bsky: https://bsky.app/profile/williamsmale.com/post/3lt5o7ahlbk2s
+bskyid: "3lt5o7ahlbk2s"
 cover:
   image: LinuxSteam.png
   alt: LinuxSteam.png

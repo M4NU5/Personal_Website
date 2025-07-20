@@ -1,66 +1,100 @@
-/* Base styles for all comment-related links */
-.comments-class a {
-  color: #999;
+.comment-container {
+display: flex;
+align-items: flex-start;
+margin-bottom: 15px;
+padding: 15px;
+background-color: var(--card-background-light);
+border-radius: 10px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+border: 1px solid var(--border-light);
+transition: all 0.3s ease;
+}
+
+.child-comments {
+margin-left: 30px;
+border-left: 2px solid var(--border-light);
+padding-left: 15px;
+margin-top: 10px;
+}
+
+.comment-avatar {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.comment-details {
+max-width: calc(100% - 60px);
+}
+
+.comment-header {
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.comment-header span {
+font-size: 0.9em;
+color: gray;
+}
+
+.comment-text {
+margin-bottom: 10px;
+}
+
+.comment-timestamp {
+font-size: 0.8em;
+color: gray;
+}
+
+.button-link {
+display: inline-block;
+padding: 8px;
+font-size: 15px;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+border-radius: 2px;
+background-color: var(--button-bg-light);
+color: var(--button-text-light);
+transition: background-color 0.3s;
+}
+
+.button-link:hover {
+filter: brightness(1.5);
+text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+.button-link {
+  background-color: var(--button-bg-dark);
+  color: var(--button-text-dark);
+}
+
+.button-link:hover {
+  filter: brightness(0.9); /* Slightly decrease brightness on hover */
+}
+}
+.username-link {
+  font-weight: bold;
+  color: var(--link-color);
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
 }
 
-/* Hover effect */
-.comments-class a:hover {
-  color: #fff;
+.username-link:hover {
   text-decoration: underline;
 }
 
-.comments-class {
-    font-size: 15px;
+.comment-meta {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: gray;
 }
 
-.comment {
-    padding: 10px 0;
-    display: flex;
-    align-items: flex-start;
-}
-.author {
-    font-weight: bold;
-}
-
-.comment-post-meta-actions .actions-link {
-    font-size: 5px;
-}
-
-#comment-post-meta-reply {
-    font-size: 14px;
-    display: block;
-    margin-top: 0.05rem; /* space below stats */
-    font-weight: 500;
-    transition: color 0.2s ease-in-out;
-}
-
-#comment-post-meta-reply:hover {
-  text-decoration: underline;
-}
-
-.avatar {
-    flex: none;
-    padding-top: 0.5rem; 
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    vertical-align: middle;
-    display: inline-block;
-    margin-right: 8px;
-}
-.nested-replies {
-    margin-left: 20px;
-    padding-left: 10px;
-}
-.actions {
-    font-size: 12px;
-    color: #666;
-}
-.nested-replies .comment {
-    margin-bottom: 0;
-}
-.rounded-full {
-    border-radius: calc(infinity * 1px);
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

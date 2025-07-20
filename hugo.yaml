@@ -69,6 +69,7 @@ params:
   ShowBreadCrumbs: false
   ShowPostNavLinks: true
   comments: true
+  bluesky: "williamsmale.com"
   relativeURLs: true
   hideDescriptions: true
   cover:
