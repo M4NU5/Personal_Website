@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Adding comments to my Blog
 date: 2025-07-24
 author: William
