@@ -8,7 +8,7 @@ category:
 tags:
   - Blog
 description: 
-bsky: 3lushw6ig4c2v
+bskyid: 3lushw6ig4c2v
 cover:
   image: speechbubble.png
   alt: speechbubble.png
