@@ -6,7 +6,7 @@ author: William
 category: 
 tags: 
 description: 
-bsky: 
+bskyid: 
 cover:
   image: test
   alt: test
