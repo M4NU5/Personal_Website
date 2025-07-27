@@ -8,13 +8,14 @@ category:
 tags:
   - Automation
   - Python
+  - Blog
 cover:
   image: immersive_labs_achievements_scraper.png
   alt: EpicSolutionArchitecture.png
 description: Create a personalized achievements page for your website using a Python web-scraping bot to extract and display your accomplishments. This guide walks you through saving your achievements page, parsing it with Beautiful Soup, and generating a custom webpage using Hugo Go shortcodes. Learn how to fetch, process, and display your achievements effectively, and discover how to solve common issues like expired image URLs by downloading and locally hosting images. Perfect for showcasing your milestones in a professional, visually appealing way.
 ---
 ## Introduction
-You ever look at your achievements page on X Y or Z website and think "I would love to show this whole page and not just piece meal my Linkedin account resulting in just unprofessional noise on my public profile"... No? Maybe it's just me... Anyway Ima build my own achievements page, with blackjack and hookers, using a [web scrapping bot](https://github.com/M4NU5/Immersivelabs_Achievements_Scrapper) that extracts all the essential details and outputs this [webpage for my site](/learned). Here is how I did it.
+You ever look at your achievements page on X Y or Z website and think "I would love to show this whole page and not just piece meal my LinkedIn account resulting in just unprofessional noise on my public profile"... No? Maybe it's just me... Anyway Ima build my own achievements page, with blackjack and hookers, using a [web scrapping bot](https://github.com/M4NU5/Immersivelabs_Achievements_Scrapper) that extracts all the essential details and outputs this [webpage for my site](/learned). Here is how I did it.
 
 ## Making the soup
 Lets get started with importing the achievements webpage into our python script. Now this achievements page is locked behind a login EWWWW. Now I could automate this login process but Ima work smart and do this part of the process manually. This isn't much of a problem as this page itself doesn't change. So I'll only need to fetch the achievements page when I'm wanting to apply an update to my website.

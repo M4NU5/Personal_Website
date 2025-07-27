@@ -38,7 +38,7 @@ ShowReadingTime: false
 ---
 ![Alt](immersive_labs_logo.webp#center)
 
-This part of the page is generated from a custom script I wrote. The script scrapes my Immersive Labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](https://williamsmale.com/thoughts/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
+This part of the page is generated from a custom script I wrote. The script scrapes my Immersive Labs achievements page and rebuilds it for my personal website. If you are interested checkout my [post](/blog/tech/coding-convenience-immersive-labs-achievements-scraper/) on it! 
 
 
      
