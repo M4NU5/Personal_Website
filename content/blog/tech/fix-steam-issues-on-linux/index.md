@@ -12,6 +12,7 @@ description: Struggling with Steam on Linux? Learn how to properly mount your NT
 cover:
   image: Steam-Linux.webp
   alt: Steam-Linux.webp
+bskyid: 3lnpz3zwtts2n
 ---
 So you want to join the cool kids club and be a Linux gamer. You have found your distro of choice and installed it. In your infinite wisdom you still have that second hard drive to store all your data keeping it separate from your OS install files.
 

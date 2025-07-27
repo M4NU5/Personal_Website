@@ -106,10 +106,11 @@ Knowlage capture and refinement needs to be as simple and integrated into your o
 
 ## Conclusion
 
-Dont get me wrong, notion as a tool can be great. I use it to track work and projects. and in this regard it excels at...
-When your on your computer and have a strong internet connection.
+Dont get me wrong, notion as a tool can be great. I use it to track work and projects and in this regard it excels at that structured approach
+When your on your computer and have a good internet connection.
 You make kanban boards 
 You can enrich pages with pages
+hell you can even share 
 
 But when it comes to a second brain approach
 where you want more imergant knowledge and ideas that are captured notion feels to ridged for me at least... Which projects require mind you 
