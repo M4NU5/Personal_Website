@@ -7,9 +7,9 @@ category:
   - Tech
 tags:
   - Linux
-  - Infrastructure
   - Security
-  - Raspberry_Pi
+  - Raspberry-Pi
+  - Home-Lab
 cover:
   image: configuring_ssh_pi.png
   alt: AwesomeRaspberryPi.png

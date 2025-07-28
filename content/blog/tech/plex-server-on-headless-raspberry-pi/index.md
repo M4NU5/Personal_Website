@@ -6,9 +6,10 @@ author: William
 category:
   - Tech
 tags:
-  - Infrastructure
+  - Raspberry-Pi
   - Linux
-  - Raspberry_Pi
+  - Docker
+  - Home-Lab
 description: 
 cover:
   image: Plex_docker_on_pi.png

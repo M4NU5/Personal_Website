@@ -63,10 +63,9 @@ Here’s what I did:
 
 Now, about my **data drive** it’s a massive NTFS volume full of games, media, junk... you name it. NTFS is Windows' baby, and while Linux can talk to it, it’s not exactly a smooth conversation.
 
-Mounting it in `/etc/fstab` works fine, though. If you're trying to run games directly off an NTFS drive (like I was), check out [my other write-up](/blog/tech/fix-steam-issues-on-linux/#mounting-your-ntfs-drive-the-right-way) where I explain exactly how I got that sorted.
+Mounting it in `/etc/fstab` works fine, though. If you're trying to run games directly off an NTFS drive (like I was) you _will_ hit permissions weirdness. Check out [my other write-up](/blog/tech/fix-steam-issues-on-linux/#mounting-your-ntfs-drive-the-right-way) where I explain exactly how I got that sorted.
 
-You _will_ hit permissions weirdness. When you do, here's what I did to fix it...
-
+Anyway without further ado!
 ## The Good
 
 - The **package manager experience** on Linux is unmatched. Yeah, it’s terminal-based, but it’s basic stuff and Windows is clearly trying to copy the vibe with Chocolatey and `wget`.

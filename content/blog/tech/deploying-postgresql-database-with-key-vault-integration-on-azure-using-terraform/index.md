@@ -6,8 +6,9 @@ author: William
 category:
   - Tech
 tags:
-  - Automation
-  - Infrastructure
+  - Terraform
+  - DevOps
+  - Azure
 cover:
   image: terraform-azure.png
   alt: EpicTerraformArchitecture.png

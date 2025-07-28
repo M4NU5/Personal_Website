@@ -6,9 +6,10 @@ author: William
 category:
   - Tech
 tags:
-  - Infrastructure
+  - Raspberry-Pi
   - Linux
-  - Raspberry_Pi
+  - Docker
+  - Home-Lab
 cover:
   image: Docker_on_pi.png
   alt: Docker_on_pi.png

@@ -6,8 +6,8 @@ author: William
 category:
   - Tech
 tags:
-  - Infrastructure
   - Linux
+  - Kubernetes
 description: 
 cover:
   image: test

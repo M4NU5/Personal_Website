@@ -6,8 +6,8 @@ author: William
 category:
   - Tech
 tags:
-  - Infrastructure
   - Windows
+  - Remote-Access
 cover:
   image: desktop_plus_laptop.png
   alt: EpicDesktopPic.png

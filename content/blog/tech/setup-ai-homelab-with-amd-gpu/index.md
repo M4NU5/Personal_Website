@@ -7,7 +7,6 @@ category:
   - Tech
 tags:
   - Windows
-  - Infrastructure
   - AI
 description: Discover how to run local AI chatbots using AMD GPUs with Ollama. Skip the cloud, own your data, and set up open-source LLMs like Meta’s LLaMA and Mistral on your machine—no NVIDIA required.
 cover:

@@ -6,9 +6,10 @@ author: William
 category:
   - Tech
 tags:
-  - Raspberry_Pi
-  - Infrastructure
+  - Raspberry-Pi
   - Linux
+  - Docker
+  - Home-Lab
 description: Learn how to set up a Pi Hole on your home network to block ads at the DNS level and enjoy an ad-free browsing experience on all devices. This step-by-step guide covers Pi Hole installation using Docker, router configuration, and adding advanced blocklists for enhanced protection.
 cover:
   image: Docker_pi_hole.png
