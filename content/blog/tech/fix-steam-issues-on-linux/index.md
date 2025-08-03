@@ -18,7 +18,9 @@ So you want to join the cool kids club and be a Linux gamer. You have found your
 
 After installing Steam you have run into countless stupid seemingly unexplainable problems and your can't seem to find a clear guide on how to get it all working smoothly. Well worry no more intrepid cyber traveller I put together this guide after piecing together and overcoming the many problems that I faced and you are probably experiencing.
 
-Let's start with the foundation: getting your NTFS data drive mounted properly so Steam can recognise and access it. If this part isn't done right, you'll run into all sorts of issues later — so take a breath, and let's go step by step.
+---
+
+Let's start with the foundation: getting your NTFS data drive mounted properly so Steam can recognise and access it. If this part isn't done right, you'll run into all sorts of issues later so take a breath, and let's go step by step.
 
 ## **Mounting Your NTFS Drive (The Right Way)**
 
@@ -47,9 +49,7 @@ I personally have 2 NVME drives, one acting as a data drive and the other holdin
 
 On a side note... You will come across a lot of people saying "EWWWW never use NTFS" and their points are valid. However windows only supports FAT32, exFAT, and NTFS. If you want interoperability with windows your data drive will need to be exFAT or NTFS. Of the two NTFS is a more robust and feature rich format that supports journaling allowing you to recover and restore if your drive corrupts. If exFAT goes bad kiss your data goodbye. Hence I'm using NTFS.
 
-Now that we know what we are looking for we need to get the UUID of the drive with
-
-`sudo blkid`
+Now that we know what we are looking for we need to get the UUID of the drive with `sudo blkid`
 
 ```bash
 - sudo blkid
@@ -64,6 +64,7 @@ The UUID of my drive is `24F46B67F46B39E6` this is what we need to specify in th
 **Edit `fstab` to Automount**
 
 Editing this file ensures the drive shall be mounted every time we start our system.
+
 `vim /etc/fstab`
 
 Here we enter in the mounting information for the drive we have identified.
@@ -129,8 +130,7 @@ Once you've linked up the compatibility data properly, your game should finally 
 
 There is a thriving Linux gaming community that work together to figure out the best configuration for any game of your choosing. Check them out here at [protondb](https://www.protondb.com/) You can search for any game you like and see the recommendations of many other users.
 
+You can find some additional information at this git repo from Valve themselves here [Valve Github](https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows).
+
 Hope this was of great help to you, I’m going to go touch some grass and play some games on my Linux machine.
-
-You can find some additional information at this git repo from Valve themselves here [Valve Github](https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows)
-
-![https://i.giphy.com/xoHntNXFYkfzGAftEv.webp](https://i.giphy.com/xoHntNXFYkfzGAftEv.webp#center)
+If you do have any additional questions drop a comment below and we can enrich this resource for any other weary travelers that dare to walk this path.
