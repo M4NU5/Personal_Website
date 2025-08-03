@@ -121,7 +121,7 @@ mkdir /home/USERNAME/.Steam/root/Steamapps/compatdata
 Next we need to create a link on the mounted NTFS drive for Steam to utilise
 
 ```bash
-sudo ln -s ~/.Steam/root/Steamapps/compatdata  /media/data/Steam LIBRARY IN NTFS DISK/Steamapps/
+sudo ln -s ~/.Steam/root/Steamapps/compatdata  /media/data/STEAM_LIBRARY_IN_NTFS_DISK/Steamapps/
 ```
 
 Once you've linked up the compatibility data properly, your game should finally launch. Success! But even if it doesn’t, you’re not alone. This is where the wider Linux gaming community really shines.
