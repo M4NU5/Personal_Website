@@ -85,4 +85,5 @@ const commentHtml = `
 ```
 
 We are simply looking to add `<img>` to the content object we are constructing. 
-Hope this is of interest for anyone looking to explore this further.
+
+Hope this is help out anyone looking to explore this further.
