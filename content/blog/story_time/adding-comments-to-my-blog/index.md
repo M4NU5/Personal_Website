@@ -72,11 +72,8 @@ safeContent += `<br><img src="${gifUrl}" alt="${altText}" loading="lazy" class="
 // Handle nested embeds (e.g., quoted posts with images)
 
 if (reply.post.embed && reply.post.embed.record && reply.post.embed.record.embed && reply.post.embed.record.embed.images) {
-
 reply.post.embed.record.embed.images.forEach(img => {
-
 safeContent += `<br><img src="${img.fullsize}" alt="${DOMPurify.sanitize(img.alt || '')}" class="comment-image">`;
-
 });
 }
 
