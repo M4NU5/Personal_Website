@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Setup Ollama with AMD GPU
 date: 2025-06-01
 author: William
@@ -9,10 +9,10 @@ tags:
   - Windows
   - AI
 description: Discover how to run local AI chatbots using AMD GPUs with Ollama. Skip the cloud, own your data, and set up open-source LLMs like Meta’s LLaMA and Mistral on your machine—no NVIDIA required.
+bskyid: 3lql3lkvx4s2o
 cover:
   image: test
   alt: test
-bskyid: 3lql3lkvx4s2o
 ---
 ## Introduction
 
