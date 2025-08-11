@@ -46,7 +46,7 @@ Weirdly X was lacking in implementation examples for such a solution.
 With out further addu the comments section for that off chance where one person wants to add their two cents to any post of mine!
 
 ---
-update: 11 / 08 / 2025
+Update: 11 / 08 / 2025
 #### V3
 I'm really happy with how Bluesky is working as a comments section on my blog. Its doing exactly what you want it to do. Incentivises people to engage with my content and enriching it further on the public domain. 
 
