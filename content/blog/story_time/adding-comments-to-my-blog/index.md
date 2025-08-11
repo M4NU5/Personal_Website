@@ -45,3 +45,44 @@ Weirdly X was lacking in implementation examples for such a solution.
 [Check out his post here](https://www.menzel.it/post/2024/11/set-comments-experience-bluesky-posts/) it goes into all the detail you need. I added some of my own personal tweaks but the core is all this mans work. All you need to do is add the partial, link it into your equivalent `post.html` and add `blueskyid` to your post metadata.
 With out further addu the comments section for that off chance where one person wants to add their two cents to any post of mine!
 
+---
+update: 11 / 08 / 2025
+#### V3
+I'm really happy with how Bluesky is working as a comments section on my blog. Its doing exactly what you want it to do. Incentive's people to engage with my content and enriching it further on the public domain. 
+
+There is however one issue! GIFs
+
+If you click through my posts you will see I have an unhealthy enjouyment of GIFs. Maybe its because I'm from the early internet by GIFs are great! This extends to my engement on social media in general where a simple GIF fits much better then a sentence. An image is 1000 words after all.
+So I have extended the comments section script to also inject embedded media from bluesky as-well to add an additional flair to the comments section. Its super straight forward and here is the code snippet below!
+```js
+...
+let safeContent = DOMPurify.sanitize(content); // Sanitize the content
+
+// Check for embedded images (including GIFs)
+if (reply.post.embed && reply.post.embed.$type.startsWith('app.bsky.embed.images')) {
+reply.post.embed.images.forEach(img => {
+safeContent += `<br><img src="${img.fullsize}" alt="${DOMPurify.sanitize(img.alt || '')}" class="comment-image">`;
+}); 
+} else if (reply.post.embed && reply.post.embed.$type.startsWith("app.bsky.embed.external")) {
+const gifUrl = reply.post.embed.external.uri;
+const altText = reply.post.embed.external.description || "Embedded external image";
+safeContent += `<br><img src="${gifUrl}" alt="${altText}" loading="lazy" class="comment-embed-image" />`;
+}
+
+// Handle nested embeds (e.g., quoted posts with images)
+
+if (reply.post.embed && reply.post.embed.record && reply.post.embed.record.embed && reply.post.embed.record.embed.images) {
+
+reply.post.embed.record.embed.images.forEach(img => {
+
+safeContent += `<br><img src="${img.fullsize}" alt="${DOMPurify.sanitize(img.alt || '')}" class="comment-image">`;
+
+});
+}
+
+const commentHtml = `
+...
+```
+
+We are simply looking to add `<img>` to the content object we are constructing. 
+Hope this is of interest for anyone looking to explore this further.

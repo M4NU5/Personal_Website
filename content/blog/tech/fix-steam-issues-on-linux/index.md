@@ -76,12 +76,12 @@ UUID=24F46B67F46B39E6   /media/data  ntfs-3g  uid=1000,gid=1000,umask=022,win
 You might be thinking WTF does this mean. Let me highlight some interesting points
 
 - `/media/data` → Sets the mount location.
-    - `/media` will show up in your [folder tab](https://askubuntu.com/questions/22215/why-have-both-mnt-and-media) where `/mnt` wont
-- `ntfs-3g` → NTFS driver with read & write support
-- `uid=1000, gid=1000` → Assigns the user account with permissions
-    - `id -u` and `id -g` can be used to double check
-- `umask=022` → Specifies 755: owner full, others read+execute
-- `exec` → Allows execution of binary file
+    - `/media` will show up in your [folder tab](https://askubuntu.com/questions/22215/why-have-both-mnt-and-media) where `/mnt` wont.
+- `ntfs-3g` → NTFS driver with read & write support.
+- `uid=1000, gid=1000` → Assigns the user account with permissions.
+    - `id -u` and `id -g` can be used to double check.
+- `umask=022` → Specifies 755: owner full, others read+execute.
+- `exec` → Allows execution of binary file.
 - `permissions` → Without this, NTFS partitions would not honor file-level permissions.
 - `big_writes` → Enables larger write buffers to improve performance.
 

@@ -58,7 +58,25 @@
                           offset += replacementText.length - originalText.length;
                       });
 
-                      const safeContent = DOMPurify.sanitize(content); // Sanitize the content
+                      let safeContent = DOMPurify.sanitize(content); // Sanitize the content
+
+                      // Check for embedded images (including GIFs)
+                        if (reply.post.embed && reply.post.embed.$type.startsWith('app.bsky.embed.images')) {
+                            reply.post.embed.images.forEach(img => {
+                                safeContent += `<br><img src="${img.fullsize}" alt="${DOMPurify.sanitize(img.alt || '')}" class="comment-image">`;
+                            });
+                        } else if (reply.post.embed && reply.post.embed.$type.startsWith("app.bsky.embed.external")) {
+                            const gifUrl = reply.post.embed.external.uri;
+                            const altText = reply.post.embed.external.description || "Embedded external image";
+                            safeContent += `<br><img src="${gifUrl}" alt="${altText}" loading="lazy" class="comment-embed-image" />`;
+                        }
+
+                        // Handle nested embeds (e.g., quoted posts with images)
+                        if (reply.post.embed && reply.post.embed.record && reply.post.embed.record.embed && reply.post.embed.record.embed.images) {
+                            reply.post.embed.record.embed.images.forEach(img => {
+                                safeContent += `<br><img src="${img.fullsize}" alt="${DOMPurify.sanitize(img.alt || '')}" class="comment-image">`;
+                            });
+                        }
 
                       const commentHtml = `
                         <div class="comment-container">

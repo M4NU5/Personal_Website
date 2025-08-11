@@ -1,7 +1,7 @@
 ---
 draft: true
 title: Docker Just Isn't Cutting It
-date: 2025-07-28
+date: 2025-08-06
 author: William
 category:
   - Tech
