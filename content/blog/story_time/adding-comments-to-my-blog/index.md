@@ -48,12 +48,13 @@ With out further addu the comments section for that off chance where one person 
 ---
 update: 11 / 08 / 2025
 #### V3
-I'm really happy with how Bluesky is working as a comments section on my blog. Its doing exactly what you want it to do. Incentive's people to engage with my content and enriching it further on the public domain. 
+I'm really happy with how Bluesky is working as a comments section on my blog. Its doing exactly what you want it to do. Incentivises people to engage with my content and enriching it further on the public domain. 
 
-There is however one issue! GIFs
+There is however one issue! **GIFs**
 
-If you click through my posts you will see I have an unhealthy enjouyment of GIFs. Maybe its because I'm from the early internet by GIFs are great! This extends to my engement on social media in general where a simple GIF fits much better then a sentence. An image is 1000 words after all.
+If you click through my posts you will see I have an unhealthy enjoyment of GIFs. Maybe its because I'm from the early internet by GIFs are great! This extends to my engement on social media in general where a simple GIF fits much better then a sentence. An image is 1000 words after all.
 So I have extended the comments section script to also inject embedded media from bluesky as-well to add an additional flair to the comments section. Its super straight forward and here is the code snippet below!
+
 ```js
 ...
 let safeContent = DOMPurify.sanitize(content); // Sanitize the content
