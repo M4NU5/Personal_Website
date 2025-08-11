@@ -40,9 +40,9 @@ Now its time to give this another stab and with AMDs drivers more mature the tim
 ## Install AMD Drivers
 The AMD drivers that we will be needing a part of AMDs ROCm Platform. Since we are talking windows it is specifically [AMDs HIP SDK](https://www.amd.com/en/developer/resources/rocm-hub/hip-sdk.html) that we will be installing.
 
-## Install Ollama
+## Install the CORRECT Ollama
 
-Tthere is a legend called likelovewant who has implemented an AMD compatible Ollama, specifically with this [github repo](https://github.com/likelovewant/ollama-for-amd/releases).
+There is a legend called likelovewant who has implemented an AMD compatible Ollama, specifically with this [github repo](https://github.com/likelovewant/ollama-for-amd/releases).
 
 Now it isn't the latest and greatest but to be honest we just need Ollama to serve the model, I don't really care for the latest bells and whistles… yet! 
 
