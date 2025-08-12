@@ -19,7 +19,7 @@ I've been looking around the interwebs of how to add commenting functionality to
 
 My requirements were simple, the solution needed to be free. I'm not going to start paying for something that I can engineer my way out of! 
 
-#### V1 - Utterances
+## V1 - Utterances
 My initial forays found me using, https://utteranc.es/.
 
 Utterances leverages Githubs issues page of a repo as the storage location for commenting. A new issue is created for each of your posts and readers can login using their Github profiles and leave comments.
@@ -41,13 +41,13 @@ Little more digging got me to this post by [Oliver Menzel](https://www.menzel.it
 Weirdly X was lacking in implementation examples for such a solution.
 ![https://i.giphy.com/bupsZiBKn7vAk.webp](https://i.giphy.com/bupsZiBKn7vAk.webp#center)
 
-#### V2 - Bluesky Comments
+## V2 - Bluesky Comments
 [Check out his post here](https://www.menzel.it/post/2024/11/set-comments-experience-bluesky-posts/) it goes into all the detail you need. I added some of my own personal tweaks but the core is all this mans work. All you need to do is add the partial, link it into your equivalent `post.html` and add `blueskyid` to your post metadata.
 With out further addu the comments section for that off chance where one person wants to add their two cents to any post of mine!
 
 ---
 Update: 11 / 08 / 2025
-#### V3 - Bluesky Comments++
+## V3 - Bluesky Comments++
 I'm really happy with how Bluesky is working as a comments section on my blog. Its doing exactly what you want it to do. Incentivises people to engage with my content and enriching it further on the public domain. 
 
 There is however one issue! **GIFs**
