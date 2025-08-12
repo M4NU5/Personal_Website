@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "5 DevSecOps Lessons from the SANS 540 Course: Building Secure and Efficient Pipelines"
+title: "SANS 540 DevSecOps Review: 5 Lessons for Building Secure and Efficient Pipelines"
 date: 2024-09-17
 author: William
 category:
@@ -8,20 +8,24 @@ category:
 tags:
   - Automation
   - Security
-description: Discover five key DevSecOps lessons from the SANS 540 course that can enhance your pipeline security and efficiency. Learn how to simplify pipelines, leverage secrets stores, implement redundancy, and more for a robust DevSecOps strategy.
+description: Thinking about taking the SANS 540 DevSecOps course? Read this review with 5 practical lessons, exam prep tips, and real-world pipeline security insights.
 cover:
-  image: cyberpipeline.webp
-  alt: cyberpipeline.webp
+  image: SANS_540_DevSecOps_course_pipeline.webp 
+  alt: SANS_540_DevSecOps_course_pipeline.webp
 ---
 ## Introduction
 
-I recently completed the SANS 540 course in person, and what an intense and rewarding journey it was! As a Product Security Engineer, I’m no stranger to pipelines and the intricacies of implementing security controls and tools. However, building everything from scratch, end-to-end, was an eye-opening experience. The course pushed me out of my comfort zone, especially the full day dedicated to Kubernetes, which completely fried my brain and reminded me just how much there is to learn in this field.
+I recently completed the SANS 540 course in person, and what an intense and rewarding journey it was! 
+
+[SANS 540](https://www.sans.org/cyber-security-courses/cloud-native-security-devsecops-automation), officially titled “Cloud Security and DevSecOps Automation,” is a five-day, hands-on course from the SANS Institute designed for security engineers, DevOps teams, and cloud professionals. It focuses on building secure, automated CI/CD pipelines, integrating security controls, and applying real-world DevSecOps principles across cloud and containerized environments. The training blends lectures, labs, and practical exercises, making it one of the most applied courses in the SANS curriculum.
+
+As a product security engineer, I’m no stranger to pipelines and the intricacies of implementing security controls and tools. However, building everything from scratch, end-to-end, was an eye-opening experience. The course pushed me out of my comfort zone, especially the full day dedicated to Kubernetes, which completely fried my brain and reminded me just how much there is to learn in this field.
 
 As I'm knuckling down in preparation for my exam, I wanted to first highlight five key takeaways from the course that can be applied everywhere. Helping to augment your daily operations in pipelines, automation, and all things DevSecOps. 
 
 A nice little bonus at the end of the week I was able to acquire the challenge coin for the course. Check it out in my conclusion and without further a due... 
 
-## 1: Keep your pipelines simple and modular
+## SANS 540.1 – Keep Pipelines Simple and Modular
 
 Ever wonder how some people manage to create those incredibly complex pipelines that execute a multitude of tasks without losing their sanity! The secret is simple: don't write everything directly in the pipeline `.yaml` file. Instead, use bash scripts, Go scripts, or similar tools to handle the heavy lifting. Let the pipeline simply call these scripts to get the job done.
 
@@ -35,7 +39,7 @@ By keeping your pipelines simple and modular, you not only streamline your workf
 
 ![Simple](https://i.giphy.com/NLuX3GCUdfltpCdFGW.webp#center)
 
-## 2: Check your tool versions
+## SANS 540.2 – Always Check Tool Versions
 
 Or, as my friends like to say: "Check yourself before you wreck yourself." 
 In other words, make sure to perform a version check on all the tools and programs used in your pipeline right at the beginning. This simple step can save you from a host of issues down the line. Here's why this is crucial:
@@ -45,7 +49,7 @@ In other words, make sure to perform a version check on all the tools and progra
 
 By incorporating a tool version check step at the start, you make your pipelines more robust, efficient, and much less prone to frustrating, time-wasting errors.
 
-## 3:  Leverage your secrets store
+## SANS 540.3 – Leverage your Secrets Store
 
 Secrets are those tricky little things everyone warns you about. You should keep them out of your codebase, locked up like they’re in a high-security vault guarded by an armed sentry. Jokes aside, the advice is clear: secrets should be stored securely and only injected into your pipeline at runtime. This is where a secrets store, like HashiCorp Vault, comes into play. While it’s common to use Vault solely for storing sensitive information, its capabilities go far beyond that.
 
@@ -57,7 +61,7 @@ By leveraging a secrets store like HashiCorp Vault, you transform it from a mere
 
 ![secrets](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTkxbWVvcXdxbjh4NjF3Nmt0NTlkNHNwMGQzbnZndmV3NjQzbDI4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIP7vCPcUz3RNMgU/giphy.webp#center)
 
-## 4: Scan at All Stages. Redundancy is Good!
+## SANS 540.4 – Scan at All Stages. Redundancy is Good!
 
 I often hear companies say, "We have X capability, so we don't need Y." A common example is: if you're already scanning your built images in the pipeline, why bother scanning the image repository where you store those built images?
 
@@ -69,7 +73,7 @@ By scanning at multiple stages—whether in the pipeline, in the image repositor
 
 ![defense](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRhem1rdW10bXpwcWJrNjhhZXVldmhhZ3VodGw2MTlyYzA3Y2J0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/56wdZ4gYcwRvU7rJiY/giphy.webp#center)
 
-## 5: Automate, But Don't Forget to Monitor
+## SANS 540.5 – Automate, But Don't Forget to Monitor
 
 Automation is the backbone of modern DevSecOps pipelines. Automating security checks, deployments, and compliance tasks can significantly reduce human error and free up your team to focus on more strategic initiatives. However, automation isn't a "set it and forget it" solution. It's crucial to actively monitor your automated processes to ensure they’re functioning as intended.
 
@@ -79,6 +83,7 @@ Set up robust logging and alerting mechanisms to track the performance of your a
 
 By combining automation with vigilant monitoring, you create a more reliable and secure pipeline that can quickly adapt to and address issues as they arise. Automation maximizes efficiency, while monitoring ensures the integrity and effectiveness of those automated processes.
 
+![allthethings.webp](allthethings.webp#center)
 ## Conclusion
 
 At the end of the day, my understanding of DevSecOps has grown tremendously through the SANS 540 course. It was an eye-opener, providing new strategies and a deeper appreciation for building secure, efficient pipelines. From keeping pipelines simple and modular to leveraging secrets stores and implementing redundancy at every stage, these key takeaways have already started to reshape how I approach pipeline security.
