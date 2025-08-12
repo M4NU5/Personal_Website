@@ -29,9 +29,9 @@ A few weeks on I was in the pub with a pint, pondering.
 ![https://i.giphy.com/qr2nV97iLSE9X1k4E4.webp](https://i.giphy.com/qr2nV97iLSE9X1k4E4.webp#center)
 The comments section of a blog is a social space so wouldn't you want to make is social? New requirement what if you leverage social media?
 
-I whipped out my laptop and started digging. Coming across a blog by [Emily Liu](https://emilyliu.me/blog/comments) who was one of the first 10 engineers of Bluesky. she talked about using a bluesky post as your comment section. This idea however fits perfectly with what I'm looking for. It makes the comments section more then just at the bottom of your blog post. It encourages engagement on my social media profile not just in my little the isolated corner of the internet.
+I whipped out my laptop and started digging. Coming across a blog by [Emily Liu](https://emilyliu.me/blog/comments) who was one of the first 10 engineers of Bluesky. she talked about using a Bluesky post as your comment section. This idea however fits perfectly with what I'm looking for. It makes the comments section more then just at the bottom of your blog post. It encourages engagement on my social media profile not just in my little the isolated corner of the internet.
 
-Obviously we want the comments section to show up under the blog post. So the comments will exist in two locations with bluesky acting as my database like Utterances Github issues. Sure you have the same login issue but this feels acceptable within this paradigm where you redirect users to a social media platform.
+Obviously we want the comments section to show up under the blog post. So the comments will exist in two locations with Bluesky acting as my database like Utterances Github issues. Sure you have the same login issue but this feels acceptable within this paradigm where you redirect users to a social media platform.
 
 Little more digging got me to this post by [Oliver Menzel](https://www.menzel.it/post/2024/11/set-comments-experience-bluesky-posts/). This gentleman is the real MVP, he had gone ahead and implemented a robust component that could be added to Hugo enabling comments and it was exactly what I was looking for. 
 
