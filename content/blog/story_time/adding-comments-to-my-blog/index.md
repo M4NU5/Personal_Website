@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Adding comments to my Blog
+title: Adding comments to my Hugo Blog
 date: 2025-07-24
 author: William
 category:
@@ -13,8 +13,6 @@ cover:
   image: speechbubble.png
   alt: speechbubble.png
 ---
-
-
 I've been looking around the interwebs of how to add commenting functionality to my Hugo blog for my one reader. Yes you buddy I love you ❤️
 
 My requirements were simple, the solution needed to be free. I'm not going to start paying for something that I can engineer my way out of! 
