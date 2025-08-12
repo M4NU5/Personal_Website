@@ -25,8 +25,8 @@ I set this up and gave it a go but it never felt quite right. The prompting for 
 I don't want to go to Github issues to respond to a commentor.
 
 #### Retrospective
-A few weeks on I was in the pub with a pint, pondering. 
 ![https://i.giphy.com/qr2nV97iLSE9X1k4E4.webp](https://i.giphy.com/qr2nV97iLSE9X1k4E4.webp#center)
+A few weeks on I was in the pub with a pint, pondering. 
 
 The comments section of a blog is a social space so wouldn't you want to make is social? New requirement what if you leverage social media?
 
