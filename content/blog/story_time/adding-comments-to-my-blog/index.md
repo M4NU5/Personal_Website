@@ -24,10 +24,9 @@ Utterances leverages Githubs issues page of a repo as the storage location for c
 I set this up and gave it a go but it never felt quite right. The prompting for login felt like a scam and the fact that is was marked as an 'issue' being stored off on Github just didn't feel quite right.
 I don't want to go to Github issues to respond to a commentor.
 
-## Retrospective
-![https://i.giphy.com/qr2nV97iLSE9X1k4E4.webp](https://i.giphy.com/qr2nV97iLSE9X1k4E4.webp#center)
+### Retrospective
 A few weeks on I was in the pub with a pint, pondering. 
-
+![https://i.giphy.com/qr2nV97iLSE9X1k4E4.webp](https://i.giphy.com/qr2nV97iLSE9X1k4E4.webp#center)
 The comments section of a blog is a social space so wouldn't you want to make is social? New requirement what if you leverage social media?
 
 I whipped out my laptop and started digging. Coming across a blog by [Emily Liu](https://emilyliu.me/blog/comments) who was one of the first 10 engineers of Bluesky. she talked about using a bluesky post as your comment section. This idea however fits perfectly with what I'm looking for. It makes the comments section more then just at the bottom of your blog post. It encourages engagement on my social media profile not just in my little the isolated corner of the internet.
@@ -45,12 +44,13 @@ With out further addu the comments section for that off chance where one person 
 
 ---
 Update: 11 / 08 / 2025
-## V3 - Bluesky Comments++
+### Retrospective
 I'm really happy with how Bluesky is working as a comments section on my blog. Its doing exactly what you want it to do. Incentivises people to engage with my content and enriching it further on the public domain. 
 
-There is however one issue! **GIFs**
-
+There is however one issue! **No support for GIFs**
+## V3 - Bluesky Comments++
 If you click through my posts you will see I have an unhealthy enjoyment of GIFs. Maybe its because I'm from the early internet by GIFs are great! This extends to my engement on social media in general where a simple GIF fits much better then a sentence. An image is 1000 words after all.
+
 So I have extended the comments section script to also inject embedded media from bluesky as-well to add an additional flair to the comments section. Its super straight forward and here is the code snippet below!
 
 ```js
