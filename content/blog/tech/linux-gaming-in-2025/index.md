@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Nobara Linux Review: Gaming on Linux in 2025"
+title: "Nobara Linux: Gaming on Linux in 2025"
 date: 2025-06-28
 author: William
 category:

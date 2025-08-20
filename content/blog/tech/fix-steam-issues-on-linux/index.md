@@ -14,7 +14,7 @@ cover:
   alt: Steam-Linux.webp
 bskyid: 3lnpz3zwtts2n
 ---
-So you want to join the cool kids club and be a Linux gamer. You have found your distro of choice and installed it. In your infinite wisdom you still have that second hard drive to store all your data keeping it separate from your OS install files.
+So you want to join the cool kids club and be a Linux gamer. You have found your distro of choice and installed it. If you're interested in a distro find my [review of one here](/blog/tech/linux-gaming-in-2025/). In your infinite wisdom you still have that second hard drive to store all your data keeping it separate from your OS install files.
 
 After installing Steam you have run into countless stupid seemingly unexplainable problems and your can't seem to find a clear guide on how to get it all working smoothly. Well worry no more intrepid cyber traveller I put together this guide after piecing together and overcoming the many problems that I faced and you are probably experiencing.
 
