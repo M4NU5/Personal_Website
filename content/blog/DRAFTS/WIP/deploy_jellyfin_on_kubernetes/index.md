@@ -51,6 +51,8 @@ For me I'm using the SMB protocol to manage the persistent storage. I want to se
 
 
 ## Cluster Deployment
+
+##### Implement SSL certificates 
 ##### Master node deployment process
 Now we are getting to the fun stuff. Deploying k3s is incredably easy and straight forward. 
 

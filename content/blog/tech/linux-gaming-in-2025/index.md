@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Linux gaming in 2025?
+title: "Nobara Linux Review: Gaming on Linux in 2025"
 date: 2025-06-28
 author: William
 category:
@@ -8,8 +8,8 @@ category:
 tags:
   - Linux
   - Gaming
-description: Thinking about switching to Linux for gaming? Here's a deep dive into dual-booting, gaming on Nobara Linux, NTFS shenanigans, Steam support, and the good, bad, and ugly of Linux gaming in 2025 from someone who actually made the switch. 
-bskyid: "3lt5o7ahlbk2s"
+description: Thinking about switching to Linux for gaming? Here's a deep dive into dual-booting, gaming on Nobara Linux, NTFS shenanigans, Steam support, and the good, bad, and ugly of Linux gaming in 2025 from someone who actually made the switch.
+bskyid: 3lt5o7ahlbk2s
 cover:
   image: LinuxSteam.png
   alt: LinuxSteam.png
@@ -26,6 +26,8 @@ Want to code? → Linux.
 Want containers? → Linux.  
 Want to run AI workloads? → Linux.  
 Want to hack? → Linux.
+
+## Linux is for Developers, Hackers, and AI Workloads
 
 Gaming though? That’s always been Windows territory.  
 (Also anything Adobe, but that’s a whole other rant.)
@@ -48,7 +50,7 @@ Nobara is a modified version of Fedora that comes preloaded with a lot of the us
 
 So I downloaded the ISO, flashed it to a USB, and booted it up to take a look. Honestly? Loved the KDE desktop. Decided to go all in split out a new partition and installed it.
 
-## Getting It Up and Running: Dual Boot + NTFS Shenanigans
+## How to Install Nobara Linux (Dual Boot + NTFS Setup)
 Since I was just trialing Nobara, I went with a dual-boot setup.  
 Linux? Plays nice.  
 Windows? Throws a tantrum if you don’t do it _just right_.
@@ -61,12 +63,16 @@ Here’s what I did:
 3. Disabled **Secure Boot** in the BIOS
 4. Installed Nobara on the newly freed space.
 
+> [!WARNING]
+> I have since switched to Fedora. Reason being **Secure Boot** support. With gaming anti-cheats be coming increasingly invasive requiring kernel access and secure boot.
+> Some game wont boot due to secure boot being disabled and no one wants to go through the pain of flipping the secure boot switch each time you want to switch OS.
+
 Now, about my **data drive** it’s a massive NTFS volume full of games, media, junk... you name it. NTFS is Windows' baby, and while Linux can talk to it, it’s not exactly a smooth conversation.
 
 Mounting it in `/etc/fstab` works fine, though. If you're trying to run games directly off an NTFS drive (like I was) you _will_ hit permissions weirdness. Check out [my other write-up](/blog/tech/fix-steam-issues-on-linux/#mounting-your-ntfs-drive-the-right-way) where I explain exactly how I got that sorted.
 
 Anyway without further ado!
-## The Good
+## The Good: Nobara Works
 
 - The **package manager experience** on Linux is unmatched. Yeah, it’s terminal-based, but it’s basic stuff and Windows is clearly trying to copy the vibe with Chocolatey and `wget`.
 - **Writing and running small scripts** is just way smoother. No faffing around with permissions or obscure admin settings.
@@ -80,17 +86,17 @@ Anyway without further ado!
     - [ProtonDB](https://www.protondb.com/)
     - [Lutris](https://lutris.net/)
 
-## The Meh
+## The Meh: Linux Struggles
 
 - **GPU driver setup** can get a little spicy but Nobara solves this out of the box.
 - **Not every game works.** Linux gaming has come a long way, but some titles still break. You might need to tweak settings, or accept that some just don’t run (_Escape from Tarkov_, looking at you).
-- **Anti-cheat** systems are still a problem. Kernal-level tools like EAC and BattlEye often just say “nope” to Linux.
+- **Anti-cheat** systems are still a problem. Kernel-level tools like EAC and BattlEye often just say “nope” to Linux.
 - **Modding** is hit-or-miss. With all the abstraction layers, modding can become fragile or weirdly buggy.
 ![https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnBreG5veDFuNm5kbmRqd3RhcHU2NTdncTc0bTZ4Y29iZDJ0bzh3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT77XTpyEzJ4OJO06c/giphy.gif](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnBreG5veDFuNm5kbmRqd3RhcHU2NTdncTc0bTZ4Y29iZDJ0bzh3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT77XTpyEzJ4OJO06c/giphy.gif#center)
 - The **Linux terminal** is a superpower but with WSL and PowerShell, Windows has started catching up. Somewhat. Still, Linux is where I live.
 - **Media support** isn’t ideal. OBS runs well, but if you’re trying to use stuff like Lightroom or DaVinci Resolve, you’re in Wine/emulator territory and it’s janky. Web versions? Feature-stripped.
 - **Fragmented install methods** can get confusing fast. `.deb`, `.rpm`, Flatpak, AppImage pick your poison. Nobara tries to streamline this with a unified update GUI, but if you're not careful, your system starts to feel like Frankenstein’s monster.
-## The Ugly
+## The Ugly: System Issues
 - **Gaming abstraction ≠ flawless.** Proton and Wine do most of the lifting, but you _will_ run into random bugs, stutters, crashes, or “why is this happening” moments.
 ![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXNrbTB0ZGY0MnhmM2x3MWkydTg3aXJhZnEwbDI2b2gycWtqdTNlOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i7JBZ17h3gFJUKwzH0/giphy.gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXNrbTB0ZGY0MnhmM2x3MWkydTg3aXJhZnEwbDI2b2gycWtqdTNlOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i7JBZ17h3gFJUKwzH0/giphy.gif#center)
 That’s when you think: _“Wouldn’t it just be easier to reboot into Windows?”_  
@@ -100,7 +106,7 @@ That’s when you think: _“Wouldn’t it just be easier to reboot into Windows
 - **Nobara-specific problem**: It’s based on Fedora, and while the out-of-box experience is great, sometimes the packages are a little old. Updating or overriding repos can feel like open-heart surgery, and I almost had to reinstall the whole OS because of one broken dependency chain.
 - **System coherence slowly unravels.** With all the install methods (Flatpak, RPMs, manual builds, etc.), your system can turn into a mess. Even with Nobara’s tools, it takes discipline to stop your setup from spiraling.
 
-## Final Thoughts
+## Final Thoughts: Nobara Linuxs mixed bag
 
 So... is Linux gaming ready for prime time?
 
@@ -119,9 +125,9 @@ Just know going in: Linux asks more of you. You’ll need to be okay with a term
 As for me? Linux stays my daily driver not because it’s perfect, but because it aligns with how I work, build, and learn. It removes barriers for me to expand my technical skills. Windows is there when I need it, but Linux is where I feel at home.
 
 
-## Bonus: My Setup
+## Bonus: Nobara Linux Gaming Setup
 
-- **Distro**: Nobara KDE (Fedora-based)
+- **Distro**: ~~Nobara KDE (Fedora-based)~~ Fedora
 - **CPU**: i7-13700k
 - **GPU**: AMD RX 7900 XT
 - **RAM**: 64GB DDR4
