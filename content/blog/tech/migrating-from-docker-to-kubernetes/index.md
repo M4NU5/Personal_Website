@@ -1,7 +1,7 @@
 ---
-draft: true
+draft: false
 title: Docker Just Isn't Cutting It
-date: 2025-08-06
+date: 2025-11-03
 author: William
 category:
   - Tech
@@ -10,14 +10,13 @@ tags:
   - Kubernetes
   - Docker
   - Home-Lab
-description: 
+description: A developer shares their journey migrating from Docker to Kubernetes using K3s, covering why Docker fell short, how K3s simplifies multi-node setups, lessons from running Plex on Kubernetes, and why Jellyfin is the better choice for a container-native media server.
+bskyid:
 cover:
-  image: test
-  alt: test
+  image: Jugger.png
+  alt: Jugger.png
 ---
-The time has come
-## Docker Just Isn't Cutting It
-That's right. I’ve crossed over. Docker just isn’t doing it for me anymore.  
+The time has come! That's right. I’ve crossed over. Docker just isn’t doing it for me anymore.  
 The limitations, the lack of flexibility, the industry drift it’s all driven me to the dark side.
 
 It’s Kubernetes time, baby.
@@ -28,7 +27,7 @@ Let me put it another way: Docker feels like level one. Maybe level two if you c
 
 ## Why Migrate?
 
-### Limitations, mostly.
+**Limitations, mostly.**
 
 Want to mount a Network Attached Storage (NAS)?  
 Docker makes this _weirdly_ painful and brittle.
@@ -40,7 +39,7 @@ Also, industry relevance. I don’t use Kubernetes daily, but I’m often one st
 
 ![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNmdWFrd3ZseHo4bnZuOXE4MDNpejY0MzR2ZDg1dXRkMHM1eTM4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XZVLh9Mq9HY0ww6wnm/giphy.gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNmdWFrd3ZseHo4bnZuOXE4MDNpejY0MzR2ZDg1dXRkMHM1eTM4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XZVLh9Mq9HY0ww6wnm/giphy.gif#center)
 
-### Also... WSL broke me.
+**Also... WSL broke me.**
 
 Docker on Windows via WSL is a cursed abstraction that gave me endless headaches. That eventually pushed me to switch to Linux as my daily driver honestly, best decision I’ve made.  
 I documented thoughts and the chaos [in this post](/blog/tech/linux-gaming-in-2025/).
@@ -69,7 +68,7 @@ Kubernetes is designed for modularity and flexibility. That makes all the above 
 
 Honestly, Linux just _makes more sense_. Every time I touch Windows or macOS these days I get irrationally angry but that’s a rant for another post.
 
-## Why K3s Over K8s?
+**Why K3s Over K8s?**
 
 I went with [K3s](https://docs.k3s.io/quick-start), the lightweight Kubernetes distro built for smaller systems.
 
@@ -100,7 +99,7 @@ Plex is old-school. It was built in 2007 six years before Docker was even a thin
 And yes, I’m using Helm Charts—think of them as Docker Compose for Kubernetes, just better in every way. Moving on. 😄
 
 
-### Maybe Use Jellyfin Instead?
+### Use Jellyfin Instead
 
 Jellyfin isn’t quite as _feature-rich_ as Plex but that’s a plus in my book. Some people would say Plex is bloated anyway.
 

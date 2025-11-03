@@ -1,7 +1,6 @@
 baseURL: https://williamsmale.com/
 languageCode: en-us
 title: William's Blog
-theme: PaperMod
 
 pagination:
   pagerSize: 50 # articles per page
@@ -134,8 +133,8 @@ params:
     #   url: https://www.buymeacoffee.com/williamsmale
 
 theme: 
-  - my_customs
   - PaperMod
+  - my_customs
 
 module:
   mounts:
