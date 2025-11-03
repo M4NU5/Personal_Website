@@ -70,7 +70,7 @@ params:
   comments: true
   bluesky: "williamsmale.com"
   relativeURLs: true
-  hideDescriptions: false
+  hideDescriptions: true
   cover:
     hiddenInList: true
   homeInfoParams:
@@ -133,8 +133,9 @@ params:
     #   url: https://www.buymeacoffee.com/williamsmale
 
 theme: 
-  - PaperMod
   - my_customs
+  - PaperMod
+
 
 module:
   mounts:
