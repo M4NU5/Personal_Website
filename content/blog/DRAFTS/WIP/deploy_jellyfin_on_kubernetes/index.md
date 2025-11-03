@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: K3s @ Home with One Helm values.yaml
 description: Jellyfin + *arr* stack on k3s, Cloudflare DNS-01 TLS, SMB shares, and fixing Fedora firewalld 502s — all managed with a single Helm values.yaml.
 date: 2025-08-20
