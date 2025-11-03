@@ -127,3 +127,5 @@ That’s how you start doing BMX tricks or mountain biking.
 Anyway if you’re looking to build a home lab and want something more powerful and dynamic, give K3s a shot. It’s not as scary as full-blown Kubernetes, but it gives you _almost_ everything you’d want.
 
 Now, after no-lifeing this migration longer than I care to admit, I’m off to touch some grass before I spiral into a monologue about ingress controllers or the true nature of reverse proxies (which, let’s be real, no one actually understands).
+
+![https://i.giphy.com/frl8HRQ70EBYvkN7nq.webp](https://i.giphy.com/frl8HRQ70EBYvkN7nq.webp#center)
