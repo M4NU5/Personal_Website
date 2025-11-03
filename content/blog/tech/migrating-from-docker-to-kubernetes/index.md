@@ -11,7 +11,7 @@ tags:
   - Docker
   - Home-Lab
 description: A developer shares their journey migrating from Docker to Kubernetes using K3s, covering why Docker fell short, how K3s simplifies multi-node setups, lessons from running Plex on Kubernetes, and why Jellyfin is the better choice for a container-native media server.
-bskyid:
+bskyid: 3m4r4l25nns2o
 cover:
   image: Jugger.png
   alt: Jugger.png
