@@ -24,7 +24,7 @@ menu:
       - identifier: certifications
         name: Certifications
         url: certifications
-        weight: 20
+        weight: 40
       # Blog
       # - identifier: thoughts
       #   name: Thoughts

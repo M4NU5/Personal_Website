@@ -14,14 +14,6 @@ category:
   - Tech
 author: William
 ---
-
-# K3s @ Home with One Helm `values.yaml`
-
-### Jellyfin + *arr* stack • Cloudflare DNS-01 TLS • SMB shares • (and fixing that nasty 502)
-
-
----
-
 ## Why this stack?
 
 If you’ve ever wanted a **real** Kubernetes experience at home without the resource tax, **k3s** is the sweet spot:
@@ -29,7 +21,7 @@ If you’ve ever wanted a **real** Kubernetes experience at home without the res
 - **Batteries included**: Traefik ships as the default ingress controller.
 - **Learn by doing**: a real cluster you can break, fix, and grow.
 
-We’ll run **Jellyfin** for media streaming and the *arr* ecosystem (Sonarr, Radarr, Prowlarr, optional Bazarr/qBittorrent) for automation — all behind **HTTPS**, with a **Let’s Encrypt wildcard** via **Cloudflare DNS-01**. Storage comes from an **SMB share** so you can keep data on a NAS or a separate box.
+We’ll run **Jellyfin** for media streaming and the *arr* ecosystem (Sonarr, Radarr, Prowlarr, optional Bazarr/qBittorrent) for automation, all behind **HTTPS**, with a **Let’s Encrypt wildcard** via **Cloudflare DNS-01**. Storage comes from an **SMB share** so you can keep data on a NAS or a separate box.
 
 > TL;DR: one `values.yaml` drives your entire app stack. cert-manager + SMB CSI are installed once and left alone.
 
@@ -79,7 +71,7 @@ flowchart LR
 
 ---
 
-## 1) Cloudflare DNS
+### Cloudflare DNS
 
 Create `A`/`CNAME` records like `jellyfin.example.com` → your node IP (e.g. `192.168.0.100`).
 
@@ -87,7 +79,7 @@ Create `A`/`CNAME` records like `jellyfin.example.com` → your node IP (e.g. `1
 
 ---
 
-## 2) Preinstall cert-manager (manual)
+### Preinstall cert-manager (manual)
 
 ```bash
 kubectl create namespace cert-manager
@@ -156,7 +148,7 @@ kubectl -n default get secret bongofett-cert   # expect type: kubernetes.io/tls
 
 ---
 
-## 3) Preinstall the SMB CSI driver
+### Preinstall the SMB CSI driver
 
 > Our Helm chart will **use** the driver to mount SMB shares, but it won’t install the driver itself.
 
@@ -170,7 +162,7 @@ If your chart expects a `StorageClass` (e.g. `smb`) or an SMB credentials `Secre
 
 ---
 
-## 4) Install the whole stack with one Helm chart
+## Install the whole stack with one Helm chart
 
 This chart handles **apps, Services, Traefik IngressRoutes/Middlewares, and SMB share wiring**. Adjust your SMB server/share and domain.
 
@@ -235,11 +227,11 @@ kubectl -n default get pods,svc,ingressroute
 
 ---
 
-## 5) Fixing 502 (Linux firewalld & fast discriminators)
+## Fixing 502 (Linux firewalld & fast discriminators)
 
 A **502** after deploying usually isn’t your app — it’s either **Cloudflare proxying** or **firewalld** on Fedora dropping traffic to Traefik.
 
-### 5.1 Cloudflare or Traefik? (10-second test)
+### Cloudflare or Traefik? (10-second test)
 
 Bypass Cloudflare and hit Traefik directly:
 
@@ -252,7 +244,7 @@ curl -sI --resolve jellyfin.example.com:443:192.168.0.100 https://jellyfin.examp
 - **Fails** → It’s local (firewall, route, backend).
     
 
-### 5.2 If stopping firewalld “fixes it”, make **permanent rules**
+### If stopping firewalld “fixes it”, make **permanent rules**
 
 Find your zone:
 
@@ -287,7 +279,7 @@ nc -vz 192.168.0.100 443
 curl -sI --resolve jellyfin.example.com:443:192.168.0.100 https://jellyfin.example.com | head -n5
 ```
 
-### 5.3 Still 502? Three tiny checks
+### Still 502? Three tiny checks
 
 - **Does Traefik see the TLS secret?**
     
@@ -315,7 +307,7 @@ curl -sI --resolve jellyfin.example.com:443:192.168.0.100 https://jellyfin.examp
 
 ---
 
-## 6) Verifications (when healthy)
+## Verifications (when healthy)
 
 ```bash
 # TLS secret present where routes live
@@ -332,20 +324,20 @@ kubectl run netcheck --rm -it --restart=Never --image=busybox:1.36 -- sh -c \
 
 ---
 
-## 7) Wire Prowlarr → Sonarr/Radarr
+## Wire Prowlarr → Sonarr/Radarr
 
 Use cluster DNS so it works pod-to-pod:
 
 ```
-http://sonarr.default.svc.cluster.local:8989
-http://radarr.default.svc.cluster.local:7878
+http://sonarr:8989
+http://radarr:7878
 ```
 
 If “name does not resolve,” ensure the **Service** exists, selectors match pod labels, and pods are **Running** (so Endpoints populate).
 
 ---
 
-## 8) Optional hardening
+## Optional hardening
 
 - Keep only **websecure** routes. If you also expose **web (80)**, add a tiny HTTP→HTTPS redirect **on web** (don’t attach `redirect-https` to **websecure**).
 - If you later enable the **Cloudflare orange-cloud** proxy, consider restricting firewalld 80/443 to Cloudflare IP ranges (rich rules), or use **Cloudflare Tunnel** for zero-trust access.
