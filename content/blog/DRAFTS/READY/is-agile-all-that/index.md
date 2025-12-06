@@ -1,15 +1,17 @@
 ---
 draft: true
-title: "Agile: Waterfall 2.0"
-date: 1994-11-09
+title: The SAFe Agile Age
+date: 2025-12-08
 author: William
 category:
   - Tech
-tags: 
-description: 
+tags:
+  - Rant
+description: A blunt, humorous look at how agile went from a startup superpower to a corporate circus. This post breaks down story points, sprints, planning increments, meeting overload, and why SAFe agile often kills real productivity. A raw take on what engineers actually need to get meaningful work done.
 cover:
   image: test
   alt: test
+bskyid:
 ---
 # The Age of Agile
 
@@ -21,16 +23,16 @@ Who wouldn't want that?! It got us Google, Uber, Amazon, and a host of other uni
 
 As any good agile certified professional will tell you. Agile isn't just a concept, it's a CULTURE! Your entire organisation needs to embody this agile methodology. This methodology is outlined in 4 key tenants articulated in the agile manifesto.
 
-- Individuals and interactions over processes and tools
-- Working software over comprehensive documentation
-- Customer collaboration over contract negotiation
-- Responding to change over following a plan
+- **Individuals and interactions** over processes and tools
+- **Working software** over comprehensive documentation
+- **Customer collaboration** over contract negotiation
+- **Responding to change** over following a plan
 
 Embodying these 4 tenants will make you agile. 
 
 ![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWxrYXpncGw2YW9ycGk0YWZmNm9rcDF2amg2cnpkYXJ2cXBpNXhrYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o8RDqjfenprrzusLZu/giphy.gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWxrYXpncGw2YW9ycGk0YWZmNm9rcDF2amg2cnpkYXJ2cXBpNXhrYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o8RDqjfenprrzusLZu/giphy.gif#center)
 
-So how did your large corporations fair...
+But when you look closely **not all agile is made the same**. So how did your large corporations fair...
 
 # The shift to agile
 
@@ -38,7 +40,7 @@ When your googles of today started to blow up everyone and their dog wanted to b
 
 Driven by shareholders asking "How is company X Agile in this modem age?". Your corporates shift towards agile but a corporate needs more than a website with 4 tenants and 12 rules... Do you see the opportunity? It spawned an entire sector... no? AGILE EXPERTS, consultants who will transform your company from the ancient lumbering monolith of waterfall to a nimble agile... puma Rawww... for a small fee of course. These subject matter experts will train your employees on the tenets of agile, after all, agile is a CULTURE. And don't worry shareholders just for you consultants have made an agile framework that can scale. SAFe agile if you will.
 
-Let's throw in those rose-tinted glasses, huff some hope and get into that shareholder mindset of SAFe Agile.
+Let's throw in those rose-tinted glasses, huff some hope and get into that shareholder mindset of **SAFe Agile**.
 
 ## The GLORIOUS storypoint
 
@@ -62,27 +64,13 @@ This short term view combined with daily standups helps keep teams focused and d
 
 Roping several sprints together we get a planned increment at the highest level. These are ~3 months long, to complete an Epic containing many tickets. A holistic feature or function.
 
-It strives to achieve team synchronization on the business unit or organization level
-
-
-SAFe Agile (Scaled agile framework) - Adopted by NIQ
-Just a framework (NOT RIDGED?) Guidelines
-Developed in 2010
-Agile release train (ART)
-Pro View
-- Align priorities 
-- Same planning cycle - Bind them into lock step
-- Combining teams together to work together
-- Foster collaboration with teams working on the same schedule
-
+It strives to achieve team synchronization on the business unit or organization level so teams can effectively coordinate in the coming months. This alignment ensures team priorities are set correctly and that they can give each other heads up on what might be needed of them in the next few months.
 
 We aren't a nimble startup with a very flat organizational structure. We are a corporate behemoth! The planned increment thus becomes a great tool to rope in directors and C-suite level. They can thus keep tabs on how the epics are progressing. Which can be fed back to the board and shareholders with a personally attached gas canister!
 
+With all this laid out in front of you can you see the problem?
 
-With all this layed out infront of you can you see the problem?
-
-
-## What reality looks like
+## The REALITY
 
 Now that I have annihilated every brain cell and reader of this article. You might be saying "My God William, this agile framework thing sounds great, LETS GO". Put down the canister Timmy, what does all this result in?
 
@@ -112,6 +100,12 @@ I'm going to take a breather here and interject with some research, for sanities
 Now in the 14 hours you have this week finding a 2~4-hour window sounds easy. BUT if you have 1 meeting in the middle any chance of a deep work session being locked in tends toward zero. This leaves maybe at best 2 focused sessions in the week. That is 8 hours out of 40 hours, just a 20% efficiency. Now this is not to say 100% is the goal but it sure as fuck is not 20! 
 
 We then stand here and wonder why sandbagging, where engineers overestimate the time a task will take, is a thing. Yes there are other factors like unknown complexity but I believe busy work is also a factor.
+
+At the beginning of this post I outlined the 4 core tenants of the agile manifesto. I would argue that SAFe Agile goes against every principle that the agile manifesto sets out.
+- Processes over people. Hell even if you engage people they will point to the process and say sorry we can do that in the next planned increment in 2 months.
+- Comprehensive documentation over working software, because you fucking bet your ass that all those meetings and processes shall be documented!
+- Following a plan over responding to change because it can always be done next planned increment. 
+- Contract negotiation over customer collaboration... I cant think of anything whitty 
 
 ## Think logically
 
