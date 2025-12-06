@@ -14,22 +14,21 @@ category:
   - Tech
 author: William
 ---
-## Why this stack?
+## Why?
 
-If you’ve ever wanted a **real** Kubernetes experience at home without the resource tax, **k3s** is the sweet spot:
-- **Lightweight & fast**: perfect for a single node and optional Pi workers.
-- **Batteries included**: Traefik ships as the default ingress controller.
-- **Learn by doing**: a real cluster you can break, fix, and grow.
+Is what I imagine the first question to pop into your head, why on so many levels did you do this. Well if you are interested in my rant about why Kubernetes [my last post](blog/tech/migrating-from-docker-to-kubernetes/) will bring you up to speed. No the why I'm answering here is what version of Kubernetes did I go for and that would be **k3s** a lightweight, batteries included kubernetes deployment that allows me to sink my teeth in without drowning in platform engineering for the next few years. k3s will allow me to learn the ins and outs of Kubernetes so I can shoot myself in the foot on my own time!
 
-We’ll run **Jellyfin** for media streaming and the *arr* ecosystem (Sonarr, Radarr, Prowlarr, optional Bazarr/qBittorrent) for automation, all behind **HTTPS**, with a **Let’s Encrypt wildcard** via **Cloudflare DNS-01**. Storage comes from an **SMB share** so you can keep data on a NAS or a separate box.
+And what a better way to start then deploying my media server in the Kubernetes world. With this will be the first major change as I'll be using **Jellyfin** for media streaming and the *arr* ecosystem (Sonarr, Radarr, Prowlarr, optional Bazarr/qBittorrent) for automation, all behind **HTTPS**, with a **Let’s Encrypt wildcard** via **Cloudflare DNS**. And finally all the media files are stored on an **SMB share** that i had previously setup in my [plex deployment post](/blog/tech/plex-server-on-headless-raspberry-pi/#step-1--prepare-media-drive).
 
-> TL;DR: one `values.yaml` drives your entire app stack. cert-manager + SMB CSI are installed once and left alone.
+> TL;DR:
+> **k3s** > Docker
+> Full arr stack is deployed with a helm chart and a `values.yaml` drives your customisations. 
+> Little preprep required with configuring cert-manager + SMB share but thats below :D
 
 ---
 
 ## Prerequisites
-Obviously we need to have k3s or whatever flavour of kubernetes you want installed on your systems. If you want to know why i went with K3s check out my writeup here
-**Install k3s**
+Obviously we need to have **k3s** installed first and that can be achieved with:
 
 ```bash
 curl -sfL https://get.k3s.io | sh -
@@ -41,9 +40,7 @@ kubectl -n kube-system get svc traefik -o wide
 > **Pro tip:** If you prefer a different ingress controller later, you can disable the bundled Traefik but for a home lab, the defaults are perfect.
 
 **Non-Helm Chart Services**
-Even though there is a single helm chart that will deploy almost everything there is 
-
-This setup uses **one Helm chart with a single `values.yaml`** for apps, Services, Traefik routes, and SMB share wiring. Two things are **preinstalled** outside Helm:
+Even though there is a single helm chart that will deploy almost everything there is we have a few manual steps before that magic. These are namely certificate management and SMB support, more specifically:
  - **cert-manager** (via `kubectl apply`)
  - **SMB CSI driver** (installed once cluster-wide)
 
