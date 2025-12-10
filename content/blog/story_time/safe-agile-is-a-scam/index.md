@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: SAFe Agile is a SCAM
 date: 2025-12-06
 author: William
