@@ -1,12 +1,12 @@
 ---
 draft: true
-title: 
-date: 
+title:
+date:
 author: William
-category: 
-tags: 
-description: 
-bskyid: 
+category:
+tags:
+description:
+bskyid:
 cover:
   image: test
   alt: test

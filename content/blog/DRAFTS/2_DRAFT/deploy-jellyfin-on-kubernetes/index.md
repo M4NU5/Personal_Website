@@ -73,13 +73,17 @@ flowchart LR
 
 ### Cloudflare DNS
 
-Create `A`/`CNAME` records like `jellyfin.example.com` → your node IP (e.g. `192.168.0.100`).
+I use cloudflare as my DNS, would highly recommend, they offer domains at cost... Need i say more. But no matter what DNS you are using create an `A`/`CNAME` record like `jellyfin.example.com` and point it to your local node IP (e.g. `192.168.0.5`). 
+You can also just foward all traffic there if you like with `*.example.com`
 
-> **Start with DNS-only (gray cloud)** so you hit your LAN origin directly while testing. You can experiment with Cloudflare proxying later or use Cloudflare Tunnel. For me however I only care to stream locally 
+> **Start with DNS-only** so you hit your LAN origin directly while testing. You can later experiment with Cloudflare proxying or use Cloudflare Tunnel but for me, I only care to stream to my LAN so that is what this guide will be scoped for.
+
+With our domain acquired and DNS setup we now need to setup our certificate management. 
 
 ---
+### Install cert-manager
 
-### Preinstall cert-manager (manual)
+Certificate manager will allow for all content to be served over `https://`. Once we set this up we will never have to do it again. So lets knock this puppy out.
 
 ```bash
 kubectl create namespace cert-manager
@@ -88,12 +92,7 @@ kubectl apply -n cert-manager \
 kubectl -n cert-manager get pods
 ```
 
-**Cloudflare token & ClusterIssuer**
-
-```bash
-kubectl -n cert-manager create secret generic cloudflare-api-token-secret \
-  --from-literal=api-token='<YOUR_CF_API_TOKEN>'
-```
+With the certificate manager installed we now want to deploy 2 components. A `certificateissuer.yaml` that will handle the refreshing of certifications and a `wildcard-cert.yaml` that will be the certificate for the cluster to use. A wildcard certificate is good enough we dont need to go down the unique certificate per subdomain route. Lets start with our certificate handler...
 
 ```yaml
 # clusterissuer.yaml
@@ -115,12 +114,16 @@ spec:
               key: api-token
 ```
 
+Next with our deployment script prepared lets generate our Cloudflare token and deploy the config to our cluster.
 ```bash
+kubectl -n cert-manager create secret generic cloudflare-api-token-secret \
+  --from-literal=api-token='<YOUR_CF_API_TOKEN>'
+  
 kubectl apply -f clusterissuer.yaml
 kubectl get clusterissuer letsencrypt-dns01 -o yaml | grep -A3 status:
 ```
 
-**Wildcard certificate (in `default`)**
+Next we deploy our wildcard certificate to the cluster.
 
 ```yaml
 # wildcard-cert.yaml
@@ -144,13 +147,13 @@ kubectl apply -f wildcard-cert.yaml
 kubectl -n default get secret bongofett-cert   # expect type: kubernetes.io/tls
 ```
 
-> **Heads-up:** If you see `invalidContact: ... example.com`, you used a placeholder email. Put a real address in the `ClusterIssuer`.
+> **Heads-up:** If you see `invalidContact: ... example.com` and you used a placeholder email like me. Put a real address in the `ClusterIssuer`.
 
 ---
 
-### Preinstall the SMB CSI driver
+### Install SMB CSI driver
 
-> Our Helm chart will **use** the driver to mount SMB shares, but it won’t install the driver itself.
+Next we want to setup our SMB driver even though our Helm chart deploys SMB the SMB mounts as part of the helm chat the chart doesnt install the driver itself. We can achieve that by doing the following.
 
 ```bash
 helm repo add csi-driver-smb https://raw.githubusercontent.com/kubernetes-csi/csi-driver-smb/master/charts
@@ -162,9 +165,11 @@ If your chart expects a `StorageClass` (e.g. `smb`) or an SMB credentials `Secre
 
 ---
 
-## Install the whole stack with one Helm chart
+## Deploy the HELM
 
-This chart handles **apps, Services, Traefik IngressRoutes/Middlewares, and SMB share wiring**. Adjust your SMB server/share and domain.
+TK - insert elmo fire
+
+This chart handles **apps, Services, Traefik IngressRoutes/Middlewares, and SMB share wiring**. Adjust your values as you see fit, SMB server/share and domain.
 
 ```yaml
 # values.yaml (excerpt)
@@ -174,7 +179,7 @@ global:
   ingressClass: traefik
 
 smb:
-  server: 192.168.0.10
+  server: 192.168.0.2
   share: media
   storageClassName: smb
   secret:
@@ -216,7 +221,7 @@ apps:
     ingress: { entryPoints: [websecure], scheme: http }
 ```
 
-Install:
+With all the variables set, we can now deploy this bad boy with:
 
 ```bash
 helm upgrade --install home-stack <PATH-TO-CHART> -n default -f values.yaml
@@ -227,24 +232,13 @@ kubectl -n default get pods,svc,ingressroute
 
 ---
 
-## Fixing 502 (Linux firewalld & fast discriminators)
+## Solving 502 error-code 
 
-A **502** after deploying usually isn’t your app — it’s either **Cloudflare proxying** or **firewalld** on Fedora dropping traffic to Traefik.
+A **502** after deploying usually isn’t a problem with the cluster its more an issue with trying to get there which is one of two things. Either **Cloudflare proxying** or **firewalld** on our Linux platform blocking traffic to our cluster. To check quickly we can tempararily disable our firewall and see if it works with the following
 
-### Cloudflare or Traefik? (10-second test)
+TK - Disable firewalld
 
-Bypass Cloudflare and hit Traefik directly:
-
-```bash
-curl -sI --resolve jellyfin.example.com:443:192.168.0.100 https://jellyfin.example.com | head -n5
-```
-
-- **Works** → Cloudflare proxy was the issue. Keep records **DNS-only (gray)** for LAN testing or use Cloudflare Tunnel.
-    
-- **Fails** → It’s local (firewall, route, backend).
-    
-
-### If stopping firewalld “fixes it”, make **permanent rules**
+If stopping firewalld “fixes it” we just need to make some permanent rules to be applied to the firewall and we are goochie.
 
 Find your zone:
 
@@ -282,31 +276,24 @@ curl -sI --resolve jellyfin.example.com:443:192.168.0.100 https://jellyfin.examp
 ### Still 502? Three tiny checks
 
 - **Does Traefik see the TLS secret?**
-    
-    ```bash
-    kubectl -n default get secret bongofett-cert
-    kubectl -n kube-system logs deploy/traefik --tail=200 | grep -i 'error configuring tls'
+```bash
+kubectl -n default get secret bongofett-cert
+kubectl -n kube-system logs deploy/traefik --tail=200 | grep -i 'error configuring tls'
     ```
-    
 - **Do middlewares actually exist in `default`?**
-    
-    ```bash
-    kubectl -n default get middleware
-    # remove missing ones from your IngressRoute or create them
-    ```
-    
+```bash
+kubectl -n default get middleware
+# remove missing ones from your IngressRoute or create them
+```
 - **Can pods reach Jellyfin’s Service?**
-    
-    ```bash
-    kubectl run netcheck --rm -it --restart=Never --image=busybox:1.36 -- sh -c \
-    'wget -S --spider http://jellyfin.default.svc.cluster.local:8096/ 2>&1 | head -n2; exit'
-    ```
-    
+```bash
+kubectl run netcheck --rm -it --restart=Never --image=busybox:1.36 -- sh -c \
+'wget -S --spider http://jellyfin.default.svc.cluster.local:8096/ 2>&1 | head -n2; exit'
+```
 
 > **Note:** Jellyfin listens on **HTTP** internally. In your Traefik **IngressRoute**, set `scheme: http`.
 
 ---
-
 ## Verifications (when healthy)
 
 ```bash
@@ -323,9 +310,9 @@ kubectl run netcheck --rm -it --restart=Never --image=busybox:1.36 -- sh -c \
 ```
 
 ---
-
 ## Wire Prowlarr → Sonarr/Radarr
 
+Some aditional wiring 
 Use cluster DNS so it works pod-to-pod:
 
 ```
