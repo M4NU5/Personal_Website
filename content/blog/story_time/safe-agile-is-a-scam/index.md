@@ -12,7 +12,7 @@ description: A blunt, humorous look at how agile went from a startup superpower 
 cover:
   image: cope_manager.png
   alt: cope_manager.png
-bskyid:
+bskyid: 3m7prtcwbrs26
 ---
 # The Age of Agile
 
