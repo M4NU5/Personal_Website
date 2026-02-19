@@ -18,7 +18,7 @@ cover:
 The time has come
 ## Docker Just Isn't Cutting It
 That's right. I’ve crossed over. Docker just isn’t doing it for me anymore.  
-The limitations, the lack of flexibility, the industry drift it’s all driven me to the dark side.
+The limitations, the lack of flexibility and industry relevance drift it’s all driven me to the dark side.
 
 It’s Kubernetes time, baby.
 
