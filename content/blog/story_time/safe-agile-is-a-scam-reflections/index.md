@@ -9,7 +9,7 @@ tags:
   - Rant
   - Agile
 description: "After publishing my critique of SAFe Agile, the response surprised me — not with simple agreement or dismissal, but with genuinely sharp pushback that forced me to reconsider my blind spots. In this follow-up, I address three core challenges to my original argument: my unexamined assumption that efficiency is a universal motivator, the real constraints of collaborating across global time zones, and the question of whether product-thinking even applies to operations and security roles. My position on SAFe hasn't changed — but I was too dogmatic, and good-faith debate sharpened the argument. This is what substantive discourse looks like."
-bskyid:
+bskyid: 3mfs6nrvhbc2i
 cover:
   image: safe-agile-reflections.png
   alt: safe-agile-reflections.png
