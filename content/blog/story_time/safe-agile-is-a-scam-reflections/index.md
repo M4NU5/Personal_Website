@@ -1,7 +1,7 @@
 ---
-draft: true
+draft: false
 title: "Reflections: Safe Agile is a Scam"
-date: 2026-02-21
+date: 2026-02-26
 author: William
 category:
   - Story Time
@@ -16,7 +16,7 @@ cover:
 ---
 After publishing my critique of SAFe Agile, I received feedback that went far beyond what I expected. Rather than simple agreement or dismissal, people came back with some fire takes that genuinely got me thinking.
 
-As a quick recap: my original post argued that SAFe Agile violates the four core principles of agile while giving executives cover to claim "we're agile" to shareholders. As engineers, our value comes from solving problems - work that happens in code, not meetings. Therefore, we should fiercely protect our deep focus time. If you would like to read it, here’s a link.
+As a quick recap: my *[original post](/blog/story_time/safe-agile-is-a-scam)* argued that SAFe Agile violates the four core principles of agile while giving executives cover to claim "we're agile" to shareholders. As engineers, our value comes from solving problems - work that happens in code, not meetings. Therefore, we should fiercely protect our deep focus time. If you would like to read it, here’s a link.
 
 The feedback revealed something I'd missed: I was **assuming efficiency** as a universal driver. Three specific challenges emerged from this blind spot, and I want to address each.
 
@@ -24,7 +24,7 @@ The feedback revealed something I'd missed: I was **assuming efficiency** as a u
 
 The most fundamental criticism was my assumption that people naturally gravitate toward efficiency. That's not reality. Plenty of people don't care about optimization if they're hitting their goals, why do more? This is a legitimate approach to work, and my original argument didn't account for it.
 
-This is where I was weakest. I wrote prescriptively about what engineers should do, but prescriptive language doesn't invite adaptation—it demands compliance. The irony? This is exactly what makes SAFe problematic: assuming one framework fits all contexts. I was doing the same thing from the opposite direction.
+This is where I was weakest. I wrote prescriptively about what engineers should do, but prescriptive language doesn't invite adaptation - it demands compliance. The irony? This is exactly what makes SAFe problematic: assuming one framework fits all contexts. I was doing the same thing from the opposite direction.
 
 **Better approach: share ideas, not mandates. Let people take what works and ignore the rest.**
 
@@ -44,9 +44,9 @@ It's not a perfect solution, but it acknowledges the constraint while still prio
 
 The final pushback: as a security engineer, I'm not building a product like software developers do, so product-thinking doesn't apply.
 
-I respectfully disagree. I _am_ building a product—it's just different. Instead of shipping features, my product is vulnerabilities fixed and risk reduction. Security engineering involves significant dev work, platform management, and for pentesters especially, deep investigative work. When you're pulling on a thread while hacking, unraveling a complex puzzle, that flow state is exactly what needs protection.
+I respectfully disagree. I _am_ building a product - it's just different. Instead of shipping features, my product is vulnerabilities fixed and risk reduction. Security engineering involves significant dev work, platform management, and for pentesters especially, deep investigative work. When you're pulling on a thread while hacking, unraveling a complex puzzle, that flow state is exactly what needs protection.
 
-Perhaps I failed in language. In my mind, operations _is_ a product—the product of risk management and organizational security posture.
+Perhaps I failed in language. In my mind, **operations _is_ a product** - the product of risk management and organizational security posture.
 
 ## Conclusion
 
