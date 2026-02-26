@@ -121,3 +121,4 @@ ERROR
 And just like that we are in business! Now you have n8n running in a containerized environment using Docker Compose.
 
 You can deploy it in any environment that supports Docker, such as your local machine, a virtual machine, or a cloud provider.
+
