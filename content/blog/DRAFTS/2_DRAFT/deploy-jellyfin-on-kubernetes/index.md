@@ -28,8 +28,9 @@ And what a better way to start then deploying my media server in the Kubernetes 
 ---
 
 ## Prerequisites
-Obviously we need to have **k3s** installed first and that can be achieved with:
+Obviously we need to have k3s or whatever flavour of kubernetes you want installed on your linux system. If you want to know why I went with K3s check out my writeup [here](/blog/tech/migrating-from-docker-to-kubernetes).
 
+**Install k3s**
 ```bash
 curl -sfL https://get.k3s.io | sh -
 kubectl get nodes -o wide
