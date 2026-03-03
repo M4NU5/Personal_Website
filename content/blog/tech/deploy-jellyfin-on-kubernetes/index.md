@@ -12,6 +12,9 @@ tags:
   - DevOps
 category:
   - Tech
+cover:
+  image: cry.png
+  alt: cry.png
 author: William
 ---
 # Why?
