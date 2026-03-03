@@ -14,7 +14,6 @@ category:
   - Tech
 author: William
 ---
-
 # Why?
 
 Is what I imagine the first question to pop into your head, why on so many levels did you do this. Well if you are interested in my rant about [why kubernetes](/blog/tech/migrating-from-docker-to-kubernetes/), it will bring you up to speed. 
