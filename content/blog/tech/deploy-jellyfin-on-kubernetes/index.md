@@ -48,7 +48,7 @@ flowchart LR
 
 # Prerequisites
 Let's start with **Installing k3s**
-```bash
+``` bash
 curl -sfL https://get.k3s.io | sh -
 kubectl get nodes -o wide
 kubectl -n kube-system get svc traefik -o wide
@@ -77,7 +77,7 @@ With domain acquired and DNS setup now for the setup of the certificate manageme
 
 Certificate manager will allow for all content to be served over `https://`. Once set up we will never have to do it again. Let's knock this puppy out.
 
-```bash
+``` bash
 kubectl create namespace cert-manager
 kubectl apply -n cert-manager \
   -f https://github.com/cert-manager/cert-manager/releases/download/v1.14.4/cert-manager.yaml
