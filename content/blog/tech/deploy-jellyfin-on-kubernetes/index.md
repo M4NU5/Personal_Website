@@ -156,30 +156,9 @@ helm upgrade --install csi-driver-smb csi-driver-smb/csi-driver-smb -n kube-syst
 If your chart expects a `StorageClass` (e.g. `smb`) or an SMB credentials `Secret`, create them first (or let your chart create them). The key is: **the driver must exist** before pods try to mount.
 
 ---
-
-# Deploy the HELM
+# Deploy the Helm Chart
 
 You can find the **[Helm chart](https://github.com/M4NU5/UltimateHomeServer)** that I have used to deploy.
-
-Here is a view of how the system links up.
-
-```flowchart
-flowchart LR
-  subgraph HomeLAN
-    A[Browser] -->|HTTPS 443| T[Traefik (k3s Service)]
-    T -->|HTTP 8096| J[Jellyfin Pod]
-    T -->|HTTP 8989| S[Sonarr Pod]
-    T -->|HTTP 7878| R[Radarr Pod]
-    T -->|HTTP 9696| P[Prowlarr Pod]
-    
-    J ---- PVC
-    S ---- PVC
-    R ---- PVC
-    P ---- PVC
-    PVC ---|SMB CSI| NAS[(SMB Share //nas/media)]  
-  end
-````
-
 
 ![https://i.giphy.com/1n4iuWZFnTeN6qvdpD.webp#center](https://i.giphy.com/1n4iuWZFnTeN6qvdpD.webp#center)
 
@@ -316,22 +295,6 @@ kubectl run netcheck --rm -it --restart=Never --image=busybox:1.36 -- sh -c \
 ```
 
 If this fails, check that the Service selector matches the pod labels and that the pod is in a **Running** state so Endpoints are populated.
-
----
-# Verifications (when healthy)
-
-```bash
-# TLS secret present where routes live
-kubectl -n default get secret example-cert
-
-# Service -> Pod wiring
-kubectl get svc jellyfin -o wide
-kubectl get endpoints jellyfin -o yaml | grep -A2 ports:
-
-# In-cluster reachability
-kubectl run netcheck --rm -it --restart=Never --image=busybox:1.36 -- sh -c \
-'wget -S --spider http://jellyfin.default.svc.cluster.local:8096/ 2>&1 | head -n2; exit'
-```
 
 ---
 # Wire Prowlarr → Sonarr/Radarr 
