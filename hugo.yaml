@@ -79,7 +79,11 @@ params:
     imageTitle: "doge.png"
     imageWidth: 100
     imageHeight: 100
-    # Content: Welcome to my blog
+    Content: > 
+      Senior Product Security Engineer by day, homelab tinkerer and CTF hacker by night.
+      I write about Linux, Kubernetes, hacking, 
+      and the occasional unhinged rant. If any of that sounds like your vibe, 
+      you're in the right place.
 
   profileMode:
     enabled: false
