@@ -2,7 +2,7 @@
 draft: false
 title: I Rewrote My Media Server in Kubernetes and Only Cried Twice
 description: Ditching Docker for k3s and deploying Jellyfin, Sonarr, Radarr and Prowlarr behind HTTPS - wildcard certs, SMB mounts, Helm charts, and 502 errors included.
-date: 2026-02-26
+date: 2026-01-23
 tags:
   - Kubernetes
   - Docker
