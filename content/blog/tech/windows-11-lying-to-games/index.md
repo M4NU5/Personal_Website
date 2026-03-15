@@ -8,6 +8,7 @@ category:
 tags:
   - Windows
   - Gaming
+  - Performance
 description: Windows 11 quietly broke the way games request higher timer resolution — and it's been causing microstutter on desktop PCs ever since. Here's what changed, why Microsoft did it, and the single registry key that fixes it permanently.
 bskyid:
 cover:
@@ -85,7 +86,7 @@ Platform Timer Resolution: Platform Timer Resolution
 Current Timer Resolution (100ns units): 156250
 ```
 
-156250 × 100ns = **15.6ms**. War Thunder was screaming into the void.
+156250 × 100ns = **15.6ms**. War Thunder was screaming into the void. **Every game will be doing exactly the same.**
 
 ---
 
@@ -125,7 +126,3 @@ If you're on Windows 11 and have persistent microstutter that doesn't correlate 
 ---
 
 Hope this saves someone else a year of head-scratching. Drop a comment below if you hit any issues.
-
-- [Windows](https://williamsmale.com/tags/windows/)
-- [Gaming](https://williamsmale.com/tags/gaming/)
-- [Performance](https://williamsmale.com/tags/performance/)
