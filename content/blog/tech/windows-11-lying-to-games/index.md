@@ -21,7 +21,6 @@ cover:
 > ```
 > Windows 11 silently broke global timer resolution. This restores it.
 > Scroll down for the full breakdown.
-
 ## A Year of Microstutter. One Registry Key.
 
 For about a year my PC has been stuttering. Not crashing, not dropping to unplayable framerates. Just this persistent, infuriating microstutter that made everything feel slightly wrong. Moving windows across the desktop, playing a game would stutter when looking at a moderately busy scene. That subtle jankiness you can't quite screenshot but absolutely feel, and it all started when I upgraded to Windows 11.
