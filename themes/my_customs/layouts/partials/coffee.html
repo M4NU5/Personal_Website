@@ -1,0 +1,8 @@
+{{ if ne .Params.showCoffee false }}
+    <div class="coffee-cta">
+    <span>{{ with .Params.coffeeText }}{{ . }}{{ else }}Found this useful?{{ end }}</span>
+    <a href="https://buymeacoffee.com/williamsmale" target="_blank" rel="noopener" class="coffee-btn">
+        ☕ Buy me a coffee
+    </a>
+    </div>
+{{ end }}

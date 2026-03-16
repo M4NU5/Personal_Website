@@ -122,3 +122,32 @@ svg {
 .danger {
   border-left-color: #ee0000;
 } */
+
+
+.coffee-cta {
+  margin-top: 2rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.coffee-cta p {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+}
+
+.coffee-btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.coffee-btn:hover {
+  background: var(--code-bg);
+}

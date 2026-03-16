@@ -21,13 +21,15 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 
+showCoffee: true
+coffeeText: "If anything here's been worth your time..."
+
 cover:
     image: "cover-photo.jpg" # image path/url
     alt: "cover-photo.jpg" # alt text
     # caption: "Perspective" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: false # only hide on current single page
-
 ---
 
 ```python
