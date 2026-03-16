@@ -64,7 +64,9 @@ Here’s what I did:
 4. Installed Nobara on the newly freed space.
 
 > [!WARNING]
-> **Update**: I've since switched from Nobara to Fedora for daily use. The reason: kernel-level anti-cheat (EAC, BattlEye) requires Secure Boot enabled, and Nobara doesn't support it out of the box. If you're primarily gaming with anti-cheat titles, go straight to Fedora — the setup is nearly identical and you'll save yourself the hassle. The rest of this post still applies either way.
+> **Update**: I've since switched from Nobara to Fedora for daily use. 
+> 
+> **The reason**: kernel-level anti-cheat (EAC, BattlEye) requires Secure Boot enabled, and Nobara doesn't support it out of the box. If you're primarily gaming with anti-cheat titles, go straight to Fedora — the setup is nearly identical and you'll save yourself the hassle. The rest of this post still applies either way.
 
 Now, about my **data drive** it’s a massive NTFS volume full of games, media, junk... you name it. NTFS is Windows' baby, and while Linux can talk to it, it’s not exactly a smooth conversation.
 
