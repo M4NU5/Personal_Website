@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Ollama + AMD GPU in 2025: Local LLMs Without the NVIDIA Tax"
+title: "Ollama + AMD GPU in 2026: Local LLMs Without the NVIDIA Tax"
 date: 2025-06-01
 author: William
 category:
@@ -14,7 +14,7 @@ cover:
   image: amd-preview.png
   alt: amd-preview.png
 ---
-> **TL;DR:** AMD quietly fixed the hard part. The January 2026 Adrenalin driver update ships Ollama, LM Studio, and ComfyUI as a one-click optional install. If you're on RX 7700 or newer -- or a Ryzen AI 300/400/Max -- you don't need to touch ROCm libraries at all. [Get the AI Bundle here.](https://www.amd.com/en/blogs/2026/amd-software-adrenalin-edition-ai-bundle-ai-made-si.html) 
+> **Update - January 2026** AMD quietly fixed the hard part. The January 2026 Adrenalin driver update ships Ollama, LM Studio, and ComfyUI as a one-click optional install. If you're on RX 7700 or newer -- or a Ryzen AI 300/400/Max -- you don't need to touch ROCm libraries at all. [Get the AI Bundle here.](https://www.amd.com/en/blogs/2026/amd-software-adrenalin-edition-ai-bundle-ai-made-si.html) 
 >Running older AMD hardware? That's what the rest of this post is for.
 
 ## Introduction
@@ -60,14 +60,15 @@ This means that Ollama doesn't have the correct drivers to utilise our GPU. Now 
 
 ## Pointing Ollama to AMD GPU
 
-It is, dont worry your little head, but we need to update the Ollama install files with the correct ROCm Library files so Ollama knows what the fuck to do. For that you will need to go here:
-[https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU/releases/tag/v0.6.1.2](https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU/releases/tag/v0.6.1.2)
+It is, don't worry your little head, but we need to update the Ollama install files with the correct ROCm Library files so Ollama knows what the fuck to do. For that you will need to go here and have a look through:
+- [https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU/releases](https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU/releases)
+
 
 Now for the hard part. To determine what GPU model you are working with. If only the names were that of what it says on the box but saddly not. For this we run `ollama serve` in our terminal.
 If Ollama detects the GPU but it isnt supported we get a message "**GPU is unsupported with a gfx**" that code is the code for our GPU. I have a RTX 7900 XT which when I run the above mentioned command I can see my GPU is classed as **gfx1100**. 
 
 We can go ahead and download the corresponding zip file. Navigate to where our drivers are for Ollama and replace them with the contents of the zip file.
-These files are generally located at `C:\Program Files\AMD\ROCm\5.7\bin` or something similar.
+These files are generally located at `C:\Program Files\AMD\ROCm\6.4\bin` or something similar.
 Have a closer look at these [installation guidelines](https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU) and remember before replacing anything make a backup copy so you can always rollback and restart.
 
 This is the point where you might be thinking fuck me this is complicated! You would be correct because I thought the same. Messing with drivers is the price to pay to use an AMD card!
