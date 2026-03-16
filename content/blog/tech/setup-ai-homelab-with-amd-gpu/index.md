@@ -26,8 +26,6 @@ This is not to say its a bad thing, its just good to know what we are working wi
 Step in the open source side of the equation, there are companies and communities out there are arent being tightfisted about the whole AI revolution. Ones that come to mind immediately are llama from meta, Mistral and Deepseek. These models are holding their own against the close source models of the tech giants and its pretty straight forward to run them yourself. Install ollama and pull models that can be run locally. How cool is that, we can run LLMs locally assuming we have a strong enough machine or well GPU if we are looking at some of the heavier models.
 Im just going to say youre not running deepseeks 671b 404gb model!
 
-Step in the open source community who have worked to provide impressive models of their own that can be run by yourself. Its what all the cool kids are doing. Install Ollama, pull models that can be run locally and bobs your uncle. How cool is that we can run local LLMs, how big a model just depends on how strong a system you are sporting.
-
 Obviously as a tech nerd myself why would I not want to run a local LLM that can give you unlimited chat capabilities. Sure not to the sophistication of GPT but that isnt always needed, plus less guardrails.
 
 ![Getinloser.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTNxdWJtaXBuY2VndnNkeGpjZmM5cjdkaG81dHNqemdrYnQwcDUyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pyTkBNVthpwp0WVFw0/giphy.gif#center)
