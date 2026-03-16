@@ -10,7 +10,7 @@ tags:
   - Gaming
   - Performance
 description: Windows 11 quietly broke the way games request higher timer resolution — and it's been causing microstutter on desktop PCs ever since. Here's what changed, why Microsoft did it, and the single registry key that fixes it permanently.
-bskyid:
+bskyid: 3mh56riu6uk2w
 cover:
   image: SlowedTime.png
   alt: SlowedTime.png
