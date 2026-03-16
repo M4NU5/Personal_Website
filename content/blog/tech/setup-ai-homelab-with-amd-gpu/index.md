@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Setup Ollama with AMD GPU
+title: How I Got Ollama Working on an AMD GPU (The ROCm Bits They Don't Tell You)
 date: 2025-06-01
 author: William
 category:
@@ -8,12 +8,15 @@ category:
 tags:
   - Windows
   - AI
-description: Discover how to run local AI chatbots using AMD GPUs with Ollama. Skip the cloud, own your data, and set up open-source LLMs like Meta’s LLaMA and Mistral on your machine—no NVIDIA required.
+description: AMD GPU not detected by Ollama? Here's how to get local LLMs running on an AMD APU or GPU on Linux using ROCm — including the bits the official docs skip.
 bskyid: 3lql3lkvx4s2o
 cover:
   image: amd-preview.png
   alt: amd-preview.png
 ---
+> **TL;DR:** AMD quietly fixed the hard part. The January 2026 Adrenalin driver update ships Ollama, LM Studio, and ComfyUI as a one-click optional install. If you're on RX 7700 or newer -- or a Ryzen AI 300/400/Max -- you don't need to touch ROCm libraries at all. [Get the AI Bundle here.](https://www.amd.com/en/blogs/2026/amd-software-adrenalin-edition-ai-bundle-ai-made-si.html) 
+>Running older AMD hardware? That's what the rest of this post is for.
+
 ## Introduction
 
 OpenAI, Google, X and many more all provide AI chatbot capabilities that are really useful to a point and that point is how much they know. There is a prevailing consensus that the more data you give a model the better it is. You can even customise and get the chat bot to know you better by uploading your personal data. By doing so however you are seeding all your data to be owned by which ever company you are uploading to. Oh and you want to use our top models consistently without rate limits cough up some money as well boy! 
