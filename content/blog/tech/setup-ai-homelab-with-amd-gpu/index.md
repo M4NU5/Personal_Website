@@ -1,6 +1,6 @@
 ---
 draft: false
-title: How I Got Ollama Working on an AMD GPU (The ROCm Bits They Don't Tell You)
+title: "Ollama + AMD GPU: Local LLMs Without the NVIDIA Tax"
 date: 2025-06-01
 author: William
 category:
