@@ -20,7 +20,9 @@ For me, the first time was during my honours year. At the start of the year, we 
 
 I’d spent my whole life on Windows, but I figured it was time to see what Linux had to offer. So I installed Mint. But no way was I putting that shit on my main machine! Homie had games to play, and the idea of running stuff through Wine? Laughable. Back then, Linux gaming meant _only_ playing what was precompiled for Linux.
 
-Fast forward a few years, and as my technical chops have matured, I keep circling back to Linux as my daily driver. There are just so many benefits it’s a better environment in so many ways:
+Fast forward a few years, and as my technical chops have matured, I keep circling back to Linux as my daily driver. There are just so many benefits it’s a better environment in so many ways.
+
+"Here's where I land on it now:
 
 Want to code? → Linux.  
 Want containers? → Linux.  
