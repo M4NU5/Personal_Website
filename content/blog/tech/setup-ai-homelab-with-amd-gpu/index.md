@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Ollama + AMD GPU: Local LLMs Without the NVIDIA Tax"
+title: "Ollama + AMD GPU in 2025: Local LLMs Without the NVIDIA Tax"
 date: 2025-06-01
 author: William
 category:
