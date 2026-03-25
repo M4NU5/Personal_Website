@@ -19,7 +19,7 @@ cover:
 > ```cmd
 > reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v GlobalTimerResolutionRequests /t REG_DWORD /d 1 /f
 > ```
-> Windows 11 silently broke global timer resolution. This restores it.
+> Windows 11 silently broke global timer resolution. This restores it enabling games to request a higher tick rate.
 > Scroll down for the full breakdown.
 ## A Year of Microstutter. One Registry Key.
 
