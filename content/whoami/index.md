@@ -37,8 +37,8 @@ class me():
     def __init__(self):
         self.name       = "William Smale"
         self.location   = "London, UK"
-        self.experience = 7
-        self.profession = "Senior Product Security Engineer"
+        self.experience = 8
+        self.profession = "Senior Applicaiton Security Engineer"
         self.languages  = ["Go", "Python", "Bash"]
         self.interests  = ["Coding", "Hacking", "Diving", "Photography", "Philosophy"]
 
