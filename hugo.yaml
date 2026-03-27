@@ -80,9 +80,12 @@ params:
     imageWidth: 100
     imageHeight: 100
     Content: > 
-      Application Security Engineer by day, homelab tinkerer and CTF hacker by night.
-      I write about Linux, Kubernetes, hacking, and the occasional unhinged rant. 
-      If any of that sounds like your vibe, you're in the right place.
+      Application Security Engineer by day, homelab tinkerer and CTF hacker by night. I write about Linux, Kubernetes, hacking, and the occasional unhinged rant. If any of that sounds like your vibe, you're in the right place.
+
+      **Start here →**
+      [Ollama + AMD GPU](/blog/tech/setup-ai-homelab-with-amd-gpu/) ·
+      [Windows 11 Lying to You](/blog/tech/windows-11-lying/) ·
+      [Fix Steam on Linux](/blog/tech/fix-steam-issues-on-linux/)
 
   profileMode:
     enabled: false
