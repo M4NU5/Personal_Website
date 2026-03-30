@@ -84,7 +84,7 @@ params:
 
       **Start here →**
       [Ollama + AMD GPU](/blog/tech/setup-ai-homelab-with-amd-gpu/) ·
-      [Docker to Kubernetes](/blog/tech/migrating-from-docker-to-kubernetes/) ·
+      [Media Server on Kubernetes](/blog/tech/deploy-jellyfin-on-kubernetes/) ·
       [Windows 11 & Timer Resolution](/blog/tech/windows-11-lying/)
 
   profileMode:
