@@ -112,7 +112,7 @@ _(Note: that domain currently links to a random Venmo. I do not condone it. But 
 
 For these reasons and a few more... I _highly_ recommend Jellyfin if you’re planning a Kubernetes-based media server.
 
-(And yes, I’m working on a full Jellyfin-on-Kubernetes guide. Stay tuned!)
+(And yes, I’ve finished working on a full Jellyfin-on-Kubernetes guide. [Find it here](/blog/tech/deploy-jellyfin-on-kubernetes/)!)
 
 ## Conclusion: No Regrets
 
