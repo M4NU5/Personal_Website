@@ -84,8 +84,8 @@ params:
 
       **Start here →**
       [Ollama + AMD GPU](/blog/tech/setup-ai-homelab-with-amd-gpu/) ·
-      [Windows 11 Lying to You](/blog/tech/windows-11-lying/) ·
-      [Fix Steam on Linux](/blog/tech/fix-steam-issues-on-linux/)
+      [Docker to Kubernetes](/blog/tech/migrating-from-docker-to-kubernetes/) ·
+      [Windows 11 & Timer Resolution](/blog/tech/windows-11-lying/)
 
   profileMode:
     enabled: false
