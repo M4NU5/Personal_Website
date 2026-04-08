@@ -81,11 +81,11 @@ params:
     imageHeight: 100
     Content: > 
       Application Security Engineer by day, homelab tinkerer and CTF hacker by night. I write about Linux, Kubernetes, hacking, and the occasional unhinged rant. If any of that sounds like your vibe, you're in the right place.
-
+    
       **Start here →**
       [Ollama + AMD GPU](/blog/tech/setup-ai-homelab-with-amd-gpu/) ·
       [Media Server on Kubernetes](/blog/tech/deploy-jellyfin-on-kubernetes/) ·
-      [Windows 11 & Timer Resolution](/blog/tech/windows-11-lying/)
+      [Windows 11 Timer Resolution](/blog/tech/windows-11-lying-to-games/)
 
   profileMode:
     enabled: false
@@ -125,18 +125,18 @@ params:
   socialIcons:
     - name: github
       url: https://github.com/M4NU5
-    # - name: linkedin
-    #   url: https://www.linkedin.com/in/william-smale/
     - name: bluesky
       url: https://bsky.app/profile/williamsmale.com
-    - name: x
-      url: https://twitter.com/WilliamSmale_ 
+    - name: buymeacoffee
+      url: https://www.buymeacoffee.com/williamsmale
     - name: instagram 
       url: https://www.instagram.com/williamsmale_/
     - name: calender 
       url: https://cal.com/williamscheduling 
-    # - name: buymeacoffee
-    #   url: https://www.buymeacoffee.com/williamsmale
+    # - name: x
+    #   url: https://twitter.com/WilliamSmale_ 
+    # - name: linkedin
+    #   url: https://www.linkedin.com/in/william-smale/
 
 theme: 
   - my_customs

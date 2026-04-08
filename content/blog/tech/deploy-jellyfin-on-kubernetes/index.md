@@ -22,7 +22,7 @@ bskyid: 3mg7v5tdkzk24
 
 Is what I imagine the first question to pop into your head, why on so many levels did you do this. Well if you are interested in my rant about [why kubernetes](/blog/tech/migrating-from-docker-to-kubernetes/), it will bring you up to speed. 
 
-The why I'm answering here is what version of Kubernetes did I go for and that would be **k3s** a lightweight, batteries included kubernetes deployment that allows me to sink my teeth in without drowning in platform engineering for the next few years. k3s will allow me to learn the ins and outs of Kubernetes so I can shoot myself in the foot on my own time!
+The why I'm answering here is what version of Kubernetes did I go for and that would be **k3s** a lightweight, batteries included kubernetes deployment that allows me to sink my teeth in without drowning in platform engineering for the next few years. k3s will allow me to learn the ins and outs of Kubernetes so I can shoot myself in the foot on my own time! (cry)
 
 # What We're Building
 This post walks through deploying a full home media server on k3s. The stack includes **Jellyfin** for media streaming, the _arr_ ecosystem (**Sonarr, Radarr, Prowlarr**) for automation, all served over **HTTPS** via a **Let's Encrypt wildcard certificate** using **Cloudflare DNS**. Media files are stored on an **SMB share** set up in my previous [plex post](/blog/tech/plex-server-on-headless-raspberry-pi/#step-1--prepare-media-drive).
@@ -230,6 +230,8 @@ kubectl -n default get pods,svc,ingressroute
 ---
 
 # Troubleshooting 502 Errors
+
+(cry)
 
 A **502** after deploying is almost never a cluster problem - it's a routing problem. Work through the following steps in order before assuming anything deeper is broken.
 
