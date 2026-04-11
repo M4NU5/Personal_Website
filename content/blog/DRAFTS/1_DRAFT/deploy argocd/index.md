@@ -1,20 +1,21 @@
 ---
 draft: true
-title: 
-date: 
+title:
+date:
 author: William
-category: 
-tags: 
-description: 
-bskyid: 
+category:
+tags:
+description:
+bskyid:
 cover:
   image: test
   alt: test
 ---
 
 
-I want to deploy argo cd to manage mt k3s cluster.
-The git ops is what all the cool kids are doing these days?
+
+
+If my previous post I detailed my deployment journey of my arr stack on k3s. 
 
 
 
@@ -24,10 +25,11 @@ The git ops is what all the cool kids are doing these days?
 _March 2026_
 
 ---
+I want to deploy argo cd to manage my k3s cluster. After all gitops is what all the cool kids are doing these days. Who wouldnt want your kubernetes just to manage itself... most of the time.
 
-My [previous post](https://williamsmale.com/blog/tech/deploy-jellyfin-on-kubernetes/) covered deploying the arr stack on K3s — cert-manager, SMB CSI, Traefik, the works. That post assumed a native Linux host. Since writing it I've migrated back to Windows as my daily driver and the old setup died with the Pi it was running on.
+My [previous post](https://williamsmale.com/blog/tech/deploy-jellyfin-on-kubernetes/) covered deploying the arr stack on K3s - cert-manager, SMB CSI, Traefik, the works mostly through helm. That post assumed a native Linux host. Since writing it I've migrated back to Windows as my daily driver. I know im a hethen but the dual booting for games was starting to get to me along with solving the windows micro lag that pushed me to do the migration in the first place, if youre interestied find my write up here. I decided to approach this redeployment from a newer angle... A Git ops angle.
 
-The rebuild was an opportunity to do something I should have done from the start: proper GitOps with ArgoCD. Everything declarative, everything in Git, cluster rebuild reduced to a single `kubectl apply`. This post covers that layer — the GitOps architecture, the secrets strategy for a public repo, and the seedbox wiring that took far longer than it should have.
+Now admittadly I should have done this from the start: proper GitOps with ArgoCD. Everything declarative, everything in Git, cluster rebuild reduced to a single `kubectl apply` and then managed for ever. Reason i didnt is i wanted to get a deeper understanding of how Kubernetes worked be for is start abstracting away from it. Anyhow this post covers that new layer of abstraction. The GitOps architecture, the secrets strategy for a public repo, and the seedbox wiring that took far longer than it should have was achived, now all neatly wrapped in a k3s cluster running on a VM.
 
 If you haven't read the previous post, start there for the K3s and cert-manager setup. This one picks up from a fresh cluster.
 
@@ -35,9 +37,11 @@ If you haven't read the previous post, start there for the K3s and cert-manager 
 
 ## The New Host Setup
 
-The physical change: Windows 11 Pro host running Hyper-V, single Ubuntu 24.04 LTS VM for K3s. The practical implication is that your `kubectl` and `kubeseal` commands run on the VM over SSH, not on your local machine. Two things that catch you early:
+Lets just outline how my environment has shifted. 
 
-**Paste doesn't work in the Hyper-V console.** The basic session doesn't relay clipboard input. Fix this by SSHing in from Windows Terminal instead — full paste support, no faff:
+**The physical change**: Windows 11 Pro host running Hyper-V, single Ubuntu 24.04 LTS VM for K3s. The practical implication is that your `kubectl` and `kubeseal` commands run on the VM over SSH, not on your local machine. Two things that catch you early:
+
+**Paste doesn't work in the Hyper-V console.** As part of initial setup configure SSHing into the VM just makes life easier. Would also recommend enfocing Cert auth only TK (Like to Blog Post or update here)
 
 ```bash
 # On the VM
@@ -55,14 +59,17 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443 --address 0.0.0.0
 ```
 
 Run it in `tmux` so it survives SSH disconnection. Access at `https://<vm-ip>:8080`.
+This is a temparary solution until we configure the correct domain name for argo TK (Review this and determine if this is truthful or would be done another way)
 
 ---
 
 ## Why ArgoCD
 
-The previous setup was `helm upgrade --install` run manually. It worked until it didn't — cluster dies, you're reconstructing state from memory and a `values.yaml` you hope is current. ArgoCD solves this by making Git the single source of truth. The cluster converges to whatever is in the repo. Drift gets detected and corrected. Rebuild is one command.
+The previous setup was `helm upgrade --install` run manually. It worked great at the start but every edit or change needs to be reapplied manually *barff* . Cluster dies, youre sliing youir way through that bad boy and you always reupgrade to make sure your `values.yaml` is up to date. ArgoCD solves this by making Git the single source of truth. The cluster converges to whatever is in the repo. Drift gets detected and corrected. Rebuild is one command. 
 
-The tradeoff is upfront complexity. ArgoCD itself has to be bootstrapped manually — it can't manage its own installation. And you need to think carefully about secrets, because GitOps means everything in Git, and Git is often public.
+TK serenity gif Danial craige
+
+The tradeoff is upfront complexity. ArgoCD itself has to be bootstrapped manually, it can't manage its own installation that would be true madness. And you need to think carefully about secrets, because GitOps means everything in Git, and Git is often public.
 
 Both of those problems are solvable. The rest of this post is how.
 
@@ -72,17 +79,18 @@ Both of those problems are solvable. The rest of this post is how.
 
 ### App of Apps
 
-The `/apps` folder in the repo is the control plane. Each file is an ArgoCD `Application` resource pointing at either a Helm chart or a path in the repo. One parent `root.yaml` points at the folder itself — ArgoCD manages its own children. Add a new app by dropping a manifest in `/apps` and pushing.
+The `/apps` folder in the repo is the control plane. Each file is an ArgoCD `Application` resource pointing at either a Helm chart or a path in the repo. One parent `root.yaml` points at the folder itself and ArgoCD manages its own children. Add a new app by dropping a manifest in `/apps` and pushing. Or point ArgoCD to another gitrepo that follows the same app of apps structure and you're golden 
 
 Sync waves control deployment order. Get this wrong and you'll spend time debugging failures that are just ordering problems:
 
-|Wave|App|Reason|
-|---|---|---|
-|0|Sealed Secrets controller|Must exist before secrets can unseal|
-|1|Sealed secrets store + cert-manager secrets|Secrets before anything needs them|
-|2|SMB CSI driver + cert-manager Helm|Infrastructure layer|
-|3|cert-manager config (ClusterIssuer + Certificate)|CRDs must exist first|
-|4|Arr stack|Everything else must be healthy|
+| Wave | App                                               | Reason                               |
+| ---- | ------------------------------------------------- | ------------------------------------ |
+| 0    | Sealed Secrets controller                         | Must exist before secrets can unseal |
+| 1    | Sealed secrets store + cert-manager secrets       | Secrets before anything needs them   |
+| 2    | SMB CSI driver + cert-manager Helm                | Infrastructure layer                 |
+| 3    | cert-manager config (ClusterIssuer + Certificate) | CRDs must exist first                |
+| 4    | Arr stack                                         | Everything else must be healthy      |
+TK( What about Persistant volumes like NAS and Seedbox)
 
 ### The Bootstrap
 
@@ -100,13 +108,15 @@ Then everything else is triggered by a single apply:
 kubectl apply -f https://raw.githubusercontent.com/M4NU5/UltimateHomeServer/main/apps/root.yaml
 ```
 
-ArgoCD reads the repo, finds the Application manifests, and deploys the stack in wave order. That's the entire cluster rebuild story.
+ArgoCD reads the repo, finds the Application manifests, and deploys the stack in wave order. That's the entire cluster rebuild story. If you ever want to add a new repository just execute this step and ArgoCD takes care of the rest.
 
 ---
 
 ## Secrets in a Public Repo
 
-The repo is public. That constraint shapes the whole secrets strategy.
+Secrets in code?! I hear you scream, but your a security engineer and this is a public repo how could you be so reckless! 
+
+I live by the belief that security needs to be an enabler not a blocker. That means whatever solution needs to be simple to setup and secure to execute on. We can achive both of these with Sealed Secrets.
 
 **Sealed Secrets** encrypts your secret with the cluster's public key and lets you commit the ciphertext safely. Only the in-cluster controller can decrypt it. The workflow:
 
@@ -122,7 +132,7 @@ kubectl create secret generic smb-creds \
   --format yaml > sealed-smb-creds.yaml
 ```
 
-Note the controller name flag. The Helm chart installs it as `sealed-secrets`, not the default `sealed-secrets-controller` that kubeseal looks for. You will hit this.
+Note the controller name flag. The Helm chart installs it as `sealed-secrets`, not the default `sealed-secrets-controller` that kubeseal looks for. You will hit this. 
 
 **Back up your master key.** If the cluster is wiped and you lose this, your sealed secrets are permanently unreadable:
 

@@ -1,7 +1,7 @@
 ---
 draft: false
 title: Lockpicking a Rooftop Cargo Carrier
-date: 2023-03-30T07:59:41+00:00
+date: 2020-03-30T07:59:41+00:00
 author: William
 discription: Uncle forgot the Thule roof box key 5 hours from home. So I picked it. Here's how the N048 wafer lock works and how I got us back in.
 category:
