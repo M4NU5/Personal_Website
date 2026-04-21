@@ -228,11 +228,11 @@ kubectl -n default get pods,svc,ingressroute
 > **Expectation setting:** At this point Jellyfin should be reachable at `https://jellyfin.example.com`. If you see **502**, jump straight to the next section.
 
 ---
-
 # Troubleshooting 502 Errors
 
 (cry)
 
+---
 A **502** after deploying is almost never a cluster problem - it's a routing problem. Work through the following steps in order before assuming anything deeper is broken.
 
 ## Step 1: Rule out Cloudflare proxying
@@ -327,7 +327,7 @@ Here's what actually did the heavy lifting:
 - **One chart, one `values.yaml`** - apps, Services, IngressRoutes, SMB wiring, all of it
 - **502s** - not a cluster problem, almost never is. Cloudflare proxy or firewalld. Check both, move on.
 
-If you hit the ground running with this and want a pre-filled `values.yaml` for your domain and SMB paths, I'll be dropping a `values.example.yaml` in the repo for copy-paste bliss.
+If you hit the ground running with this and want a pre-filled `values.yaml` for your domain and SMB paths, just fork my repo and replace the values as appropriate.
 
 The chart link lives **[here](https://github.com/M4NU5/UltimateHomeServer)** - I'll keep it updated as things evolve.
 
