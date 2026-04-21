@@ -1,7 +1,7 @@
 ---
 draft: false
 title: I Rewrote My Media Server in Kubernetes and Only Cried Twice
-description: Ditching Docker for k3s and deploying Jellyfin, Sonarr, Radarr and Prowlarr behind HTTPS - wildcard certs, SMB mounts, Helm charts, and 502 errors included.
+description: Step-by-step guide to deploying Jellyfin, Sonarr, Radarr, and Prowlarr on k3s with Traefik, cert-manager, and a wildcard Let's Encrypt cert.
 date: 2026-01-23
 tags:
   - Kubernetes
@@ -18,12 +18,6 @@ cover:
 author: William
 bskyid: 3mg7v5tdkzk24
 ---
-# Why?
-
-Is what I imagine the first question to pop into your head, why on so many levels did you do this. Well if you are interested in my rant about [why kubernetes](/blog/tech/migrating-from-docker-to-kubernetes/), it will bring you up to speed. 
-
-The why I'm answering here is what version of Kubernetes did I go for and that would be **k3s** a lightweight, batteries included kubernetes deployment that allows me to sink my teeth in without drowning in platform engineering for the next few years. k3s will allow me to learn the ins and outs of Kubernetes so I can shoot myself in the foot on my own time! (cry)
-
 # What We're Building
 This post walks through deploying a full home media server on k3s. The stack includes **Jellyfin** for media streaming, the _arr_ ecosystem (**Sonarr, Radarr, Prowlarr**) for automation, all served over **HTTPS** via a **Let's Encrypt wildcard certificate** using **Cloudflare DNS**. Media files are stored on an **SMB share** set up in my previous [plex post](/blog/tech/plex-server-on-headless-raspberry-pi/#step-1--prepare-media-drive).
 
@@ -49,6 +43,12 @@ flowchart LR
 > Full arr stack is deployed with a helm chart and a `values.yaml` drives your customisations. 
 > Little preprep required with configuring cert-manager + SMB share but that's below :D
 ---
+
+# Why?
+
+Is what I imagine the first question to pop into your head, why on so many levels did you do this. Well if you are interested in my rant about [why kubernetes](/blog/tech/migrating-from-docker-to-kubernetes/), it will bring you up to speed. 
+
+The why I'm answering here is what version of Kubernetes did I go for and that would be **k3s** a lightweight, batteries included kubernetes deployment that allows me to sink my teeth in without drowning in platform engineering for the next few years. k3s will allow me to learn the ins and outs of Kubernetes so I can shoot myself in the foot on my own time! (cry)
 
 # Prerequisites
 Let's start with **Installing k3s**

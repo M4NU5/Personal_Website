@@ -22,7 +22,7 @@ I’d spent my whole life on Windows, but I figured it was time to see what Linu
 
 Fast forward a few years, and as my technical chops have matured, I keep circling back to Linux as my daily driver. There are just so many benefits it’s a better environment in so many ways.
 
-"Here's where I land on it now:
+Here's where I land on it now:
 
 Want to code? → Linux.  
 Want containers? → Linux.  
@@ -64,11 +64,6 @@ Here’s what I did:
 2. Flashed Nobara to USB 
 3. Disabled **Secure Boot** in the BIOS
 4. Installed Nobara on the newly freed space.
-
-> [!WARNING]
-> **Update**: I've since switched from Nobara to Fedora for daily use. 
-> 
-> **The reason**: kernel-level anti-cheat (EAC, BattlEye) requires Secure Boot enabled, and Nobara doesn't support it out of the box. If you're primarily gaming with anti-cheat titles, go straight to Fedora — the setup is nearly identical and you'll save yourself the hassle. The rest of this post still applies either way.
 
 Now, about my **data drive** it’s a massive NTFS volume full of games, media, junk... you name it. NTFS is Windows' baby, and while Linux can talk to it, it’s not exactly a smooth conversation.
 
@@ -128,9 +123,21 @@ Just know going in: Linux asks more of you. You’ll need to be okay with a term
 As for me? Linux stays my daily driver not because it’s perfect, but because it aligns with how I work, build, and learn. It removes barriers for me to expand my technical skills. Windows is there when I need it, but Linux is where I feel at home.
 
 If I were starting fresh today: install Fedora, dual-boot it alongside Windows, and keep Windows purely for anti-cheat games. That's it. Linux for everything else.
+
+> [!NOTE]
+> **Update**: I've since switched from Nobara to Fedora for daily use. 
+> 
+> **The reason**: kernel-level anti-cheat (EAC, BattlEye) requires Secure Boot enabled, and Nobara doesn't support it out of the box. If you're primarily gaming with anti-cheat titles, go straight to Fedora - the setup is nearly identical and you'll save yourself the hassle. The rest of this post still applies either way.
+> 
+> **Update 2:** I've switched back to Windows for daily use.
+> 
+> **The reason:** Funnily enough, it was my homelab that sealed it, not Linux itself. The original reason I switched away from Windows was a microstutter [issue I incorrectly chalked up to OS bloat](/blog/tech/windows-11-lying-to-games/). But even knowing that, the dual-boot setup forced me to choose every session: gaming with friends (Windows) or working on side projects and watching series off my arr stack (Linux). I thought the friction would make me more productive. It just made me reboot more and weirdly game more as well. The simplest solution was Windows as the daily driver with Linux VMs for everything else. No reboots, no choosing, and the [homelab runs better for it](/blog/tech/migrating-from-docker-to-kubernetes/).
+
+
+---
 ## Bonus: Nobara Linux Gaming Setup
 
-- **Distro**: ~~Nobara KDE (Fedora-based)~~ Fedora
+- **Distro**: ~~Nobara KDE (Fedora-based)~~ | ~~Fedora~~ | Windows 11
 - **CPU**: i7-13700k
 - **GPU**: AMD RX 7900 XT
 - **RAM**: 64GB DDR4
