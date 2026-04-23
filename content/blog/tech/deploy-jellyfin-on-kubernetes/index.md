@@ -230,10 +230,7 @@ kubectl -n default get pods,svc,ingressroute
 ---
 # Troubleshooting 502 Errors
 
-(cry)
-
----
-A **502** after deploying is almost never a cluster problem - it's a routing problem. Work through the following steps in order before assuming anything deeper is broken.
+A **502** after deploying is almost never a cluster problem - it's a routing problem. Work through the following steps in order before assuming anything deeper is broken. (cry)
 
 ## Step 1: Rule out Cloudflare proxying
 
