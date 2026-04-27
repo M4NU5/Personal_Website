@@ -12,7 +12,7 @@ tags:
   - Security
   - Rant
 description: Mealie throwing Permission denied as root, inside a root container. Not file permissions. AppArmor blocking uvloop syscalls before the kernel even checked credentials. Here is how to fix it.
-bskyid:
+bskyid: 3mkizsdv4xs2j
 cover:
   image: mealie_cake.png
   alt: mealie_cake.png
