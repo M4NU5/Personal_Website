@@ -33,7 +33,7 @@ This was not one of those times.
 
 ## Setting the Scene
 
-This was running on a throwaway VPS I'd spun up to kick the tyres on a few self-hosted services. Single user box. Root. The container? Also root. Permissions should not have been a problem. Root cannot be denied permission. Root IS permission.
+This was running on a throwaway VPS I'd spun up to mess around with a few self-hosted services. Single user box. Root. The container? Also root. Permissions should not have been a problem. Root cannot be denied permission. Root IS permission.
 
 And yet. Permission denied.
 
