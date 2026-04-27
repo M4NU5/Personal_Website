@@ -18,7 +18,7 @@ cover:
   alt: mealie_cake.png
 ---
 ## Introduction
-
+ 
 So there I was, minding my own business, trying to restart my Mealie container after a routine update. You know Mealie. The recipe management app that promises to organise your culinary life. I use it to hoard recipes I'll never cook, which is its own kind of joy.
 
 Except this time Mealie decided it wasn't going to boot. At all. Instead, it gave me this:
