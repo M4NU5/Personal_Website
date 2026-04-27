@@ -43,6 +43,9 @@
   {{- end }}
 
   {{ partial "coffee.html" . }}
+
+  {{ partial "comments.html" . }}
+
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
@@ -50,10 +53,6 @@
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
-    
-    {{ partial "comments.html" . }}
-
-
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
