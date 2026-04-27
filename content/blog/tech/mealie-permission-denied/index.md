@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Mealie Permission Denied: AppArmor Was Blocking uvloop"
 date: 2026-04-27
 author: William
