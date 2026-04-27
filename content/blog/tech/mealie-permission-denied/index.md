@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Mealie Permission Denied: AppArmor Was Blocking uvloop"
+title: "AppArmor Ate My Mealie: Permission Denied"
 date: 2026-04-27
 author: William
 category:
