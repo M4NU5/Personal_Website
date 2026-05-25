@@ -24,6 +24,14 @@
 </footer>
 {{- end }}
 
+{{- if .Param "bskyid" }}
+<a href="#comments-cta" aria-label="go to comments" title="Go to Comments" class="comments-link" id="comments-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+</a>
+{{- end }}
+
 {{- if (not site.Params.disableScrollToTop) }}
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -67,14 +75,13 @@
 {{- if (not site.Params.disableScrollToTop) }}
 <script>
     var mybutton = document.getElementById("top-link");
+    var commentsbutton = document.getElementById("comments-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
+        var scrolled = document.body.scrollTop > 800 || document.documentElement.scrollTop > 800;
+        var vis = scrolled ? "visible" : "hidden";
+        var op = scrolled ? "1" : "0";
+        if (mybutton) { mybutton.style.visibility = vis; mybutton.style.opacity = op; }
+        if (commentsbutton) { commentsbutton.style.visibility = vis; commentsbutton.style.opacity = op; }
     };
 
 </script>

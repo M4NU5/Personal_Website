@@ -105,3 +105,26 @@ text-decoration: underline;
   border-radius: 6px;
   margin-top: 6px;
 }
+
+.comments-link {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    bottom: 112px;
+    right: 30px;
+    z-index: 99;
+    background: var(--tertiary);
+    width: 42px;
+    height: 42px;
+    padding: 11px;
+    border-radius: 64px;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: visibility 0.5s, opacity 0.8s linear;
+}
+
+.comments-link:hover { color: var(--primary); }
+.comments-link:focus { outline: 0; }
+.comments-link svg   { filter: drop-shadow(0px 0px 0px var(--theme)); }

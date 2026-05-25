@@ -10,12 +10,12 @@
 }
 
 
-/* Icon Hover */
-svg:hover {
+/* Icon Hover (social icons only) */
+.social-icons a svg:hover {
     transition: 0.2s;
     transform: scale(1.6);
 }
-svg {
+.social-icons a svg {
     transition: all .2s ease-in-out;
 }
 
@@ -35,7 +35,7 @@ svg {
 } */
 
 .social-icons a:nth-child(3) svg:hover {
-    color: #13171A !important;
+    color: #f0cc05 !important;
 }
 
 .social-icons a:nth-child(4) svg:hover {
