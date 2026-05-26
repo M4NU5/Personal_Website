@@ -1,31 +1,24 @@
 ---
 draft: true
-title:
-date:
+title: "GitOps My Home Lab: ArgoCD, Sealed Secrets, and Everything That Broke"
+date: 2026-05-27
 author: William
 category:
+  - Tech
 tags:
-description:
+  - Kubernetes
+  - Home-Lab
+  - DevOps
+  - ArgoCD
+description: How I set up ArgoCD and Sealed Secrets on my K3s homelab for GitOps with a public repo. Covers the app-of-apps pattern, sync wave ordering, vps wiring with rclone FUSE mounts, and every wrong turn along the way.
 bskyid:
 cover:
   image: test
   alt: test
 ---
-> **RELEVANCE: 9/10** | Best technical post in the folder — specific, honest about wrong turns (the rclone wrong turns section is gold), and GitOps-at-home on K3s is a well-searched topic with few quality walkthrough posts.
-
-> **VERDICT: SHIP THIS FIRST** — Resolve the TK placeholders, verify the kubeseal ordering note, and publish; this is the strongest near-complete post you have.
-
-If my previous post I detailed my deployment journey of my arr stack on k3s.
-
-# GitOps My Home Lab: ArgoCD, Sealed Secrets, and Everything That Broke
-
-_March 2026_
-
----
-
 I want to deploy argo cd to manage my k3s cluster. After all, GitOps is what all the cool kids are doing these days. Who wouldnt want your kubernetes just to manage itself... most of the time. My [previous post](https://williamsmale.com/blog/tech/deploy-jellyfin-on-kubernetes/) covered deploying the arr stack on K3s with cert-manager and an SMB share, that was mostly managed by helm. That post assumed a native Linux host. Since writing it I've migrated back to Windows as my daily driver. I know I’m a heathen but the dual booting for games was starting to get to me along with solving the windows micro lag that pushed me to do the migration in the first place, if you’re interested find my write up here. I decided to approach this redeployment from a newer angle... A GitOps angle.
 
-Now admittedly I should have done this from the start: proper GitOps with ArgoCD. Everything declarative, everything in Git, and a simple `kubectl apply` to get the ball rolling. Reason I didn’t is I wanted to get a deeper understanding of how Kubernetes worked before I start abstracting away from it. Anyhow this post covers that new layer of abstraction. The GitOps architecture, the secrets strategy for a public repo, and the seedbox wiring that took far longer than it should have but was achieved, now all neatly wrapped in a k3s cluster running on a VM.
+Now admittedly I should have done this from the start: proper GitOps with ArgoCD. Everything declarative, everything in Git, and a simple `kubectl apply` to get the ball rolling. Reason I didn’t is I wanted to get a deeper understanding of how Kubernetes worked before I start abstracting away from it. Anyhow this post covers that new layer of abstraction. The GitOps architecture, the secrets strategy for a public repo, and the vps wiring that took far longer than it should have but was achieved, now all neatly wrapped in a k3s cluster running on a VM.
 
 If you haven't read the previous post, start there for the K3s and cert-manager setup. This one picks up from a fresh cluster.
 
@@ -88,7 +81,7 @@ Sync waves control deployment order. Get this wrong and you'll spend time debugg
 |3|cert-manager config (ClusterIssuer + Certificate)|CRDs must exist first|
 |4|Arr stack|Everything else must be healthy|
 
-PersistentVolumes for NAS and seedbox storage are defined in the arr stack chart itself and deploy at wave 4 alongside everything else. They don't need their own wave because they have no dependencies that aren't already satisfied by waves 0-3.
+PersistentVolumes for NAS and vps storage are defined in the arr stack chart itself and deploy at wave 4 alongside everything else. They don't need their own wave because they have no dependencies that aren't already satisfied by waves 0-3.
 
 ### The Bootstrap
 
@@ -148,7 +141,7 @@ For values that genuinely must stay out of Git, ArgoCD supports a private values
 
 ---
 
-## The Seedbox
+## The VPS
 
 This is where it gets interesting. For my arr stack I need two storage backends: a local NAS, and a remote VPS where qBittorrent downloads before files get imported by Sonarr and Radarr.
 
@@ -205,7 +198,7 @@ The challenge runs in the namespace where your `Certificate` resource lives, for
 **PersistentVolume immutability.** PV specs cannot be changed after creation. Changing storage backend means delete and recreate. With `Retain` policy the PV moves to `Released` not `Available` and holds a stale `claimRef`. You will run this more than once:
 
 ```bash
-kubectl patch pv pv-seedbox -p '{"spec":{"claimRef":null}}'
+kubectl patch pv pv-vps -p '{"spec":{"claimRef":null}}'
 ```
 
 **Config directory permissions.** [linuxserver.io](http://linuxserver.io) images run as PUID/PGID 1000. `DirectoryOrCreate` hostPaths are created by root. Jellyfin starts fine, renders the UI, then fails with `SQLite Error 8: attempt to write a readonly database` when you try to log in. Fix it permanently with an initContainer on every arr stack deployment:
@@ -228,7 +221,7 @@ initContainers:
 
 **Make the repo private from day one.** Several values can't be injected from secrets due to Kubernetes API constraints. A private repo sidesteps the whole conversation. If public is a hard requirement, the ArgoCD private values overlay works but adds complexity you don't want mid-setup.
 
-**Validate rclone connectivity before touching Kubernetes.** The SFTPGo port, the obscured password format, the remote path - test all of it with `rclone ls` on the VM before writing a single pod spec. Half the seedbox debugging time was rclone configuration that had nothing to do with Kubernetes.
+**Validate rclone connectivity before touching Kubernetes.** The SFTPGo port, the obscured password format, the remote path - test all of it with `rclone ls` on the VM before writing a single pod spec. Half the vps debugging time was rclone configuration that had nothing to do with Kubernetes.
 
 **Namespace strategy upfront.** cert-manager secrets ended up needing to exist in two namespaces. Thinking about this before deploying saves a resealing round trip.
 

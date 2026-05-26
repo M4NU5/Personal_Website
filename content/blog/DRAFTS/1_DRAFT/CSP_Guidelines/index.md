@@ -11,7 +11,7 @@ cover:
   image: test
   alt: test
 ---
-Today I want to talk about something near and dear to no ones heart Content Security Policies (CSPs). CSPs are just that right intercection of techincal engeneering meeting the nontechnical arm of most probably the businesses marketing department. Where things change on a wim and it is always an external tool that is being used because noone in marketing wants to do things themselves.
+	Today I want to talk about something near and dear to no ones heart Content Security Policies (CSPs). CSPs are just that right intercection of techincal engeneering meeting the nontechnical arm of most probably the businesses marketing department. Where things change on a wim and it is always an external tool that is being used because noone in marketing wants to do things themselves.
 
 Combine this with the lovely fact that CSPs …
 
