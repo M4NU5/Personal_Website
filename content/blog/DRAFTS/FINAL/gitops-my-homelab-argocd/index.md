@@ -37,7 +37,7 @@ Lets just outline how my environment has shifted.
 
 **The physical change**: Windows 11 Pro host running Hyper-V, single Ubuntu 24.04 LTS VM for K3s. The practical implication is that your `kubectl` and `kubeseal` commands run on the VM over SSH, not on your local machine. Two things that catch you early:
 
-**Paste doesn't work in the Hyper-V console.** So as part of initial setup configure SSHing into the VM just makes life easier. Would also recommend enfocing Cert auth only TK (Like to Blog Post or update here)
+**Paste doesn't work in the Hyper-V console.** So as part of initial setup configure SSHing into the VM just makes life easier. Would also recommend enforcing Cert auth only, checkout my post about it [here](https://williamsmale.com/blog/tech/secure-headless-raspberry-pi-on-your-home-network/). It makes it both easier to connect and how to harden the security of your box. I recently got hit with a bruteforce attack against on of my public boxes and if I didnt have Cert only auth i would have been alot more worried, post on that coming soon 😀
 
 ```bash
 # On the VM
@@ -56,7 +56,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443 --address 0.0.0.0
 
 Run it in `tmux` so it survives SSH disconnection. Access at `https://<vm-ip>:8080`.
 
-This is a temparary solution until we configure the correct domain name for argo TK (Review this and determine if this is truthful or would be done another way)
+For a homelab you only hit the ArgoCD UI occasionally, so port-forward is fine as a permanent solution. If you want a proper domain, you'd add an Ingress or IngressRoute resource pointing at the `argocd-server` service and let cert-manager handle the TLS, same as any other service in the cluster.
 
 ---
 
@@ -64,7 +64,7 @@ This is a temparary solution until we configure the correct domain name for argo
 
 The previous setup was `helm upgrade --install` run manually. It worked great at the start but every edit or change needs to be reapplied manually _barff_ . Cluster dies, youre sliing youir way through that bad boy and you always reupgrade to make sure your `values.yaml` is up to date. ArgoCD solves this by making Git the single source of truth. The cluster converges to whatever is in the repo. Drift gets detected and corrected. Rebuild is one command.
 
-TK serenity gif Danial craige
+![https://i.giphy.com/CiTLZWskt7Fu.webp](https://i.giphy.com/CiTLZWskt7Fu.webp#center)
 
 The tradeoff is upfront complexity. ArgoCD itself has to be bootstrapped manually, it can't manage its own installation that would be true madness. And you need to think carefully about secrets, because GitOps means everything in Git, and Git is often public.
 
@@ -88,7 +88,7 @@ Sync waves control deployment order. Get this wrong and you'll spend time debugg
 |3|cert-manager config (ClusterIssuer + Certificate)|CRDs must exist first|
 |4|Arr stack|Everything else must be healthy|
 
-TK( What about Persistant volumes like NAS and Seedbox)
+PersistentVolumes for NAS and seedbox storage are defined in the arr stack chart itself and deploy at wave 4 alongside everything else. They don't need their own wave because they have no dependencies that aren't already satisfied by waves 0-3.
 
 ### The Bootstrap
 
@@ -144,35 +144,36 @@ Store it somewhere offline. Not in the repo.
 
 **Some values cannot be sealed.** `PersistentVolume.spec.volumeAttributes.source` requires a literal string. cert-manager's ClusterIssuer email is the same. For a private LAN IP and a domain that's already on your public blog, this isn't a real security concern. Pick your battles.
 
-For values that genuinely must stay out of Git, ArgoCD supports a private values overlay — a cluster secret in the `argocd` namespace injected at sync time, never touching Git. Useful to know about, not needed for most home lab setups.
+For values that genuinely must stay out of Git, ArgoCD supports a private values overlay. A cluster secret in the `argocd` namespace injected at sync time, never touching Git. Useful to know about, not needed for most home lab setups.
 
 ---
 
 ## The Seedbox
 
-This is where it gets interesting. The arr stack needs two storage backends: a NAS over SMB (covered in the previous post), and a remote seedbox VPS where qBittorrent downloads before files get imported by Sonarr and Radarr.
+This is where it gets interesting. For my arr stack I need two storage backends: a local NAS, and a remote VPS where qBittorrent downloads before files get imported by Sonarr and Radarr.
 
-The VPS is GigaDrive. The connection is SFTP via SFTPGo — not vsftpd or Pure-FTPd, both of which have a known rclone TLS incompatibility. Use SFTPGo or spend an afternoon debugging TLS handshake failures.
-
-The architecture I landed on after several wrong turns:
+For the VPS the connection is SFTP. The architecture I landed on after several wrong turns:
 
 ```
-GigaDrive VPS (SFTPGo, port 14391)
+VPS (SFTPGo)
     │  SFTP outbound
 rclone pod
     │  FUSE mount with mountPropagation: Bidirectional
-/mnt/seedbox on k3s host
+/mnt/vps on k3s host
     │  hostPath volume
 qbittorrent / sonarr / radarr pods
 ```
 
 rclone mounts the SFTP remote directly onto the host filesystem. The `Bidirectional` propagation flag makes that mount visible to pods via a plain `hostPath`. No NFS, no additional CSI driver, no protocol translation.
 
-**The wrong turns, for completeness:**
+Before all of this install `fuse3` on the host VM before any of this:
 
-`rclone serve smb` doesn't exist in 1.68. Neither does `serve nfs` work usefully here — NFS PersistentVolumes are mounted by kubelet at the host OS level, and `rclone-seedbox.home-server.svc.cluster.local` is a cluster DNS name the host OS cannot resolve. CoreDNS only exists inside the cluster. You can work around this with a NodePort and `127.0.0.1`, but mount timing issues make it unreliable on a single node.
+```bash
+sudo apt install fuse3 -y
+echo "user_allow_other" | sudo tee -a /etc/fuse.conf
+```
 
-The FUSE approach avoids the problem entirely.
+It will help you avoid I lot of stupidity I went through.
 
 **rclone gotchas worth calling out:**
 
@@ -180,20 +181,13 @@ Passwords passed via the inline `:sftp,...` backend syntax must be pre-obscured 
 
 Add `--allow-non-empty` to the mount command. Kubernetes bind-mounts the hostPath directory into the container before rclone starts, making the target appear already mounted. Without this flag rclone refuses to start.
 
-Also install `fuse3` on the host VM before any of this:
-
-```bash
-sudo apt install fuse3 -y
-echo "user_allow_other" | sudo tee -a /etc/fuse.conf
-```
-
 ---
 
 ## cert-manager: One Non-Obvious Split
 
 Covered in the previous post, but one thing changed in the ArgoCD context.
 
-ArgoCD's multi-source Application feature — combining a Helm chart source with a raw manifest source in a single Application — triggered an `argocd-vault-plugin` lookup that broke manifest generation entirely. The fix is to keep them as separate Applications:
+ArgoCD's multi-source Application feature, combining a Helm chart source with a raw manifest source in a single Application, triggered an `argocd-vault-plugin` lookup that broke manifest generation entirely. The fix is to keep them as separate Applications:
 
 - `cert-manager` — Helm chart only, wave 2
 - `cert-manager-config` — ClusterIssuer + Certificate, wave 3
@@ -202,7 +196,7 @@ The wave split matters. cert-manager CRDs must exist before you can apply a `Clu
 
 The Cloudflare API token also needs `Zone:Zone:Read` AND `Zone:DNS:Edit`. Missing `Zone:Read` produces API calls to `/zones//dns_records/...` with an empty zone ID. The double slash in the error path is the tell.
 
-The challenge runs in the namespace where your `Certificate` resource lives — `home-server` here — so the Cloudflare token sealed secret needs to be deployed to both `cert-manager` and `home-server`. Seal it twice, once per namespace.
+The challenge runs in the namespace where your `Certificate` resource lives, for me its `home-server`, so the Cloudflare token sealed secret needs to be deployed to both `cert-manager` and `home-server`. Seal it twice, once per namespace.
 
 ---
 
@@ -226,9 +220,7 @@ initContainers:
         mountPath: /config
 ```
 
-**nodeName in templates.** The original chart had `nodeName` hardcoded per-service pointing at Pi cluster nodes. Remove it entirely — it causes scheduling failures if the node name doesn't match and is unnecessary on a single node cluster.
-
-**kubeseal ordering.** You cannot seal secrets before the Sealed Secrets controller is deployed. Bootstrap ArgoCD, apply the root app, wait for wave 0 to complete, then seal. Trying earlier fails with `services "sealed-secrets-controller" not found` — a confusing error that has nothing to do with your secret content.
+**kubeseal ordering.** You cannot seal secrets before the Sealed Secrets controller is deployed. Bootstrap ArgoCD, apply the root app, wait for wave 0 to complete, then seal. Trying earlier fails with `services "sealed-secrets-controller" not found`, a confusing error that has nothing to do with your secret content.
 
 ---
 
@@ -236,7 +228,7 @@ initContainers:
 
 **Make the repo private from day one.** Several values can't be injected from secrets due to Kubernetes API constraints. A private repo sidesteps the whole conversation. If public is a hard requirement, the ArgoCD private values overlay works but adds complexity you don't want mid-setup.
 
-**Validate rclone connectivity before touching Kubernetes.** The SFTPGo port, the obscured password format, the remote path — test all of it with `rclone ls` on the VM before writing a single pod spec. Half the seedbox debugging time was rclone configuration that had nothing to do with Kubernetes.
+**Validate rclone connectivity before touching Kubernetes.** The SFTPGo port, the obscured password format, the remote path - test all of it with `rclone ls` on the VM before writing a single pod spec. Half the seedbox debugging time was rclone configuration that had nothing to do with Kubernetes.
 
 **Namespace strategy upfront.** cert-manager secrets ended up needing to exist in two namespaces. Thinking about this before deploying saves a resealing round trip.
 
@@ -244,11 +236,11 @@ initContainers:
 
 ## The Takeaway
 
-The previous post got the stack running. This one made it reproducible. The difference matters when the host dies — and home lab hosts always eventually die.
+My previous post got the stack running but ArgoCD simplifies that and gives it a manager. The difference is when the host dies and home lab hosts always eventually die you can have another one up an running in no time.
 
 ArgoCD plus Sealed Secrets holds up for a public repo GitOps setup in a way that surprised me. The bootstrap is manual once. Everything after is `git push`. Rough edges are mostly one-time friction during initial setup rather than ongoing operational pain.
 
-The chart is [here](https://github.com/M4NU5/UltimateHomeServer). Read the [previous post](https://williamsmale.com/blog/tech/deploy-jellyfin-on-kubernetes/) for the K3s and cert-manager prerequisites. Don't skip the master key backup. Use SFTPGo.
+The chart is [here](https://github.com/M4NU5/UltimateHomeServer). Read the [previous post](https://williamsmale.com/blog/tech/deploy-jellyfin-on-kubernetes/) for the K3s and cert-manager prerequisites.
 
 ---
 
