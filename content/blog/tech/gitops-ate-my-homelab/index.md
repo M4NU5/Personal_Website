@@ -14,7 +14,7 @@ tags:
   - Sealed-Secrets
   - Hyper-V
 description: How I rebuilt my K3s homelab around ArgoCD and Sealed Secrets, with a public GitOps repo, sync waves, app-of-apps, rclone FUSE mounts, and the usual amount of self-inflicted pain.
-bskyid:
+bskyid: 3mmwrcdr4ts24
 cover:
   image: sealing_secrets.png
   alt: "Hand-drawn homelab GitOps diagram with ArgoCD, Kubernetes, sealed secrets, and a stressed hoodie figure debugging YAML"
