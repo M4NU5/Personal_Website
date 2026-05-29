@@ -23,7 +23,7 @@ cover:
 > Scroll down for the full breakdown.
 >
 > Edit: An additional performance improvement can be done with turning of your memory integrity. **Windows Security > Device Security > Core Isolation > Memory Integrity**
-> THIS DOES HAVE MAKE YOU DEVICE LESS SECURE... Full write up explaining to come
+> CAUTION: This does make your device less secure... Full write up explaining to come
 
 
 
