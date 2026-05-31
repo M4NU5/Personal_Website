@@ -22,7 +22,7 @@ cover:
 > Windows 11 silently broke global timer resolution. This restores it enabling games to request a higher tick rate.
 > Scroll down for the full breakdown.
 >
-> Edit: An additional performance improvement can be done with turning of your memory integrity. **Windows Security > Device Security > Core Isolation > Memory Integrity**
+> Edit: An additional performance improvement can be done with turning off your memory integrity. **Windows Security > Device Security > Core Isolation > Memory Integrity**
 > CAUTION: This does make your device less secure... Full write up explaining to come
 
 
