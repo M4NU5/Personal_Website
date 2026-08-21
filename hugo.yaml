@@ -35,7 +35,12 @@ menu:
         name: Moments
         url: https://moments.williamsmale.com/
         weight: 30
-    
+
+      - identifier: risk
+        name: MCP Risk
+        url: https://risk.williamsmale.com/
+        weight: 35
+
       - identifier: Tags
         name: Tags
         url: /tags/
