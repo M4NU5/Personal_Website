@@ -12,6 +12,7 @@ tags:
   - Home-Lab
 cover:
   image: Docker_on_pi.png
+  relative: true
   alt: Docker_on_pi.png
 description: Learn how to install Docker on a headless Raspberry Pi with this step-by-step guide. Avoid common errors in official Docker documentation by following our tailored instructions for Raspbian OS. Discover the benefits of using a headless OS and understand Docker's role in containerization. This guide covers prerequisites, adding the correct Docker repository, and successfully installing Docker without a GUI. Perfect for Raspberry Pi users looking to deploy containerized apps on a minimal, efficient setup. Start your headless Docker journey now!
 ---

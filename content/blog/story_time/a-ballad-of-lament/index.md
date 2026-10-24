@@ -10,6 +10,7 @@ tags:
 description: An epic, satirical tale of engineers resisting a Confluence-to-SharePoint migration. Insightful, hilarious, and painfully relatable for every tech team.
 cover:
   image: A_dramatic_landscape.jpg
+  relative: true
   alt: A_dramatic_landscape.jpg
 ---
 

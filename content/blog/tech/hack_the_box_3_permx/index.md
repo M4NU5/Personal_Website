@@ -11,6 +11,7 @@ tags:
   - Hacking
 cover:
   image: hack_the_box_3_permx.png
+  relative: true
   alt: hack_the_box_3_permx.png
 ---
 I've been messing with retired boxes on Hack the box and thought i would finally try my hand on one of the active ones!

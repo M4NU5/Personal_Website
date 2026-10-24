@@ -80,7 +80,7 @@ params:
     hiddenInList: true
   homeInfoParams:
     Title: "William Smale"
-    imageUrl: "doge.png"
+    imageUrl: "doge.webp"
     imageTitle: "doge.png"
     imageWidth: 100
     imageHeight: 100

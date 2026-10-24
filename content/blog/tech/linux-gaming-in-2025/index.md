@@ -12,6 +12,7 @@ description: Linux gaming in 2025 is viable — if you can live with the anti-ch
 bskyid: 3lt5o7ahlbk2s
 cover:
   image: LinuxSteam.png
+  relative: true
   alt: LinuxSteam.png
 ---
 So you're thinking about switching to Linux. We've all had those moments.
@@ -57,7 +58,7 @@ Since I was just trialing Nobara, I went with a dual-boot setup.
 Linux? Plays nice.  
 Windows? Throws a tantrum if you don’t do it _just right_.
 
-![https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2dlYXFpNmx1eTRocm93YWd6NjFrYmpkYmNicmhqcWZxampkY2l5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqvzWqa6Jf9c9hK/giphy.gif](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2dlYXFpNmx1eTRocm93YWd6NjFrYmpkYmNicmhqcWZxampkY2l5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqvzWqa6Jf9c9hK/giphy.gif#center)
+![https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2dlYXFpNmx1eTRocm93YWd6NjFrYmpkYmNicmhqcWZxampkY2l5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqvzWqa6Jf9c9hK/giphy.webp](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2dlYXFpNmx1eTRocm93YWd6NjFrYmpkYmNicmhqcWZxampkY2l5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqvzWqa6Jf9c9hK/giphy.webp#center)
 
 Here’s what I did:
 1. **Shrank** my Windows drive to make room for a new partition.
@@ -76,7 +77,7 @@ Anyway without further ado!
 - **Writing and running small scripts** is just way smoother. No faffing around with permissions or obscure admin settings.
 - **Privacy**: Windows makes you wrestle your OS into respecting your privacy. Linux? Not an issue.
 - **KDE is a beast**. You can tweak just about everything. Hell, I even linked my phone to it and can run terminal commands from there.
-![https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2VhOXE3dzV1bDE3Y2E5djRtc2Rrc2JlZnBsOGd0YmIybGIxdW8wYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IwAZ6dvvvaTtdI8SD5/giphy.gif](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2VhOXE3dzV1bDE3Y2E5djRtc2Rrc2JlZnBsOGd0YmIybGIxdW8wYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IwAZ6dvvvaTtdI8SD5/giphy.gif#center)
+![https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2VhOXE3dzV1bDE3Y2E5djRtc2Rrc2JlZnBsOGd0YmIybGIxdW8wYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IwAZ6dvvvaTtdI8SD5/giphy.webp](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2VhOXE3dzV1bDE3Y2E5djRtc2Rrc2JlZnBsOGd0YmIybGIxdW8wYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IwAZ6dvvvaTtdI8SD5/giphy.webp#center)
 - **Running containers with AMD GPUs** is totally doable on Linux. Great news if you’re doing AI work or compute-heavy stuff.
 - **Gaming legit works out of the box** (assuming permissions and basic setup are correct). Even most Windows games run like a charm.
 - **Not being Windows** is a huge win on its own. The bloat, the weird UX decisions, the constant feeling that you're wrestling the OS… it's exhausting. Linux feels cleaner, more responsive especially if you're comfy in the terminal.
@@ -90,13 +91,13 @@ Anyway without further ado!
 - **Not every game works.** Linux gaming has come a long way, but some titles still break. You might need to tweak settings, or accept that some just don’t run (_Escape from Tarkov_, looking at you).
 - **Anti-cheat** systems are still a problem. Kernel-level tools like EAC and BattlEye often just say “nope” to Linux.
 - **Modding** is hit-or-miss. With all the abstraction layers, modding can become fragile or weirdly buggy.
-![https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnBreG5veDFuNm5kbmRqd3RhcHU2NTdncTc0bTZ4Y29iZDJ0bzh3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT77XTpyEzJ4OJO06c/giphy.gif](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnBreG5veDFuNm5kbmRqd3RhcHU2NTdncTc0bTZ4Y29iZDJ0bzh3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT77XTpyEzJ4OJO06c/giphy.gif#center)
+![https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnBreG5veDFuNm5kbmRqd3RhcHU2NTdncTc0bTZ4Y29iZDJ0bzh3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT77XTpyEzJ4OJO06c/giphy.webp](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnBreG5veDFuNm5kbmRqd3RhcHU2NTdncTc0bTZ4Y29iZDJ0bzh3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT77XTpyEzJ4OJO06c/giphy.webp#center)
 - The **Linux terminal** is a superpower but with WSL and PowerShell, Windows has started catching up. Somewhat. Still, Linux is where I live.
 - **Media support** isn’t ideal. OBS runs well, but if you’re trying to use stuff like Lightroom or DaVinci Resolve, you’re in Wine/emulator territory and it’s janky. Web versions? Feature-stripped.
 - **Fragmented install methods** can get confusing fast. `.deb`, `.rpm`, Flatpak, AppImage pick your poison. Nobara tries to streamline this with a unified update GUI, but if you're not careful, your system starts to feel like Frankenstein’s monster.
 ## The Ugly: Anti-Cheat and System Entropy
 - **Gaming abstraction ≠ flawless.** Proton and Wine do most of the lifting, but you _will_ run into random bugs, stutters, crashes, or “why is this happening” moments.
-![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXNrbTB0ZGY0MnhmM2x3MWkydTg3aXJhZnEwbDI2b2gycWtqdTNlOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i7JBZ17h3gFJUKwzH0/giphy.gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXNrbTB0ZGY0MnhmM2x3MWkydTg3aXJhZnEwbDI2b2gycWtqdTNlOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i7JBZ17h3gFJUKwzH0/giphy.gif#center)
+![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXNrbTB0ZGY0MnhmM2x3MWkydTg3aXJhZnEwbDI2b2gycWtqdTNlOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i7JBZ17h3gFJUKwzH0/giphy.webp](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXNrbTB0ZGY0MnhmM2x3MWkydTg3aXJhZnEwbDI2b2gycWtqdTNlOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i7JBZ17h3gFJUKwzH0/giphy.webp#center)
 That’s when you think: _“Wouldn’t it just be easier to reboot into Windows?”_  
 	And yeah... sometimes it is.
 - **You’ll need a Windows partition**. No matter how much you want to commit, there will be That One Game that refuses to cooperate.

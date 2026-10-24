@@ -17,6 +17,7 @@ description: How I rebuilt my K3s homelab around ArgoCD and Sealed Secrets, with
 bskyid: 3mmwrcdr4ts24
 cover:
   image: sealing_secrets.png
+  relative: true
   alt: "Hand-drawn homelab GitOps diagram with ArgoCD, Kubernetes, sealed secrets, and a stressed hoodie figure debugging YAML"
 ---
 
@@ -335,7 +336,7 @@ rclone mounts the SFTP remote directly onto the host filesystem.
 
 Such beauty was worth small amount of pain.
 
-![https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmg1bXV5OHBvbW5pMTlkeTFlOGhjaDNwb2toZ2lkcmthYnAxYWtlYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7aCWJavAgtBzLWrS/giphy.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmg1bXV5OHBvbW5pMTlkeTFlOGhjaDNwb2toZ2lkcmthYnAxYWtlYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7aCWJavAgtBzLWrS/giphy.gif#center)
+![https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmg1bXV5OHBvbW5pMTlkeTFlOGhjaDNwb2toZ2lkcmthYnAxYWtlYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7aCWJavAgtBzLWrS/giphy.webp](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmg1bXV5OHBvbW5pMTlkeTFlOGhjaDNwb2toZ2lkcmthYnAxYWtlYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7aCWJavAgtBzLWrS/giphy.webp#center)
 
 Now lets get that working for you.
 
@@ -419,7 +420,7 @@ Notice the double slash. That means cert-manager did not resolve the zone ID.
 
 It is not obvious until you see it. Now you know.
 
-![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXo1M3N4enQ1aHQyb2tnczIxMW5tZnhpaDZhdjRtOWZvNXJnMGhmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/felyWZRMgfd28/giphy.gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXo1M3N4enQ1aHQyb2tnczIxMW5tZnhpaDZhdjRtOWZvNXJnMGhmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/felyWZRMgfd28/giphy.gif#center)
+![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXo1M3N4enQ1aHQyb2tnczIxMW5tZnhpaDZhdjRtOWZvNXJnMGhmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/felyWZRMgfd28/giphy.webp](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXo1M3N4enQ1aHQyb2tnczIxMW5tZnhpaDZhdjRtOWZvNXJnMGhmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/felyWZRMgfd28/giphy.webp#center)
 
 ---
 ## Rough Edges
@@ -542,4 +543,4 @@ Read the [previous post](https://williamsmale.com/blog/tech/deploy-jellyfin-on-k
 
 Now go commit some YAML and pretend this was always the plan. I need to touch some grass.
 
-![https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGduNGhybWZ1enY0c2xoM3plMmM5bDZhcG1vMmQ5MDg3MjdkN2s4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SdZRb7QxJ5NOo/giphy.gif](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGduNGhybWZ1enY0c2xoM3plMmM5bDZhcG1vMmQ5MDg3MjdkN2s4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SdZRb7QxJ5NOo/giphy.gif#center)
+![https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGduNGhybWZ1enY0c2xoM3plMmM5bDZhcG1vMmQ5MDg3MjdkN2s4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SdZRb7QxJ5NOo/giphy.webp](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGduNGhybWZ1enY0c2xoM3plMmM5bDZhcG1vMmQ5MDg3MjdkN2s4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SdZRb7QxJ5NOo/giphy.webp#center)

@@ -12,6 +12,7 @@ description: "After publishing my critique of SAFe Agile, the response surprised
 bskyid: 3mfs6nrvhbc2i
 cover:
   image: safe-agile-reflections.png
+  relative: true
   alt: safe-agile-reflections.png
 ---
 After publishing my critique of SAFe Agile, I received feedback that went far beyond what I expected. Rather than simple agreement or dismissal, people came back with some fire takes that genuinely got me thinking.

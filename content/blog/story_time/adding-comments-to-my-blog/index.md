@@ -11,6 +11,7 @@ description:
 bskyid: 3lushw6ig4c2v
 cover:
   image: speechbubble.png
+  relative: true
   alt: speechbubble.png
 ---
 I've been looking around the interwebs of how to add commenting functionality to my Hugo blog for my one reader. Yes you buddy I love you ❤️

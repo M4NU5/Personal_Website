@@ -11,6 +11,7 @@ tags:
   - Azure
 cover:
   image: terraform-azure.png
+  relative: true
   alt: EpicTerraformArchitecture.png
 description: Deploying a PostgreSQL database on Azure? Use Terraform to automate the setup in a private VNet, including infrastructure like resource groups, virtual networks, and key vaults for storing credentials. The guide walks through creating subnets, DNS zones, and deploying the database securely, without relying on the Azure GUI. The final setup links the database to your application, with credentials managed via the key vault. Check out the full project details and code on GitHub to streamline your deployment process.
 ---
@@ -340,4 +341,4 @@ There are several other things I could build on. Whether that be the configurati
 Now if you have read this far I truly thank you from the bottom of my heart…   
 NOW GO TOUCH SOME GRASS 😀
 
-![EpicBemo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExazd6cWJuZjE1bTdpc2VtdGZlY3V2eWZoeHlkMGd6ejg4MnZrbmpqZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ILjkBExIzBhrFzqDVP/giphy.gif#center)
+![EpicBemo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExazd6cWJuZjE1bTdpc2VtdGZlY3V2eWZoeHlkMGd6ejg4MnZrbmpqZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ILjkBExIzBhrFzqDVP/giphy.webp#center)

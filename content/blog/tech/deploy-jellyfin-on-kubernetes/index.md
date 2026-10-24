@@ -14,6 +14,7 @@ category:
   - Tech
 cover:
   image: cry.png
+  relative: true
   alt: cry.png
 author: William
 bskyid: 3mg7v5tdkzk24

@@ -10,6 +10,7 @@ tags:
   - Remote-Access
 cover:
   image: desktop_plus_laptop.png
+  relative: true
   alt: EpicDesktopPic.png
 description: Learn how to set up Windows Remote Desktop Protocol (RDP) for seamless access to your powerful desktop from a laptop, even while traveling or dealing with power outages. This guide covers enabling RDP on Windows Pro, resolving common RDP issues like the black screen, and securing remote access with Tailscale VPN. Perfect for those needing a remote connection to their desktop without relying on third-party software, ensuring a smooth, reliable experience wherever you are. Simplify remote access and stay productive on the go.
 ---
@@ -56,7 +57,7 @@ We are pretty much good to go but a couple more housekeeping items to think abou
  
 And we are done, now I can be anywhere in the world with an internet connection and my laptop and RDP to my desktop whether I’m flying home or going down to the local cafe. FANTASTIC!
 
-![CelebrationImage](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmJtY3ZrdTZkaHZzaWR6ODlpYnM3Nmx3ODNlYTVuYmhtbTc1cnBiNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8OqgB15nDMjX8c05tY/giphy.gif#center) 
+![CelebrationImage](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmJtY3ZrdTZkaHZzaWR6ODlpYnM3Nmx3ODNlYTVuYmhtbTc1cnBiNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8OqgB15nDMjX8c05tY/giphy.webp#center) 
 
 It would be cool if i could have written my OSCP using this but the proctor being unable to track and confirm it is in fact me writing the exam due to the RDP... So big sad I know...
 Anyway, thanks for reading this far! Now go touch grass 😁

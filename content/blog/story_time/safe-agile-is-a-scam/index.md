@@ -11,6 +11,7 @@ tags:
 description: A blunt, humorous look at how agile went from a startup superpower to a corporate circus. This post breaks down story points, sprints, planning increments, meeting overload, and why SAFe agile often kills real productivity. A raw take on what engineers actually need to get meaningful work done.
 cover:
   image: cope_manager.png
+  relative: true
   alt: cope_manager.png
 bskyid: 3m7prtcwbrs26
 ---
@@ -31,7 +32,7 @@ The agile methodology is outlined in 4 key tenets articulated in the manifesto:
 
 Embodying these 4 tenets will make you agile.
 
-![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWxrYXpncGw2YW9ycGk0YWZmNm9rcDF2amg2cnpkYXJ2cXBpNXhrYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o8RDqjfenprrzusLZu/giphy.gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWxrYXpncGw2YW9ycGk0YWZmNm9rcDF2amg2cnpkYXJ2cXBpNXhrYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o8RDqjfenprrzusLZu/giphy.gif#center)
+![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWxrYXpncGw2YW9ycGk0YWZmNm9rcDF2amg2cnpkYXJ2cXBpNXhrYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o8RDqjfenprrzusLZu/giphy.webp](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWxrYXpncGw2YW9ycGk0YWZmNm9rcDF2amg2cnpkYXJ2cXBpNXhrYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o8RDqjfenprrzusLZu/giphy.webp#center)
 
 But when you look closely **not all agile is made the same**. When large corporations saw Google's success, they wanted in. But here's the problem: the Agile Manifesto is just a website with 4 tenets and 12 principles. That's not enough for a corporate procurement committee. They need frameworks, training programs, certifications, consultants, and a roadmap they can present to the board.
 

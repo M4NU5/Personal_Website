@@ -11,6 +11,7 @@ tags:
 description: Thinking about taking the SANS 540 DevSecOps course? Read this review with 5 practical lessons, exam prep tips, and real-world pipeline security insights.
 cover:
   image: SANS_540_DevSecOps_course_pipeline.webp 
+  relative: true
   alt: SANS_540_DevSecOps_course_pipeline.webp
 ---
 ## Introduction

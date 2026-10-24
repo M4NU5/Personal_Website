@@ -11,12 +11,13 @@ tags:
   - Hacking
 cover:
   image: hack_the_box_5_blurry.png
+  relative: true
   alt: hack_the_box_5_blurry.png
 ---
 
 I woke up this morning breathed in that sweet morning air. I could feel it, to days the day ima hack a box and come to the sun setting I had pwned this box by getting an AI model to execute a reverse shell that got me root! Here we go
 
-![ChewingStraw](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtrYXIyajJ5NjFtNzRzc25mdmQzbTFsNG9xamtqbHJpZXZudXhydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lqqB7E9CdSG76/200.gif#center)
+![ChewingStraw](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtrYXIyajJ5NjFtNzRzc25mdmQzbTFsNG9xamtqbHJpZXZudXhydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lqqB7E9CdSG76/200.webp#center)
 
 ---
 ## Enumeration
@@ -111,7 +112,7 @@ ClearML setup completed successfully.
 
 Now we are primed for attack and it is time to pounce 
 
-![pounce](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3JleDdvcjRmcXIweGN0bXkzajQwZ3BzaW1ja2x4MWV0MGQ3eWUwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26h0qOq4LxV8YcDKw/giphy.gif#center)
+![pounce](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3JleDdvcjRmcXIweGN0bXkzajQwZ3BzaW1ja2x4MWV0MGQ3eWUwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26h0qOq4LxV8YcDKw/giphy.webp#center)
 
 
 ```bash
@@ -217,6 +218,6 @@ root
 
 And that is root baby! WINNING!!! And I get my [rubber stamp of approval](https://www.hackthebox.com/achievement/machine/1695260/605) from Hack the Box as a reward.  Now that I can say with confidence I have hacked an AI model I'm going to go touch some grass :D
 
-![touchGrass](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWt0Z3Z5a2R6ODhpM2h1azVqNTExazE1MHVqMms5amZzbGwzdzBsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VlYBM5zERKWD5ONSzi/giphy.gif#center)
+![touchGrass](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWt0Z3Z5a2R6ODhpM2h1azVqNTExazE1MHVqMms5amZzbGwzdzBsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VlYBM5zERKWD5ONSzi/giphy.webp#center)
 
 

@@ -11,6 +11,7 @@ tags:
   - Blog
 cover:
   image: immersive_labs_achievements_scraper.png
+  relative: true
   alt: EpicSolutionArchitecture.png
 description: Create a personalized achievements page for your website using a Python web-scraping bot to extract and display your accomplishments. This guide walks you through saving your achievements page, parsing it with Beautiful Soup, and generating a custom webpage using Hugo Go shortcodes. Learn how to fetch, process, and display your achievements effectively, and discover how to solve common issues like expired image URLs by downloading and locally hosting images. Perfect for showcasing your milestones in a professional, visually appealing way.
 ---
@@ -22,7 +23,7 @@ Lets get started with importing the achievements webpage into our python script.
 
 So simply logging in, going to the achievements page and saving it to the project file on my computer. This will be enough to get us where we need to go.
 
-![EpicGif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3FzZ245bmYwNzRjcGlqNmdzY3F3bDRkOTJtOW85bzB4OWoxdGZyZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r8I7tDl75QLfh2SkpE/giphy.gif#center)
+![EpicGif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3FzZ245bmYwNzRjcGlqNmdzY3F3bDRkOTJtOW85bzB4OWoxdGZyZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r8I7tDl75QLfh2SkpE/giphy.webp#center)
 
 We then open the file and pass it using beautiful soup.
 

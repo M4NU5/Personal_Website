@@ -15,6 +15,7 @@ description: Mealie throwing Permission denied as root, inside a root container.
 bskyid: 3mkizsdv4xs2j
 cover:
   image: mealie_cake.png
+  relative: true
   alt: mealie_cake.png
 ---
 

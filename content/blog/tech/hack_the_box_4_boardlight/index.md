@@ -11,6 +11,7 @@ tags:
   - Hacking
 cover:
   image: hack_the_box_4_boardlight.png
+  relative: true
   alt: hack_the_box_4_boardlight.png
 ---
 This evening I felt like cutting my teeth a little bit more. So lets spin up this box and give it a poke.
@@ -115,6 +116,6 @@ root
 ```
 
 With that we are done with both flags in the bag. Its time to treat myself with going outside and touching grass... Just one blade
-![Grass.png](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHZiaHY2ZjcwbXEycXp1dnp5cXV5aG5peWtnMWRtODhkaTd0dWQ0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jVk5ebwWGahBS/giphy.gif#center)
+![Grass.png](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHZiaHY2ZjcwbXEycXp1dnp5cXV5aG5peWtnMWRtODhkaTd0dWQ0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jVk5ebwWGahBS/giphy.webp#center)
 
 Oh and the [rubber stamp](https://www.hackthebox.com/achievement/machine/1695260/603) from hack the box

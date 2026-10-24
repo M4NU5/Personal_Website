@@ -12,6 +12,7 @@ description: AMD GPU not detected by Ollama? Here's how to get local LLMs runnin
 bskyid: 3lql3lkvx4s2o
 cover:
   image: amd-preview.png
+  relative: true
   alt: amd-preview.png
 ---
 > **Update - January 2026** AMD quietly fixed the hard part. The January 2026 Adrenalin driver update ships Ollama, LM Studio, and ComfyUI as a one-click optional install. If you're on RX 7700 or newer -- or a Ryzen AI 300/400/Max -- you don't need to touch ROCm libraries at all. [Get the AI Bundle here.](https://www.amd.com/en/blogs/2026/amd-software-adrenalin-edition-ai-bundle-ai-made-si.html) 
@@ -28,7 +29,7 @@ Im just going to say youre not running deepseeks 671b 404gb model!
 
 Obviously as a tech nerd myself why would I not want to run a local LLM that can give you unlimited chat capabilities. Sure not to the sophistication of GPT but that isnt always needed, plus less guardrails.
 
-![Getinloser.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTNxdWJtaXBuY2VndnNkeGpjZmM5cjdkaG81dHNqemdrYnQwcDUyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pyTkBNVthpwp0WVFw0/giphy.gif#center)
+![Getinloser.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTNxdWJtaXBuY2VndnNkeGpjZmM5cjdkaG81dHNqemdrYnQwcDUyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pyTkBNVthpwp0WVFw0/giphy.webp#center)
 
 As this is cutting edge the ecosystem is still evolving. Nvidia has a real leg up due to its CUDA ecosystem for non-gaming related GPU tasks. So when AI exploded all the Nividia cool kids got turn key access to this world and all us AMD pesants who just wanted raw power for gaming have been left in the dust.
 

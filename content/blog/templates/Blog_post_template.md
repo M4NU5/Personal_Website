@@ -9,5 +9,6 @@ description:
 bskyid:
 cover:
   image: test
+  relative: true
   alt: test
 ---
