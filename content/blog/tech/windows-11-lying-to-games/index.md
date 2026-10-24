@@ -13,6 +13,7 @@ description: Windows 11 quietly broke the way games request higher timer resolut
 bskyid: 3mh56riu6uk2w
 cover:
   image: SlowedTime.png
+  relative: true
   alt: SlowedTime.png
 ---
 > **TL;DR** Run this in an elevated Command Prompt and reboot:

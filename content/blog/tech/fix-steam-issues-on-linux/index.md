@@ -11,6 +11,7 @@ tags:
 description: Struggling with Steam on Linux? Learn how to properly mount your NTFS drive, fix Proton issues, and start gaming smoothly with this step-by-step guide.
 cover:
   image: Steam-Linux.webp
+  relative: true
   alt: Steam-Linux.webp
 bskyid: 3lnpz3zwtts2n
 ---

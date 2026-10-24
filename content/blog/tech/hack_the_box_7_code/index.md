@@ -11,6 +11,7 @@ tags:
 description: 
 cover:
   image: Code.png
+  relative: true
   alt: Code.png
 ---
 

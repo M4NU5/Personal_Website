@@ -12,6 +12,7 @@ tags:
 description: Detailed Hack the Box Greenhorn write-up where I share the full process of enumeration, exploitation, and privilege escalation. From cracking MD5 hashes to leveraging a PoC for a reverse shell, and even using a de-pixelling tool for root access, this guide takes you through the challenges and solutions of this HTB box. Perfect for CTF enthusiasts looking for in-depth insights and a step-by-step breakdown of exploiting Greenhorn!
 cover:
   image: GreenHorn.png
+  relative: true
   alt: GreenHorn.png
 ---
 

@@ -10,6 +10,7 @@ category:
 
 cover:
     image: simple-homemade-bread.jpg
+    relative: true
     alt: "Simple_Homemade_Bread_Pic.png"
 ---
 A family recipe that was passed down through the generations. Thank you for this one granny ^^  

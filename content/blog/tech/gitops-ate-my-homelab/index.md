@@ -17,6 +17,7 @@ description: How I rebuilt my K3s homelab around ArgoCD and Sealed Secrets, with
 bskyid: 3mmwrcdr4ts24
 cover:
   image: sealing_secrets.png
+  relative: true
   alt: "Hand-drawn homelab GitOps diagram with ArgoCD, Kubernetes, sealed secrets, and a stressed hoodie figure debugging YAML"
 ---
 

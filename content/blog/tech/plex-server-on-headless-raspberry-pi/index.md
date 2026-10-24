@@ -13,6 +13,7 @@ tags:
 description: 
 cover:
   image: Plex_docker_on_pi.png
+  relative: true
   alt: Plex_docker_on_pi.png
 ---
 ## Introduction

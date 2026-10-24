@@ -11,6 +11,7 @@ tags:
   - Blog
 cover:
   image: immersive_labs_achievements_scraper.png
+  relative: true
   alt: EpicSolutionArchitecture.png
 description: Create a personalized achievements page for your website using a Python web-scraping bot to extract and display your accomplishments. This guide walks you through saving your achievements page, parsing it with Beautiful Soup, and generating a custom webpage using Hugo Go shortcodes. Learn how to fetch, process, and display your achievements effectively, and discover how to solve common issues like expired image URLs by downloading and locally hosting images. Perfect for showcasing your milestones in a professional, visually appealing way.
 ---

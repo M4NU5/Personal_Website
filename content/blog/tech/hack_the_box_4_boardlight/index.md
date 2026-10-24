@@ -11,6 +11,7 @@ tags:
   - Hacking
 cover:
   image: hack_the_box_4_boardlight.png
+  relative: true
   alt: hack_the_box_4_boardlight.png
 ---
 This evening I felt like cutting my teeth a little bit more. So lets spin up this box and give it a poke.

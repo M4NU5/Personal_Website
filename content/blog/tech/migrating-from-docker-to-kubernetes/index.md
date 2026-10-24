@@ -14,6 +14,7 @@ description: A developer shares their journey migrating from Docker to Kubernete
 bskyid: 3m4r4l25nns2o
 cover:
   image: Jugger.png
+  relative: true
   alt: Jugger.png
 ---
 The time has come! That's right. I’ve crossed over. Docker just isn’t doing it for me anymore.  

@@ -10,6 +10,7 @@ tags:
   - Python
 cover:
   image: auto_expensing_solution_architecture.png
+  relative: true
   alt: EpicSolutionArchitecture.png
 description: Automate your utility expenses with a Python script that integrates bank transactions, Google Sheets, and Zapier to streamline bill splitting with your housemates. This guide details the architecture and setup, including how to fetch direct debits, sync with Google Sheets, and trigger automated Splitwise expenses. Perfect for anyone looking to simplify group expenses and free up time for more enjoyable activities. Explore the full project on [GitHub](https://github.com/M4NU5/ExpenseAutomation/tree/master) and consider future enhancements like automated payment notifications.
 ---

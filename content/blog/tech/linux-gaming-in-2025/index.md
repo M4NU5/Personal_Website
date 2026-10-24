@@ -12,6 +12,7 @@ description: Linux gaming in 2025 is viable — if you can live with the anti-ch
 bskyid: 3lt5o7ahlbk2s
 cover:
   image: LinuxSteam.png
+  relative: true
   alt: LinuxSteam.png
 ---
 So you're thinking about switching to Linux. We've all had those moments.

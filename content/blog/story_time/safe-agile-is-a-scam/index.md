@@ -11,6 +11,7 @@ tags:
 description: A blunt, humorous look at how agile went from a startup superpower to a corporate circus. This post breaks down story points, sprints, planning increments, meeting overload, and why SAFe agile often kills real productivity. A raw take on what engineers actually need to get meaningful work done.
 cover:
   image: cope_manager.png
+  relative: true
   alt: cope_manager.png
 bskyid: 3m7prtcwbrs26
 ---

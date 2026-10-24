@@ -12,6 +12,7 @@ description: AMD GPU not detected by Ollama? Here's how to get local LLMs runnin
 bskyid: 3lql3lkvx4s2o
 cover:
   image: amd-preview.png
+  relative: true
   alt: amd-preview.png
 ---
 > **Update - January 2026** AMD quietly fixed the hard part. The January 2026 Adrenalin driver update ships Ollama, LM Studio, and ComfyUI as a one-click optional install. If you're on RX 7700 or newer -- or a Ryzen AI 300/400/Max -- you don't need to touch ROCm libraries at all. [Get the AI Bundle here.](https://www.amd.com/en/blogs/2026/amd-software-adrenalin-edition-ai-bundle-ai-made-si.html) 

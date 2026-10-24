@@ -11,6 +11,7 @@ tags:
   - Hacking
 cover:
   image: hack_the_box_2_analytics.png
+  relative: true
   alt: hack_the_box_2_analytics.png
 ---
 ## Introduction

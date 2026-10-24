@@ -13,6 +13,7 @@ tags:
   - Thule
 cover:
   image: thule-roof-rack.jpg
+  relative: true
   alt: Epic_Lockpicking_Image.png
 ---
 So my uncle forgot his keys to his roof rack… Ok when you have just left home. Not so ok when you at 5 hours from it!
