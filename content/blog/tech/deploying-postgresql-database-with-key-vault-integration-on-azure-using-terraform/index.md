@@ -340,4 +340,4 @@ There are several other things I could build on. Whether that be the configurati
 Now if you have read this far I truly thank you from the bottom of my heart…   
 NOW GO TOUCH SOME GRASS 😀
 
-![EpicBemo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExazd6cWJuZjE1bTdpc2VtdGZlY3V2eWZoeHlkMGd6ejg4MnZrbmpqZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ILjkBExIzBhrFzqDVP/giphy.gif#center)
+![EpicBemo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExazd6cWJuZjE1bTdpc2VtdGZlY3V2eWZoeHlkMGd6ejg4MnZrbmpqZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ILjkBExIzBhrFzqDVP/giphy.webp#center)

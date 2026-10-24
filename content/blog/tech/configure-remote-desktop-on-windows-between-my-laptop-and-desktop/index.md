@@ -56,7 +56,7 @@ We are pretty much good to go but a couple more housekeeping items to think abou
  
 And we are done, now I can be anywhere in the world with an internet connection and my laptop and RDP to my desktop whether I’m flying home or going down to the local cafe. FANTASTIC!
 
-![CelebrationImage](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmJtY3ZrdTZkaHZzaWR6ODlpYnM3Nmx3ODNlYTVuYmhtbTc1cnBiNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8OqgB15nDMjX8c05tY/giphy.gif#center) 
+![CelebrationImage](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmJtY3ZrdTZkaHZzaWR6ODlpYnM3Nmx3ODNlYTVuYmhtbTc1cnBiNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8OqgB15nDMjX8c05tY/giphy.webp#center) 
 
 It would be cool if i could have written my OSCP using this but the proctor being unable to track and confirm it is in fact me writing the exam due to the RDP... So big sad I know...
 Anyway, thanks for reading this far! Now go touch grass 😁

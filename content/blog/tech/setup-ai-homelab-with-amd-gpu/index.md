@@ -28,7 +28,7 @@ Im just going to say youre not running deepseeks 671b 404gb model!
 
 Obviously as a tech nerd myself why would I not want to run a local LLM that can give you unlimited chat capabilities. Sure not to the sophistication of GPT but that isnt always needed, plus less guardrails.
 
-![Getinloser.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTNxdWJtaXBuY2VndnNkeGpjZmM5cjdkaG81dHNqemdrYnQwcDUyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pyTkBNVthpwp0WVFw0/giphy.gif#center)
+![Getinloser.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTNxdWJtaXBuY2VndnNkeGpjZmM5cjdkaG81dHNqemdrYnQwcDUyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pyTkBNVthpwp0WVFw0/giphy.webp#center)
 
 As this is cutting edge the ecosystem is still evolving. Nvidia has a real leg up due to its CUDA ecosystem for non-gaming related GPU tasks. So when AI exploded all the Nividia cool kids got turn key access to this world and all us AMD pesants who just wanted raw power for gaming have been left in the dust.
 

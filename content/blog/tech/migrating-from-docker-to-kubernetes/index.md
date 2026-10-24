@@ -37,7 +37,7 @@ Sure, Docker Swarm _exists_, but using it just feels... off. You know?
 
 Also, industry relevance. I don’t use Kubernetes daily, but I’m often one step away. Sometimes I have to get my hands dirty. And there’s _nothing_ more embarrassing than blanking on basic `kubectl` commands in front of the Principal SRE.
 
-![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNmdWFrd3ZseHo4bnZuOXE4MDNpejY0MzR2ZDg1dXRkMHM1eTM4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XZVLh9Mq9HY0ww6wnm/giphy.gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNmdWFrd3ZseHo4bnZuOXE4MDNpejY0MzR2ZDg1dXRkMHM1eTM4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XZVLh9Mq9HY0ww6wnm/giphy.gif#center)
+![https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNmdWFrd3ZseHo4bnZuOXE4MDNpejY0MzR2ZDg1dXRkMHM1eTM4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XZVLh9Mq9HY0ww6wnm/giphy.webp](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNmdWFrd3ZseHo4bnZuOXE4MDNpejY0MzR2ZDg1dXRkMHM1eTM4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XZVLh9Mq9HY0ww6wnm/giphy.webp#center)
 
 **Also... WSL broke me.**
 

@@ -22,7 +22,7 @@ Lets get started with importing the achievements webpage into our python script.
 
 So simply logging in, going to the achievements page and saving it to the project file on my computer. This will be enough to get us where we need to go.
 
-![EpicGif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3FzZ245bmYwNzRjcGlqNmdzY3F3bDRkOTJtOW85bzB4OWoxdGZyZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r8I7tDl75QLfh2SkpE/giphy.gif#center)
+![EpicGif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3FzZ245bmYwNzRjcGlqNmdzY3F3bDRkOTJtOW85bzB4OWoxdGZyZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r8I7tDl75QLfh2SkpE/giphy.webp#center)
 
 We then open the file and pass it using beautiful soup.
 

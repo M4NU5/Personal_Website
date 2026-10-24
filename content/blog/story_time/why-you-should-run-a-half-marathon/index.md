@@ -12,7 +12,7 @@ tag:
 ---
 Because running ~21km sounds tough but in truth, IT’S FUCKING EASY. I have walked that in a day, so running it will be a breeze right?!
 
-![RunnigRocky.gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGhrbTJvYm1raHJlOWVwY2d2NHVlZ3Fua3V6YjJ5ODkyZzFxMWk3YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tPrj21W9DYMB2dW/giphy.gif#center)
+![RunnigRocky.gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGhrbTJvYm1raHJlOWVwY2d2NHVlZ3Fua3V6YjJ5ODkyZzFxMWk3YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tPrj21W9DYMB2dW/giphy.webp#center)
 
 The difficulty doesn’t come from setting your goal. The difficulty comes with following through on them!
 
@@ -89,6 +89,6 @@ The best way to grow as a person is through adversity. So why not challenge your
 
 ### JUST DO IT
 
-![JustDoIt.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTl1bjF0aWU5d2UxZnoxdzY3MHo4Nm45aGszaW94dWhzOWFuZDF6MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/104ueR8J1OPM2s/giphy.gif#center)
+![JustDoIt.gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTl1bjF0aWU5d2UxZnoxdzY3MHo4Nm45aGszaW94dWhzOWFuZDF6MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/104ueR8J1OPM2s/giphy.webp#center)
 
 And if you have made it this far, I appreciate you. Now go touch some grass 😀
