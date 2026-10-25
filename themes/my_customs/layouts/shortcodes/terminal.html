@@ -1,0 +1,69 @@
+{{- /*
+  Interactive terminal sandbox with a virtual filesystem.
+
+  Usage in markdown:
+    {{< terminal host="will@williamsmale" >}}
+    # muted line (motd, last login)
+    $ a command that gets typed and really executed
+    fallback output for readers without JavaScript
+    {{< /terminal >}}
+
+  The filesystem comes from data/terminal.yaml. Blog posts are mounted at
+  ~/blog/<section>/<slug>.md and certification badges at ~/certs/*.badge.
+  The JS lives in assets/js/terminal.js.
+*/ -}}
+{{- $host := .Get "host" | default "will@williamsmale" -}}
+{{- $user := index (split $host "@") 0 -}}
+{{- $data := site.Data.terminal | default dict -}}
+{{- $tree := $data.fs | default dict -}}
+
+{{- /* Mount blog posts */ -}}
+{{- range where site.RegularPages "Section" "blog" -}}
+  {{- $segs := split (strings.Trim .RelPermalink "/") "/" -}}
+  {{- $n := len $segs -}}
+  {{- if ge $n 2 -}}
+    {{- $summary := .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | truncate 200 -}}
+    {{- $content := printf "@page %s|%s|%s|%s" .RelPermalink .Title (.Date.Format "2006-01-02") $summary -}}
+    {{- $node := dict (printf "%s.md" (index $segs (sub $n 1))) $content -}}
+    {{- range $j := seq (sub $n 1) -}}
+      {{- $k := sub (sub $n 1) $j -}}
+      {{- $url := printf "/%s/" (delimit (first (add $k 1) $segs) "/") -}}
+      {{- $node = dict (index $segs $k) (merge $node (dict ".url" $url)) -}}
+    {{- end -}}
+    {{- $tree = merge $tree (dict "home" (dict $user $node)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Mount certification badges */ -}}
+{{- $badges := dict ".url" "/certifications/" -}}
+{{- range readDir "content/certifications/badge_images" -}}
+  {{- $name := replaceRE `\.[A-Za-z0-9]+$` "" .Name -}}
+  {{- $label := strings.Trim (replace $name "_" " " | replaceRE `\s+` " ") " " -}}
+  {{- $badges = merge $badges (dict (printf "%s.badge" $name) (printf "Immersive Labs badge: %s\nSee /certifications/ for the full wall.\n" $label)) -}}
+{{- end -}}
+{{- $tree = merge $tree (dict "home" (dict $user (dict "certs" $badges))) -}}
+
+{{- /* Mount the page's cover photo as ~/me.jpg */ -}}
+{{- with .Page.Params.cover }}{{ with .image }}{{ with $.Page.Resources.GetMatch . }}
+  {{- $tree = merge $tree (dict "home" (dict $user (dict "me.jpg" (printf "@image %s|%s" .RelPermalink ($.Page.Params.cover.alt | default "me"))))) -}}
+{{- end }}{{ end }}{{ end -}}
+
+{{- $lines := split (trim .Inner "\r\n") "\n" -}}
+{{- $js := resources.Get "js/terminal.js" | minify | fingerprint -}}
+<div class="term" data-host="{{ $host }}" data-fs="{{ $tree | jsonify }}" data-fortunes="{{ $data.fortunes | default slice | jsonify }}" role="figure" aria-label="Interactive terminal for {{ $host }}">
+  <div class="term-bar"><span class="term-title">{{ $host }}: ~</span></div>
+  <div class="term-body">
+    {{- range $lines }}
+    {{- $l := trim . "\r" }}
+    {{- if hasPrefix $l "$ " }}
+    <span class="term-line term-cmd"><span class="term-prompt">{{ $host }} ~ $</span> <span class="term-text">{{ strings.TrimPrefix "$ " $l }}</span></span>
+    {{- else if hasPrefix $l "# " }}
+    <span class="term-line term-muted">{{ strings.TrimPrefix "# " $l }}</span>
+    {{- else }}
+    <span class="term-line term-out">{{ $l }}</span>
+    {{- end }}
+    {{- end }}
+    <form class="term-line term-cmd term-end" autocomplete="off"><label class="term-prompt" for="term-input-{{ .Ordinal }}">{{ $host }} ~ $</label> <input class="term-input" id="term-input-{{ .Ordinal }}" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Type a command and press Enter"></form>
+  </div>
+</div>
+<script defer src="{{ $js.RelPermalink }}"></script>

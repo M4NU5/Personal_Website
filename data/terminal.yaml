@@ -1,0 +1,77 @@
+# Virtual filesystem for the whoami terminal.
+# Maps are directories. Strings are files. Special file prefixes:
+#   "@denied <content>"  -> permission denied until `chmod +r`
+#   "@link <url>"        -> symlink to a URL (`cd`/`open` navigate there)
+#   "@random"            -> /dev/random
+# A directory with `_denied: true` can't be entered or listed.
+# Blog posts and certification badges are mounted automatically at build time.
+fortunes:
+  - "The quieter you become, the more you can hear."
+  - "There are more stars in the universe than seconds in a human life."
+  - "It's not a bug. It's an undocumented feature."
+  - "Every system is secure until someone bothers to look."
+  - "The S in IoT stands for security."
+  - "There is no cloud. It's just someone else's computer."
+  - "Have you tried turning it off and on again?"
+fs:
+  home:
+    will:
+      .profile: |
+        NAME="William Smale"
+        LOCATION="London, UK"
+        ROLE="Senior Application Security Engineer"
+        EXPERIENCE="8 years"
+        LANGUAGES="Go Python Bash"
+        INTERESTS="coding hacking diving photography philosophy"
+      .flag: |
+        @denied You little hacker you.
+        That'll cost you a coffee: https://buymeacoffee.com/williamsmale
+      .bash_history: |
+        ls
+        cd blog
+        cat .flag
+        sudo cat .flag
+        chmod +r .flag
+        rm -rf / --no-preserve-root
+        history -c
+      .ssh:
+        authorized_keys: "@denied ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE1pbmQgdGhlIGdhcC4gTmljZSB0cnku will@laptop"
+        config: |
+          Host homelab
+            HostName 10.0.0.42
+            User will
+            IdentityFile ~/.ssh/id_ed25519
+      whoami.txt: |
+        AppSec by day. Homelab tinkerer and CTF hacker by night.
+        I write about Linux, Kubernetes, hacking, and the occasional unhinged rant.
+      notes.txt: |
+        - finish the MCP risk post
+        - fix the thing
+        - buy coffee
+        - do NOT run rm -rf / again
+      moments: "@link https://moments.williamsmale.com/"
+      risk: "@link https://risk.williamsmale.com/"
+  root:
+    _denied: true
+    .secret: "@denied there is nothing here"
+  etc:
+    hostname: "williamsmale\n"
+    motd: "Welcome to Hallownest. Mind the gap.\n"
+    passwd: |
+      root:x:0:0:root:/root:/bin/bash
+      will:x:1000:1000:William Smale:/home/will:/bin/fakesh
+      nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+    shadow: "@denied root:$6$nice$try:19000:0:99999:7:::"
+  var:
+    log:
+      auth.log: |
+        Oct 25 23:05:12 williamsmale sshd[1337]: Failed password for root from 203.0.113.42 port 51022 ssh2
+        Oct 25 23:05:14 williamsmale sshd[1337]: Failed password for admin from 203.0.113.42 port 51023 ssh2
+        Oct 25 23:05:17 williamsmale sshd[1337]: Failed password for will from 203.0.113.42 port 51024 ssh2
+        Oct 25 23:05:19 williamsmale sshd[1337]: Connection closed by 203.0.113.42 port 51024 [preauth]
+        Oct 25 23:05:20 williamsmale sshd[1337]: Banned 203.0.113.42. Nice try.
+  dev:
+    "null": ""
+    random: "@random"
+    coffee: "cortado\n"
+  tmp: {}

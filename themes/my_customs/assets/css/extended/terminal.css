@@ -1,0 +1,100 @@
+/* Interactive terminal sandbox (shortcode: terminal). Stays dark in both themes. */
+.term {
+  --term-bg: #070a12;
+  --term-fg: #d9f5ef;
+  --term-prompt: #5fe3d6;
+  --term-muted: #8ea0b5;
+  --term-border: #1a2236;
+  margin: 1.5rem 0;
+  border: 1px solid var(--term-border);
+  border-radius: var(--radius);
+  background: var(--term-bg);
+  color: var(--term-fg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow: hidden;
+  cursor: text;
+}
+.term-bar {
+  padding: 0.35rem 1rem;
+  border-bottom: 1px solid var(--term-border);
+  color: var(--term-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+.term-body {
+  padding: 1rem 1.1rem 1.1rem;
+  min-height: 3rem;
+  max-height: 34rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--term-border) transparent;
+}
+.term-line {
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 1.6em;
+}
+.term-prompt { color: var(--term-prompt); }
+.term-muted { color: var(--term-muted); }
+.term a { color: var(--term-prompt); text-decoration: underline; text-underline-offset: 2px; box-shadow: none; }
+.term a:hover { color: var(--term-fg); }
+.term-img {
+  display: block;
+  max-width: 100%;
+  max-height: 20rem;
+  margin: 0.4em 0;
+  border: 1px solid var(--term-border);
+  border-radius: 6px;
+}
+.term-cmd:not(:first-child) { margin-top: 0.6em; }
+
+/* Live prompt */
+.term-end {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5ch;
+  margin-top: 0.6em;
+}
+.term:not([data-init]) .term-end,
+.term.is-typing .term-end { display: none; }
+.term-end .term-prompt { white-space: nowrap; }
+.term .term-input {
+  flex: 1 1 4ch;
+  min-width: 4ch;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+  background: transparent;
+  color: var(--term-fg);
+  font: inherit;
+  line-height: inherit;
+  caret-color: var(--term-fg);
+  -webkit-appearance: none;
+  appearance: none;
+}
+.term.is-busy .term-input { opacity: 0.4; }
+
+/* Intro typing cursor */
+.term.is-typing { cursor: pointer; }
+.term-line.cur .term-text::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 1px;
+  background: var(--term-fg);
+  vertical-align: text-bottom;
+  animation: term-blink 1s steps(2, start) infinite;
+}
+@keyframes term-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .term-line.cur .term-text::after { animation: none; }
+}
