@@ -26,36 +26,24 @@ coffeeText: "If anything here's been worth your time..."
 
 cover:
     image: "cover-photo.jpg" # image path/url
-    alt: "cover-photo.jpg" # alt text
+    alt: "Will in Cape Town, throwing peace signs" # alt text, also the caption inside the terminal
     # caption: "Perspective" # display caption under cover
     relative: true # when using page bundles set this to true
-    hidden: false # only hide on current single page
+    hidden: true # the photo lives inside the terminal now: open me.jpg
 ---
 
-```python
-class me():
-    def __init__(self):
-        self.name       = "William Smale"
-        self.location   = "London, UK"
-        self.experience = 8
-        self.profession = "Senior Applicaiton Security Engineer"
-        self.languages  = ["Go", "Python", "Bash"]
-        self.interests  = ["Coding", "Hacking", "Diving", "Photography", "Philosophy"]
-
-    def favorite_quote(self):
-        return random.choice([
-            "There are more stars in the universe then seconds in a human life.",
-            "The quieter you become, the more you can hear."
-        ])
-
-    def output_code(self, coffee):
-        if coffee == "Cortado":
-            return "Code crafted with perfection ☕️"
-        elif not coffee:
-            raise Exception("NO COFFEE!!!")
-        return "Code"
-```
-
-
-
-
+{{< terminal host="will@williamsmale" >}}
+# Last login: Fri Sep 15 11:30:03 2023 on tty1
+# Failed password attempts since last login: 1337
+$ whoami
+will
+$ cat ~/.profile
+NAME="William Smale"
+LOCATION="London, UK"
+ROLE="Senior Application Security Engineer"
+EXPERIENCE="8 years"
+LANGUAGES="Go Python Bash"
+INTERESTS="coding hacking diving photography philosophy"
+$ cat .flag
+cat: .flag: Permission denied
+{{< /terminal >}}
