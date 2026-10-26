@@ -35,8 +35,6 @@ cover:
 {{< terminal host="will@williamsmale" >}}
 # Last login: Fri Sep 15 11:30:03 2023 on tty1
 # Failed password attempts since last login: 1337
-$ whoami
-will
 $ cat ~/.profile
 NAME="William Smale"
 LOCATION="London, UK"
